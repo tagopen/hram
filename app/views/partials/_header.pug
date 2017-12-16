@@ -1,0 +1,16 @@
+header.header
+  .container
+    .col
+      .nav
+  .header__content
+    .container
+      .row
+        .col-24.col-md-14.col-lg-12
+          .header__box
+            .header__heading
+              h1.header__heading--text!=content.index.header.heading
+              i.ic.ic--venzel
+            .header__text!=content.index.header.text
+            a.btn.header__btn(href!=content.index.header.btn.href)!=content.index.header.btn.text
+              +svg('arrow-right-o')(class="btn__ic")
+        .col-24.col-md-10.col-lg-12      

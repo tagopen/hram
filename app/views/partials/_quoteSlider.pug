@@ -1,0 +1,17 @@
+section.quote
+  .container-fluid
+    .row
+      .col-24
+        .quote__slider.js-quote-slider
+          each item, i in content.index.quote.slides
+            .quote__item
+              .container
+                .row
+                  .col-24
+                    .quote__box
+                      .quote__content
+                        i.ic.ic--quoteleft.d-none.d-md-block
+                        i.ic.ic--quoteright.d-none.d-md-block  
+                        .quote__text!=item.text
+                        .quote__author!=item.author
+        .js-quote-slider__dots      

@@ -51,7 +51,7 @@ var GRVE = GRVE || {};
   GRVE.documentReady = {
     init: function() {
       GRVE.jReject.init();
-
+      GRVE.slickInit.init();
     }
   };
 
@@ -98,6 +98,31 @@ var GRVE = GRVE || {};
         paragraph2: 'Пожалуйста, установите современный браузер:',
         closeMessage: 'Закрывая это уведомление вы соглашаетесь с тем, что сайт в вашем браузере может отображаться некорректно.',
         closeLink: 'Закрыть это уведомление',
+      });
+    }
+  };
+  GRVE.slickInit = {
+    init: function(){
+      this.quoteCarousel();
+    },
+    quoteCarousel: function(){
+      $('.js-quote-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        infinite: true,
+        focusOnSelect: true,
+        dots: true,
+        appendDots: $('.js-quote-slider__dots'),
+        responsive: [
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        ]
       });
     }
   };

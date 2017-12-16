@@ -1,0 +1,99 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$quoteleft-name: 'quoteleft'
+$quoteleft-x: 33px
+$quoteleft-y: 24px
+$quoteleft-offset-x: -33px
+$quoteleft-offset-y: -24px
+$quoteleft-width: 22px
+$quoteleft-height: 16px
+$quoteleft-total-width: 169px
+$quoteleft-total-height: 40px
+$quoteleft-image: 'sprite.png'
+$quoteleft: (33px, 24px, -33px, -24px, 22px, 16px, 169px, 40px, 'sprite.png', 'quoteleft', )
+$quoteright-name: 'quoteright'
+$quoteright-x: 0px
+$quoteright-y: 24px
+$quoteright-offset-x: 0px
+$quoteright-offset-y: -24px
+$quoteright-width: 23px
+$quoteright-height: 16px
+$quoteright-total-width: 169px
+$quoteright-total-height: 40px
+$quoteright-image: 'sprite.png'
+$quoteright: (0px, 24px, 0px, -24px, 23px, 16px, 169px, 40px, 'sprite.png', 'quoteright', )
+$venzel-name: 'venzel'
+$venzel-x: 0px
+$venzel-y: 0px
+$venzel-offset-x: 0px
+$venzel-offset-y: 0px
+$venzel-width: 169px
+$venzel-height: 14px
+$venzel-total-width: 169px
+$venzel-total-height: 40px
+$venzel-image: 'sprite.png'
+$venzel: (0px, 0px, 0px, 0px, 169px, 14px, 169px, 40px, 'sprite.png', 'venzel', )
+$spritesheet-width: 169px
+$spritesheet-height: 40px
+$spritesheet-image: 'sprite.png'
+$spritesheet-sprites: ($quoteleft, $quoteright, $venzel, )
+$spritesheet: (169px, 40px, 'sprite.png', $spritesheet-sprites, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)

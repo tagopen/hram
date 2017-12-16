@@ -84,7 +84,7 @@ gulp.task('scripts', () => {
       //'node_modules/jquery.cookie/jquery.cookie.js',
       //'node_modules/matchHeight/dist/jquery.matchHeight.js',
       //'node_modules/bootstrap-slider/dist/bootstrap-slider.js',
-      //'node_modules/slick-carousel/slick/slick.js',
+      'node_modules/slick-carousel/slick/slick.js',
       //'node_modules/select2/dist/js/select2.js',
       //'node_modules/jquery-tags-input/src/jquery.tagsinput.js',
       //'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',

@@ -62,3 +62,159 @@
   position: absolute !important
   width: 1px !important
 +comment("home page style")
+.btn
+  position: relative
+  background-color: #ffb24a
+  border-radius: 10px
+  box-shadow: 0 5px 15px rgba(255, 178, 74, 0.8)
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
+  color: #313431
+  font: 700 italic 18px/20px $font-playfair
+  padding: 25px 60px 25px 25px
+  min-width: 270px
+  text-align: left  
+  transition: all .3s ease
+  &:hover,
+  &:focus
+    color: #313431
+    background-color: #ee8d3f
+    box-shadow: 0 10px 15px rgba(238, 141, 63, 0.8)
+  &__ic
+    position: absolute
+    right: 30px
+    top: 50%
+    margin-top: -8px
+    opacity: 0.3
++comment("header style")
+.header
+  background: #d9dbce url(../img/headerbg.png) no-repeat
+  background-position: left bottom
+  background-size: cover
+  &__box
+    padding: 90px 0
+    text-align: center
+  &__heading
+    text-align: center
+    &--text
+      font: 700 italic 24px/34px $font-playfair
+      color: $green-color
+      margin-bottom: 20px
+    .ic
+      margin-bottom: 30px  
+  &__text
+    font: 400 italic 20px/24px $font-playfair  
+    color: $green-color
+    text-align: center 
+    margin-bottom: 40px
++r(768)
+  .header
+    background-size: auto
+    &__box
+      padding: 90px 0 100px
+      text-align: left
+    &__heading 
+      text-align: left
+      &--text   
+        font: 700 italic 34px/40px $font-playfair
+        margin-bottom: 45px
+      .ic
+        margin-bottom: 50px  
+    &__text
+      font: 400 italic 22px/24px $font-playfair  
+      text-align: left 
+      margin-bottom: 50px   
++r(992)
+  .header
+    height: 100vh
+    &__box
+      padding: 100px 0 60px
+    &__heading    
+      &--text
+        font: 700 italic 44px/50px $font-playfair
+        margin-bottom: 40px
++comment("quote style")
+.quote 
+  padding: 50px 0
+  overflow: hidden
+  &__item
+    margin-bottom: 30px
+  &__box
+    position: relative  
+    &:before
+      content: ''
+      height: 100%
+      position: absolute
+      width: 96%
+      bottom: -15px
+      left: 2%
+      opacity: 0.6
+      background-color: #f8f8f8
+      border-radius: 10px
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08)
+      z-index: 5
+    &:after
+      content: ''
+      height: 100%
+      position: absolute
+      width: 94%
+      bottom: -30px
+      left: 3%
+      opacity: 0.6
+      background-color: #f8f8f8
+      border-radius: 10px 
+      z-index: 6   
+    .ic
+      position: absolute
+  &__content
+    position: relative
+    z-index: 15  
+    padding: 35px 25px 20px 
+    border-radius: 10px  
+    background-color: #f8f8f8
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.06) 
+  &__text
+    color: rgba(49, 52, 49, 0.8)
+    font: 400 italic 22px/26px $font-playfair
+    margin-bottom: 20px
+    text-align: center
+  &__author
+    text-align: right
+    font: 400 italic 18px/20px $font-playfair  
+    color: $green-color
+.ic
+  &--quoteleft    
+    left: 40px
+    top: 30px
+  &--quoteright
+    right: 35px
+    bottom: 33px
+.js-quote-slider__dots
+  position: relative
+  .slick-dots
+    position: static
+    bottom: 0
+  li
+    height: 12px
+    width: 12px
+    padding: 0
+    &.slick-active
+      button
+        background-color: #ffb24a
+    button
+      padding: 0
+      height: 12px
+      width: 12px
+      border-radius: 50%
+      background: rgba(0, 0, 0, 0.1)
+      &:before
+        content: none    
++r(768)
+  .quote
+    &__content
+      padding: 55px 90px 35px  
+    &__text
+      margin-bottom: 25px  
++r(992)
+  .quote
+    &__content
+      padding: 75px 90px 35px 
