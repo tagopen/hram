@@ -3229,6 +3229,61 @@
   fill: currentColor;
 }
 
+.svg--arrow-left {
+  width: 0.625em;
+  height: 1.125em;
+}
+
+.svg--arrow-left-o {
+  width: 1em;
+  height: 1em;
+}
+
+.svg--arrow-right {
+  width: 0.625em;
+  height: 1.125em;
+}
+
+.svg--arrow-right-o {
+  width: 1em;
+  height: 1em;
+}
+
+.svg--calendar {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.svg--chat {
+  width: 1.3125em;
+  height: 1.375em;
+}
+
+.svg--church {
+  width: 1.90938em;
+  height: 2em;
+}
+
+.svg--close {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.svg--map {
+  width: 1.6875em;
+  height: 1.6875em;
+}
+
+.svg--map-pin {
+  width: 1.5075em;
+  height: 2em;
+}
+
+.svg--person {
+  width: 1.1875em;
+  height: 1.375em;
+}
+
 /* form */
 .text-danger {
   color: #b94a48;

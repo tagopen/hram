@@ -82,7 +82,7 @@ var GRVE = GRVE || {};
   // # Old browser notification
   // ============================================================================= //
   GRVE.jReject = {
-    init : function() {
+    init: function() {
       $.reject({
         reject: {
           msie: 10
@@ -102,13 +102,26 @@ var GRVE = GRVE || {};
     }
   };
 
+  GRVE.calendar = {
+    init: function() {
+      
+    }
+  };
+
+
+  GRVE.navbar = {
+    init: function() {
+      
+    }
+  };
+
   // # Basic Elements
   // ============================================================================= //
   GRVE.basicElements = {
     init: function() {
       this.carousel();
     },
-    carousel: function(){
+    carousel: function() {
 
       var $element = $('.js-carousel');
 
