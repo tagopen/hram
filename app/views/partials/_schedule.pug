@@ -1,0 +1,18 @@
+section.schedule
+  .container
+    .row
+      .col-24
+        .heading.schedule__heading!=content.index.schedule.heading
+  .container.schedule__container      
+    .row.schedule__row
+      each item, i in content.index.schedule.days
+        .col-24.col-md-12.schedule__col
+          .schedule__element
+            .schedule__day
+               +svg('calendar')(class="schedule__ic")
+               !=item.day
+            .schedule__date!=item.date
+            .schedule__text!=item.text
+            .schedule__event!=item.event 
+        
+        

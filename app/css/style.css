@@ -4413,6 +4413,17 @@ li.fancybox-thumbs-loading {
 /* ---------------------------------------- */
 /* H O M E    P A G E    S T Y L E          */
 /* ---------------------------------------- */
+.heading {
+  font: 700 italic 28px/36px "PlayfairDisplay", sans-serif;
+  color: #4b8078;
+}
+
+@media only screen and (min-width: 768px) {
+  .heading {
+    font: 700 italic 42px/50px "PlayfairDisplay", sans-serif;
+  }
+}
+
 .btn {
   position: relative;
   background-color: #ffb24a;
@@ -4464,7 +4475,7 @@ li.fancybox-thumbs-loading {
 }
 
 .header__heading--text {
-  font: 700 italic 24px/34px "PlayfairDisplay", sans-serif;
+  font: 700 italic 24px/40px "PlayfairDisplay", sans-serif;
   color: #4b8078;
   margin-bottom: 20px;
 }
@@ -4492,7 +4503,7 @@ li.fancybox-thumbs-loading {
     text-align: left;
   }
   .header__heading--text {
-    font: 700 italic 34px/40px "PlayfairDisplay", sans-serif;
+    font: 700 italic 34px/44px "PlayfairDisplay", sans-serif;
     margin-bottom: 45px;
   }
   .header__heading .ic {
@@ -4513,7 +4524,7 @@ li.fancybox-thumbs-loading {
     padding: 100px 0 60px;
   }
   .header__heading--text {
-    font: 700 italic 44px/50px "PlayfairDisplay", sans-serif;
+    font: 700 italic 44px/60px "PlayfairDisplay", sans-serif;
     margin-bottom: 40px;
   }
 }
@@ -4602,26 +4613,26 @@ li.fancybox-thumbs-loading {
   bottom: 33px;
 }
 
-.js-quote-slider__dots {
+.quote-dots {
   position: relative;
 }
 
-.js-quote-slider__dots .slick-dots {
+.quote-dots .slick-dots {
   position: static;
   bottom: 0;
 }
 
-.js-quote-slider__dots li {
+.quote-dots li {
   height: 12px;
   width: 12px;
   padding: 0;
 }
 
-.js-quote-slider__dots li.slick-active button {
+.quote-dots li.slick-active button {
   background-color: #ffb24a;
 }
 
-.js-quote-slider__dots li button {
+.quote-dots li button {
   padding: 0;
   height: 12px;
   width: 12px;
@@ -4630,7 +4641,7 @@ li.fancybox-thumbs-loading {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.js-quote-slider__dots li button:before {
+.quote-dots li button:before {
   content: none;
 }
 
@@ -4646,5 +4657,82 @@ li.fancybox-thumbs-loading {
 @media only screen and (min-width: 992px) {
   .quote__content {
     padding: 75px 90px 35px;
+  }
+}
+
+/* ---------------------------------------- */
+/* S C H E D U L E    S T Y L E             */
+/* ---------------------------------------- */
+.schedule {
+  padding: 45px 0 60px;
+  background: #f8f8f8;
+}
+
+.schedule__heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.schedule__element {
+  padding: 30px 25px 35px;
+}
+
+.schedule__day {
+  font: 700 italic 24px/26px "PlayfairDisplay", sans-serif;
+  color: #4b8078;
+  margin-bottom: 20px;
+}
+
+.schedule__ic {
+  margin-right: 15px;
+}
+
+.schedule__date {
+  font: 600 16px/18px "PF Beau Sans Pro", sans-serif;
+  color: #4b8078;
+  margin-bottom: 20px;
+}
+
+.schedule__text {
+  font: 600 16px/18px "PF Beau Sans Pro", sans-serif;
+  color: #4b8078;
+  margin-bottom: 20px;
+}
+
+.schedule__event {
+  font: 300 16px/18px "PF Beau Sans Pro", sans-serif;
+  color: #313431;
+}
+
+.schedule__container {
+  background: #fff;
+}
+
+.schedule__row {
+  overflow: hidden;
+}
+
+.schedule__col {
+  -webkit-box-shadow: 0 0 0 2px #f8f8f8;
+          box-shadow: 0 0 0 2px #f8f8f8;
+}
+
+@media only screen and (min-width: 768px) {
+  .schedule {
+    padding: 80px 0 75px;
+  }
+  .schedule__heading {
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .schedule {
+    padding: 75px 0 100px;
+    background: url(../img/schedulebg.png) no-repeat;
+  }
+  .schedule__heading {
+    text-align: left;
+    margin-bottom: 65px;
   }
 }

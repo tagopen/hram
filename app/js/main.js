@@ -113,7 +113,7 @@ var GRVE = GRVE || {};
         infinite: true,
         focusOnSelect: true,
         dots: true,
-        appendDots: $('.js-quote-slider__dots'),
+        appendDots: $('.js-quote-dots'),
         responsive: [
         {
           breakpoint: 1600,
