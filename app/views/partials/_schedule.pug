@@ -6,7 +6,7 @@ section.schedule
   .container.schedule__container      
     .row.schedule__row
       each item, i in content.index.schedule.days
-        .col-24.col-md-12.schedule__col
+        .col-24.schedule__col(class=(i == 6) ? 'col-md-24': 'col-md-12')
           .schedule__element
             .schedule__day
                +svg('calendar')(class="schedule__ic")

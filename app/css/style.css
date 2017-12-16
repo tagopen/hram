@@ -4674,7 +4674,10 @@ li.fancybox-thumbs-loading {
 }
 
 .schedule__element {
-  padding: 30px 25px 35px;
+  position: relative;
+  padding: 30px 25px 50px;
+  background: url(../img/venzelvertical.png) no-repeat;
+  background-position: right top;
 }
 
 .schedule__day {
