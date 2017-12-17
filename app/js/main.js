@@ -104,6 +104,7 @@ var GRVE = GRVE || {};
   GRVE.slickInit = {
     init: function(){
       this.quoteCarousel();
+      this.aboutCarousel();
     },
     quoteCarousel: function(){
       $('.js-quote-slider').slick({
@@ -114,6 +115,26 @@ var GRVE = GRVE || {};
         focusOnSelect: true,
         dots: true,
         appendDots: $('.js-quote-dots'),
+        responsive: [
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        ]
+      });
+    },
+    aboutCarousel: function(){
+      $('.js-about-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        appendArrows: $('.js-about-arrows'),
+        infinite: true,
+        focusOnSelect: true,
+        dots: false,
         responsive: [
         {
           breakpoint: 1600,

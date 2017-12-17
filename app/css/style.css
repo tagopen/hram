@@ -4739,3 +4739,115 @@ li.fancybox-thumbs-loading {
     margin-bottom: 65px;
   }
 }
+
+/* ---------------------------------------- */
+/* A B O U T    S T Y L E                   */
+/* ---------------------------------------- */
+.about {
+  padding: 65px 0 75px;
+  background: #e5e7df url(../img/aboutbg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.about__heading {
+  margin-bottom: 40px;
+}
+
+.about__slider {
+  margin: 0 -15px;
+}
+
+.about__info {
+  padding: 30px 20px;
+  background: #fff;
+  border-left: 5px solid #ffb24a;
+}
+
+.about__text {
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+  color: #313431;
+}
+
+.js-about-arrows {
+  padding-top: 56px;
+  margin: 0 -15px;
+}
+
+.js-about-arrows .slick-arrow {
+  display: inline-block;
+  position: static;
+  height: 50px;
+  width: 50px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  -webkit-box-shadow: 2.5px 4.3px 15px rgba(236, 176, 83, 0.8);
+          box-shadow: 2.5px 4.3px 15px rgba(236, 176, 83, 0.8);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.js-about-arrows .slick-prev {
+  background: #ecb053 url(../img/icons/svg/arrow-left.svg) no-repeat;
+  background-position: center;
+}
+
+.js-about-arrows .slick-prev:hover {
+  background: #ee8d3f url(../img/icons/svg/arrow-left.svg) no-repeat;
+  -webkit-box-shadow: 0 10px 15px rgba(238, 141, 63, 0.8);
+          box-shadow: 0 10px 15px rgba(238, 141, 63, 0.8);
+  background-position: center;
+}
+
+.js-about-arrows .slick-next {
+  background: #ecb053 url(../img/icons/svg/arrow-right.svg) no-repeat;
+  background-position: center;
+}
+
+.js-about-arrows .slick-next:hover {
+  background: #ee8d3f url(../img/icons/svg/arrow-right.svg) no-repeat;
+  -webkit-box-shadow: 0 10px 15px rgba(238, 141, 63, 0.8);
+          box-shadow: 0 10px 15px rgba(238, 141, 63, 0.8);
+  background-position: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .about {
+    padding-bottom: 50px;
+  }
+  .about__item {
+    padding-bottom: 162px;
+  }
+  .about__box {
+    position: relative;
+    margin: 0;
+  }
+  .about__info {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: -140px;
+    padding: 35px 30px;
+    max-width: 540px;
+  }
+  .js-about-arrows {
+    padding: 0;
+    position: relative;
+    top: -80px;
+    margin: 0;
+  }
+  .js-about-arrows .slick-prev {
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .about__heading {
+    margin-bottom: 50px;
+  }
+  .about__info {
+    left: 50px;
+    max-width: 580px;
+  }
+}

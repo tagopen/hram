@@ -1,0 +1,21 @@
+section.about
+  .container
+    .row
+      .col-24.text-center
+        .heading.about__heading!=content.index.about.heading
+  .container-fluid      
+    .row
+      .col-24
+        .about__slider.js-about-slider
+          each item, i in content.index.about.slides  
+            .about__item
+              .container
+                .row
+                  .col-24
+                    .about__box
+                      .about__img
+                        img.img-fluid(src!=item.img.src, alt!=item.img.alt)
+                      .about__info
+                        .about__text!=item.text 
+        .container                
+          .js-about-arrows.d-flex.justify-content-between.justify-content-md-end               
