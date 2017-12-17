@@ -1,0 +1,17 @@
+section.history
+  .container
+    .row
+      .col-24.text-center
+        .heading.history__heading!=content.index.history.heading
+  .container-fluid
+    .row
+      .col-24
+        ul#accordion.accordion
+          each item, i in content.index.history.slides  
+            li.accordion__item(class="accordion__item--"+(i+1))
+              .accordion__img(class="accordion__img--"+(i+1))
+              .accordion__box
+                .accordion__date!=item.date
+                .accordion__text!=item.text
+            
+      

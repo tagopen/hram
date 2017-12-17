@@ -52,6 +52,8 @@ var GRVE = GRVE || {};
     init: function() {
       GRVE.jReject.init();
       GRVE.slickInit.init();
+      GRVE.showMore.init();
+      GRVE.accordion.init();
     }
   };
 
@@ -101,6 +103,40 @@ var GRVE = GRVE || {};
       });
     }
   };
+
+  GRVE.showMore = {
+    init: function() {
+      $('[data-show-all]').on('click', function (e) {
+        var target = $(this).data('show-all'), 
+            $items = $(target); 
+        $items.removeClass('gallery__col--hidden');
+        $(this).stop().fadeOut(300);
+        e.preventDefault();
+      }); 
+    }
+  };
+
+  GRVE.accordion = {
+    init: function() {
+      if( $( window ).width() >= 768 ) {
+        $('#accordion > li').mouseover(
+          function () {
+            var $this = $(this);
+            $this.stop().animate({'flex-grow' : '2'});
+             $('.accordion__text',$this).addClass('accordion__text--hover');
+             $('.accordion__img',$this).addClass('accordion__img--hover');
+          });
+        $('#accordion > li').mouseout(  
+          function () {
+            var $this = $(this);
+            $this.stop().animate({'flex-grow':'1'});
+            $('.accordion__text',$this).removeClass('accordion__text--hover');
+            $('.accordion__img',$this).removeClass('accordion__img--hover');
+        });
+      }
+    }
+  };
+
   GRVE.slickInit = {
     init: function(){
       this.quoteCarousel();
@@ -132,6 +168,8 @@ var GRVE = GRVE || {};
         slidesToScroll: 1,
         arrows: true,
         appendArrows: $('.js-about-arrows'),
+        prevArrow: '<button type="button" data-role="none" aria-label="Prev" role="button" class="slick-prev slick-arrow">Previous<svg class="svg svg--arrow-left slick-arrow__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+        nextArrow: '<button type="button" data-role="none" aria-label="Next" role="button" class="slick-next slick-arrow">Next<svg class="svg svg--arrow-right slick-arrow__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
         infinite: true,
         focusOnSelect: true,
         dots: false,

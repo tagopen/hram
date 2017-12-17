@@ -68,6 +68,12 @@
 +r(768)  
   .heading
     font: 700 italic 42px/50px $font-playfair
+button,
+a
+  outline: none !important
+  &:hover,
+  &:focus
+    outline: none !important
 .btn
   position: relative
   background-color: #ffb24a
@@ -301,25 +307,25 @@
       border-radius: 10px
       box-shadow: 2.5px 4.3px 15px rgba(236, 176, 83, 0.8)  
       transition: all .3s ease 
+      &__icon  
+        fill: #313431
     &-prev
-      background: #ecb053 url(../img/icons/svg/arrow-left.svg) no-repeat  
-      background-position: center
-      &:hover
-        background: #ee8d3f url(../img/icons/svg/arrow-left.svg) no-repeat  
+      background: #ecb053 
+      &:hover,
+      &:focus
+        background: #ee8d3f 
         box-shadow: 0 10px 15px rgba(238, 141, 63, 0.8)  
-        background-position: center
     &-next
-      background: #ecb053 url(../img/icons/svg/arrow-right.svg) no-repeat  
-      background-position: center
-      &:hover
-        background: #ee8d3f url(../img/icons/svg/arrow-right.svg) no-repeat  
+      background: #ecb053
+      &:hover,
+      &:focus
+        background: #ee8d3f  
         box-shadow: 0 10px 15px rgba(238, 141, 63, 0.8)  
-        background-position: center  
 +r(768)
   .about
     padding-bottom: 50px      
     &__item
-      padding-bottom: 162px
+      padding-bottom: 225px
     &__box
       position: relative
       margin: 0    
@@ -333,7 +339,7 @@
   .js-about-arrows
     padding: 0
     position: relative
-    top: -80px
+    top: -120px
     margin: 0
     .slick-prev
       margin-right: 25px      
@@ -344,3 +350,208 @@
     &__info
       left: 50px   
       max-width: 580px     
++comment("life style")
+.life
+  padding: 65px 0
+  &__heading
+    margin-bottom: 35px   
+.gallery
+  &__link
+    display: block
+    height: 280px
+    margin-bottom: 30px
+    &--1
+      background: url(../img/gallery1.jpg) no-repeat
+      background-size: cover
+    &--2
+      background: url(../img/gallery2.jpg) no-repeat
+      background-size: cover
+    &--3
+      background: url(../img/gallery3.jpg) no-repeat
+      background-size: cover
+    &--4
+      background: url(../img/gallery4.jpg) no-repeat
+      background-size: cover
+    &--5
+      background: url(../img/gallery5.jpg) no-repeat
+      background-size: cover
+    &--6
+      background: url(../img/gallery6.jpg) no-repeat
+      background-size: cover
+  &__btn
+    margin-top: 40px
+    padding: 25px
+    text-align: center     
+  &__video
+    position: relative
+  &__play
+    position: absolute
+    top: 50%
+    left: 50%
+    margin: -50px 0 0 -50px
+    display: inline-block
+    width: 100px
+    height: 100px
+    border-radius: 50%
+    background: #5e7f78  
+    text-align: center 
+    cursor: pointer
+  &__icon
+    position: relative
+    color: #fff
+    line-height: 100px
+    z-index: 20
+    right: -2px
+  &__border
+    &--1
+      position: absolute
+      top: 50%
+      left: 50%
+      margin: -35px 0 0 -35px
+      display: inline-block
+      height: 70px
+      width: 70px
+      border-radius: 50%
+      border: 1px solid #fff  
+      opacity: 0.3
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        transform: rotate(45deg)
+        display: inline-block
+        height: 14px
+        width: 72px
+        background: #5e7f78 
+        opacity: 1
+        transform-origin: 1px 18px
+    &--2              
+      position: absolute
+      top: 50%
+      left: 50%
+      margin: -25px 0 0 -25px
+      display: inline-block
+      height: 50px
+      width: 50px
+      border-radius: 50%
+      border: 1px solid #fff
+      opacity: 0.3
+      &:before
+        content: ''
+        position: absolute
+        right: 0
+        top: 0
+        transform: rotate(-45deg)
+        display: inline-block
+        height: 14px
+        width: 52px
+        background: #5e7f78
+        opacity: 1
+        transform-origin: 96% 12px     
+@keyframes rotate360 
+  from 
+    transform: rotate(0)
+  to 
+    transform: rotate(360deg)
+@keyframes rotate-360 
+  from 
+    transform: rotate(0)
+  to 
+    transform: rotate(-360deg)    
+.gallery__border--1
+  animation: rotate360 3s linear infinite
+.gallery__border--2
+  animation: rotate-360 3s linear infinite  
++comment("history style") 
+.history 
+  padding: 65px 0 30px
+  background-color: #e5e6de
+  overflow: hidden
+  &__heading
+    margin-bottom: 40px
+.accordion
+  padding: 0
+  margin: 0 -15px
+  &__item
+    position: relative
+    margin-bottom: 25px
+  &__date
+    position: absolute
+    display: inline-block
+    height: 100px
+    width: 100px
+    background: #fff
+    top: 0
+    left: 50%
+    margin-left: -50px
+    font: 700 italic 20px/96px $font-playfair
+    color: $green-color
+    text-align: center  
+  &__text
+    padding: 0 15px
+    font: 300 16px/21px $font-pf
+    color: #313431
+    text-align: center
+  &__img
+    height: 250px
+    margin-bottom: 25px
+    &--1,
+    &--2,
+    &--3,
+    &--4,
+    &--5
+      background: url(../img/accordion1.jpg) no-repeat
+      background-size: cover
++r(768)
+  .history
+    padding-bottom: 0    
+  .accordion
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    list-style: none
+    &__item
+      flex-basis: 0
+      flex-grow: 1
+      max-width: 100%
+      margin: 0
+    &__img
+      height: 550px  
+      background-size: auto
+      margin: 0
+      opacity: 0.3
+      transition: all .3s ease
+      &--hover
+        opacity: 1
+    &__box
+      max-width: 256px
+      background: #fff
+      position: absolute
+      top: 220px
+      left: 0  
+      padding: 35px
+    &__date
+      position: static
+      height: auto
+      width: auto  
+      margin: 0 0 15px
+      font: 700 italic 20px/22px $font-playfair
+    &__text
+      padding: 0
+      text-align: left 
+      display: none 
+      opacity: 0
+      transition: all 3s ease
+      &--hover
+        display: block
+        opacity: 1
+        transition: all 3s ease
++r(992)
+  .accordion
+    &__box
+      max-width: 330px        
++r(1200)
+  .accordion
+    &__box
+      max-width: 360px     
