@@ -514,7 +514,7 @@ a
     &__item
       flex-basis: 0
       flex-grow: 1
-      max-width: 100%
+      width: 100%
       margin: 0
     &__img
       height: 550px  
@@ -550,8 +550,47 @@ a
 +r(992)
   .accordion
     &__box
-      max-width: 330px        
+      width: 330px        
 +r(1200)
   .accordion
     &__box
-      max-width: 360px     
+      width: 360px     
++comment("donate style")       
+.donate
+  padding: 65px 0 40px
+  background: url(../img/donatebg.jpg) no-repeat
+  background-size: cover
+  overflow: hidden
+  &__heading
+    margin-bottom: 30px
+  &__text
+    font: 300 16px/21px $font-pf
+    color: #313431  
+    text-align: center
+  &__btn
+    margin-top: 15px  
+  &__img
+    padding-top: 40px   
++r(768)
+  .donate
+    padding: 80px 0  
+    &__heading
+      text-align: left
+    &__text
+      text-align: left  
+    &__btn
+      margin-top: 30px  
+    &__img
+      padding: 0
+      position: relative
+      img
+        position: absolute
+        top: 0
+        left: 0
+        max-width: none  
++r(992)
+  .donate
+    padding-bottom: 120px
++r(1200)
+  .donate
+    padding-bottom: 160px            

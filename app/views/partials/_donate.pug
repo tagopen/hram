@@ -1,0 +1,14 @@
+section.donate
+  .container
+    .row
+      .col-24.text-center
+        .row
+          .col-24.col-md-18.col-lg-16.col-xl-14
+            .heading.donate__heading!=content.index.donate.heading
+            .donate__text!=content.index.donate.text
+            .text-center.text-md-left
+              a.btn.donate__btn(href!=content.index.donate.btn.href)!=content.index.donate.btn.text
+                +svg('arrow-right-o')(class="btn__ic")
+          .col-24.col-md-6.col-lg-8.col-xl-10
+            .donate__img
+              img.img-fluid(src!=content.index.donate.img.src, alt!=content.index.donate.img.alt)      

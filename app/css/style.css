@@ -5300,7 +5300,7 @@ a:focus {
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    max-width: 100%;
+    width: 100%;
     margin: 0;
   }
   .accordion__img {
@@ -5347,12 +5347,77 @@ a:focus {
 
 @media only screen and (min-width: 992px) {
   .accordion__box {
-    max-width: 330px;
+    width: 330px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .accordion__box {
-    max-width: 360px;
+    width: 360px;
+  }
+}
+
+/* ---------------------------------------- */
+/* D O N A T E    S T Y L E                 */
+/* ---------------------------------------- */
+.donate {
+  padding: 65px 0 40px;
+  background: url(../img/donatebg.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.donate__heading {
+  margin-bottom: 30px;
+}
+
+.donate__text {
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+  color: #313431;
+  text-align: center;
+}
+
+.donate__btn {
+  margin-top: 15px;
+}
+
+.donate__img {
+  padding-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .donate {
+    padding: 80px 0;
+  }
+  .donate__heading {
+    text-align: left;
+  }
+  .donate__text {
+    text-align: left;
+  }
+  .donate__btn {
+    margin-top: 30px;
+  }
+  .donate__img {
+    padding: 0;
+    position: relative;
+  }
+  .donate__img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .donate {
+    padding-bottom: 120px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .donate {
+    padding-bottom: 160px;
   }
 }
