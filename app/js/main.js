@@ -155,13 +155,16 @@ var GRVE = GRVE || {};
         infinite: true,
         focusOnSelect: true,
         dots: true,
+        adaptiveHeight: true,
         appendDots: $('.js-quote-dots'),
+        mobileFirst: true,
+        accessibility: false,
+        swipeToSlide: '15',
         responsive: [
         {
-          breakpoint: 1600,
+          breakpoint: 1366,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
+            adaptiveHeight: false
           }
         }
         ]
@@ -177,13 +180,16 @@ var GRVE = GRVE || {};
         nextArrow: '<button type="button" data-role="none" aria-label="Next" role="button" class="slick-next slick-arrow">Next<svg class="svg svg--arrow-right slick-arrow__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
         infinite: true,
         focusOnSelect: true,
+        adaptiveHeight: true,
+        mobileFirst: true,
+        accessibility: false,
+        swipeToSlide: '15',
         dots: false,
         responsive: [
         {
-          breakpoint: 1600,
+          breakpoint: 1366,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
+            adaptiveHeight: false
           }
         }
         ]

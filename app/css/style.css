@@ -5781,6 +5781,7 @@ a:focus {
   margin-top: 40px;
   padding: 25px;
   text-align: center;
+  cursor: pointer;
 }
 
 .gallery__col--hidden {
@@ -6194,30 +6195,59 @@ a:focus {
 }
 
 .service__item {
-  background: #fff;
-  padding: 10px;
   margin-bottom: 30px;
+  height: 100%;
 }
 
-.service__box {
+.sv-card {
+  background: #fff;
+  padding: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 30px 0;
+}
+
+.sv-card__box {
   position: relative;
   -webkit-box-shadow: inset 0 0 0 1px #e5e5e5;
           box-shadow: inset 0 0 0 1px #e5e5e5;
   text-align: center;
-  padding: 15px 10px 35px;
+  padding: 15px 10px;
   overflow: hidden;
 }
 
-.service__icon {
+.sv-card__icon {
   margin-bottom: 15px;
 }
 
-.service__text {
+.sv-card__text {
   font: 700 italic 20px/22px "PlayfairDisplay", sans-serif;
   color: #4b8078;
 }
 
-.service__corner {
+.sv-card__corner {
   position: absolute;
   display: inline-block;
   height: 20px;
@@ -6228,7 +6258,7 @@ a:focus {
   background: #fff;
 }
 
-.service__corner:before {
+.sv-card__corner:before {
   content: '';
   height: 1px;
   width: 1px;
@@ -6240,7 +6270,7 @@ a:focus {
   border: 1px solid #e5e5e5;
 }
 
-.service__corner--tl {
+.sv-card__corner--tl {
   top: -10px;
   left: -10px;
   -webkit-transform: rotate(45deg);
@@ -6249,7 +6279,7 @@ a:focus {
   border-left: 1px solid #e5e5e5;
 }
 
-.service__corner--tr {
+.sv-card__corner--tr {
   top: -10px;
   right: -10px;
   border-left: 1px solid #e5e5e5;
@@ -6258,7 +6288,7 @@ a:focus {
           transform: rotate(135deg);
 }
 
-.service__corner--bl {
+.sv-card__corner--bl {
   bottom: -10px;
   left: -10px;
   -webkit-transform: rotate(-45deg);
@@ -6266,7 +6296,7 @@ a:focus {
           transform: rotate(-45deg);
 }
 
-.service__corner--br {
+.sv-card__corner--br {
   bottom: -10px;
   right: -10px;
   -webkit-transform: rotate(225deg);

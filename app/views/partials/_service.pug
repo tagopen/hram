@@ -5,14 +5,14 @@ section.service
         .heading.heading--dark.service__heading!=content.index.service.heading
     .row.justify-content-center
       .col-24.col-md-20.col-lg-24
-        .row
+        .row.align-items-stretch
           each item, i in content.index.service.items
             .col-24.col-md-12.col-lg-6.service__col
-              .service__item
-                .service__box
-                  .service__corner.service__corner--tl
-                  .service__corner.service__corner--tr
-                  .service__corner.service__corner--bl
-                  .service__corner.service__corner--br 
-                  i.ic.ic--t.service__icon
-                  .service__text!=item.text
+              .service__item.sv-card
+                .sv-card__box
+                  i.sv-card__corner.sv-card__corner--tl
+                  i.sv-card__corner.sv-card__corner--tr
+                  i.sv-card__corner.sv-card__corner--bl
+                  i.sv-card__corner.sv-card__corner--br 
+                  i.ic.ic--t.sv-card__icon
+                  .sv-card__text!=item.text
