@@ -213,26 +213,36 @@ var GRVE = GRVE || {};
 
       this.$toggler.on('click', function() {
         $(this).toggleClass(self.navbarTogglerOpen);
-        self.$navbar.toggleClass(self.navbarOpen);
+        if (self.$navbar.hasClass(self.navbarTogglerOpen)) {
+          self.showNavbar('hide');
+        } else {
+          self.showNavbar('show');
+        }
       });
 
       this.$backdrop.on('click', function() {
-        self.$toggler.toggleClass(self.navbarTogglerOpen);
-        self.$navbar.toggleClass(self.navbarOpen);
+        self.showNavbar('hide');
       });
 
       this.$navbarLink.on('click', function() {
         self.$navbarLink.removeClass(self.navbarLinkActive)
         $(this).addClass(self.navbarLinkActive);
 
-        self.$toggler.toggleClass(self.navbarTogglerOpen);
-        self.$navbar.toggleClass(self.navbarOpen);
+        self.showNavbar('hide');
       });
 
       this.$close.on('click', function() {
-        self.$toggler.toggleClass(self.navbarTogglerOpen);
-        self.$navbar.toggleClass(self.navbarOpen);
+        self.showNavbar('hide');
       });
+    },
+    showNavbar: function(status) {
+      if (status === 'hide') {
+        this.$toggler.removeClass(this.navbarTogglerOpen);
+        this.$navbar.removeClass(this.navbarOpen);
+      } else if (status === 'show') {
+        this.$toggler.addClass(this.navbarTogglerOpen);
+        this.$navbar.addClass(this.navbarOpen);
+      }
     }
   };
 
