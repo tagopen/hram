@@ -54,6 +54,7 @@ var GRVE = GRVE || {};
       GRVE.slickInit.init();
       GRVE.showMore.init();
       GRVE.accordion.init();
+      GRVE.navbar.init();
     }
   };
 
@@ -104,6 +105,8 @@ var GRVE = GRVE || {};
     }
   };
 
+  // # Show all columns
+  // ============================================================================= //
   GRVE.showMore = {
     init: function() {
       $('[data-show-all]').on('click', function (e) {
@@ -137,6 +140,8 @@ var GRVE = GRVE || {};
     }
   };
 
+  // # Initialize slick carousel
+  // ============================================================================= //
   GRVE.slickInit = {
     init: function(){
       this.quoteCarousel();
@@ -195,7 +200,39 @@ var GRVE = GRVE || {};
 
   GRVE.navbar = {
     init: function() {
-      
+      this.$toggler =             $('[data-toggler]');
+      this.target =               this.$toggler.data('toggler');
+      this.$navbar =              $(this.target);
+      this.$backdrop =            this.$navbar.find('.navbar__bg');
+      this.$navbarLink =          this.$navbar.find('a.navbar__link[href*="#"]:not([href="#"])');
+      this.$close =               this.$navbar.find(".navbar__close");
+      this.navbarLinkActive =     "navbar__link--active";
+      this.navbarTogglerOpen =    "nv-toggler--open";
+      this.navbarOpen =           "navbar--open";
+      self =                      this;
+
+      this.$toggler.on('click', function() {
+        $(this).toggleClass(self.navbarTogglerOpen);
+        self.$navbar.toggleClass(self.navbarOpen);
+      });
+
+      this.$backdrop.on('click', function() {
+        self.$toggler.toggleClass(self.navbarTogglerOpen);
+        self.$navbar.toggleClass(self.navbarOpen);
+      });
+
+      this.$navbarLink.on('click', function() {
+        self.$navbarLink.removeClass(self.navbarLinkActive)
+        $(this).addClass(self.navbarLinkActive);
+
+        self.$toggler.toggleClass(self.navbarTogglerOpen);
+        self.$navbar.toggleClass(self.navbarOpen);
+      });
+
+      this.$close.on('click', function() {
+        self.$toggler.toggleClass(self.navbarTogglerOpen);
+        self.$navbar.toggleClass(self.navbarOpen);
+      });
     }
   };
 

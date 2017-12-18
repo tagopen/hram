@@ -43,6 +43,15 @@ $svg-calendar-offset-y: px;
 $svg-calendar-image: "../img/sprite.svg";
 $svg-calendar: ( "calendar", em(24), em(24), px, px, "../img/sprite.svg" );
 
+// camera
+$svg-camera-name: "camera";
+$svg-camera-width: em(18);
+$svg-camera-height: em(14);
+$svg-camera-offset-x: px;
+$svg-camera-offset-y: px;
+$svg-camera-image: "../img/sprite.svg";
+$svg-camera: ( "camera", em(18), em(14), px, px, "../img/sprite.svg" );
+
 // chat
 $svg-chat-name: "chat";
 $svg-chat-width: em(21);
@@ -69,6 +78,24 @@ $svg-close-offset-x: px;
 $svg-close-offset-y: px;
 $svg-close-image: "../img/sprite.svg";
 $svg-close: ( "close", em(24), em(24), px, px, "../img/sprite.svg" );
+
+// info
+$svg-info-name: "info";
+$svg-info-width: em(18);
+$svg-info-height: em(19);
+$svg-info-offset-x: px;
+$svg-info-offset-y: px;
+$svg-info-image: "../img/sprite.svg";
+$svg-info: ( "info", em(18), em(19), px, px, "../img/sprite.svg" );
+
+// list
+$svg-list-name: "list";
+$svg-list-width: em(17);
+$svg-list-height: em(17);
+$svg-list-offset-x: px;
+$svg-list-offset-y: px;
+$svg-list-image: "../img/sprite.svg";
+$svg-list: ( "list", em(17), em(17), px, px, "../img/sprite.svg" );
 
 // map
 $svg-map-name: "map";
@@ -101,4 +128,4 @@ $svg-person: ( "person", em(19), em(22), px, px, "../img/sprite.svg" );
 $svg-spritesheet-width: px;
 $svg-spritesheet-height: px;
 $svg-spritesheet-image: "../img/sprite.svg";
-$svg-spritesheet-sprites: ( $svg-arrow-left,  $svg-arrow-left-o,  $svg-arrow-right,  $svg-arrow-right-o,  $svg-calendar,  $svg-chat,  $svg-church,  $svg-close,  $svg-map,  $svg-map-pin,  $svg-person,  );
+$svg-spritesheet-sprites: ( $svg-arrow-left,  $svg-arrow-left-o,  $svg-arrow-right,  $svg-arrow-right-o,  $svg-calendar,  $svg-camera,  $svg-chat,  $svg-church,  $svg-close,  $svg-info,  $svg-list,  $svg-map,  $svg-map-pin,  $svg-person,  );

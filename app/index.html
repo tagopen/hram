@@ -36,45 +36,93 @@
     <meta name="twitter:image" content="/img/logo/microformat.png"/>
     <!-- build:css css/bundle.min.css-->
     <!-- Fonts CSS-->
-    <link rel="stylesheet" href="css/fonts.css?v=1513549673041">
+    <link rel="stylesheet" href="css/fonts.css?v=1513596924588">
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="css/bootstrap.css?v=1513549673041">
+    <link rel="stylesheet" href="css/bootstrap.css?v=1513596924588">
     <!-- Font-Awesome CSS-->
-    <link rel="stylesheet" href="css/font-awesome.css?v=1513549673041">
+    <link rel="stylesheet" href="css/font-awesome.css?v=1513596924588">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1513549673041">
+    <link rel="stylesheet" href="css/style.css?v=1513596924588">
     <!-- endbuild-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
     <!-- WARNING: Respond.js doesn't work if you view the page via file://--><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js?v=1513549673041"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js?v=1513549673041"></script>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js?v=1513596924588"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js?v=1513596924588"></script>
 <![endif]-->
   </head>
   <body class="body">
     <header class="header">
-      <div class="container">
-        <div class="col">
-          <div class="nav"></div>
+      <section class="nav header__nav">
+        <div class="container nav__container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-auto"><a class="nav__link nv-map" href="#map">
+                <svg class="svg svg--map nv-map__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                  <use xlink:href="img/sprite.svg#map"></use>
+                </svg><span class="nv-map__text">Как добраться?</span></a></div>
+            <div class="col-auto order-md-1">
+              <div class="nv-nav-toggler nav__toggler">
+                <button class="nv-toggler nv-nav-toggler__btn" id="nav-toggler" type="button" data-toggler=".js-navbar-1"><span class="nv-toggler__line"></span><span class="nv-toggler__line"></span><span class="nv-toggler__line"></span></button>
+                <label class="nv-toggler-text nv-nav-toggler__text" for="nav-toggler">Меню</label>
+              </div>
+            </div>
+            <div class="col-24 col-md">
+              <div class="nv-descr nav__descr">
+                <svg class="svg svg--church nv-descr__icon nv-descr__icon--md-fixed" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                  <use xlink:href="img/sprite.svg#church"></use>
+                </svg>
+                <p class="nv-descr__text">Украинская Каноническая Православная <nobr>Церковь Днепропетровская Епархия</nobr></p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="header__content">
+        <nav class="navbar navbar--ferdinand nav__navbar js-navbar-1">
+          <div class="navbar__bg"></div>
+          <div class="navbar__box">
+            <ul class="navbar__list">
+              <li class="navbar__item">
+                <div class="navbar__link navbar__link--between">
+                  <h3 class="navbar__heading">Меню</h3>
+                  <button class="nv-close navbar__close">
+                    <svg class="svg svg--close nv-close__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="navbar__item"><a class="link link navbar__link js-scroll-trigger navbar__link--active" href="#calendar"> 
+                  <svg class="svg svg--list navbar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                    <use xlink:href="img/sprite.svg#list"></use>
+                  </svg><span class="navbar__text">Расписание богослужений</span></a></li>
+              <li class="navbar__item"><a class="link link navbar__link js-scroll-trigger" href="#about"> 
+                  <svg class="svg svg--info navbar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                    <use xlink:href="img/sprite.svg#info"></use>
+                  </svg><span class="navbar__text">О храме</span></a></li>
+              <li class="navbar__item"><a class="link link navbar__link js-scroll-trigger" href="#life"> 
+                  <svg class="svg svg--camera navbar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                    <use xlink:href="img/sprite.svg#camera"></use>
+                  </svg><span class="navbar__text">Жизнь храма</span></a></li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+      <section class="intro header__intro">
         <div class="container">
           <div class="row">
             <div class="col-24 col-md-14 col-lg-12">
-              <div class="header__box">
-                <div class="header__heading">
-                  <h1 class="header__heading--text">Храм преподобного Серафима Саровского и Умиления Пресвятой Богородицы</h1><i class="ic ic--venzel"></i>
+              <div class="intro__box">
+                <div class="intro__heading">
+                  <h2 class="intro__heading--text">Храм преподобного Серафима Саровского и Умиления Пресвятой Богородицы</h2><i class="ic ic--venzel"></i>
                 </div>
-                <div class="header__text">Храм открыт</div><a class="btn header__btn" href="">Подробнее
+                <div class="intro__text">Храм открыт</div><a class="btn intro__btn" href="">Подробнее
                   <svg class="svg svg--arrow-right-o btn__ic" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
                     <use xlink:href="img/sprite.svg#arrow-right-o"></use>
                   </svg></a>
               </div>
             </div>
-            <div class="col-24 col-md-10 col-lg-12">     </div>
+            <div class="col-24 col-md-10 col-lg-12"> </div>
           </div>
         </div>
-      </div>
+      </section>
     </header>
     <main class="main">
       <section class="quote">
@@ -640,21 +688,21 @@
     <div class="footer"></div>
     <!-- build:js js/bundle.min.js-->
     <!-- Popper JavaScript-->
-    <script src="js/popper.js?v=1513549673041"></script>
+    <script src="js/popper.js?v=1513596924588"></script>
     <!-- jQuery-->
-    <script src="js/jquery.js?v=1513549673041"></script>
+    <script src="js/jquery.js?v=1513596924588"></script>
     <!-- Bootstrap JavaScript-->
-    <script src="js/bootstrap.js?v=1513549673041"></script>
+    <script src="js/bootstrap.js?v=1513596924588"></script>
     <!-- Old browsers reject JavaScript-->
-    <script src="js/jquery.reject.js?v=1513549673041"></script>
+    <script src="js/jquery.reject.js?v=1513596924588"></script>
     <!-- Wowjs animation JavaScript-->
-    <script src="js/wow.js?v=1513549673041"></script>
+    <script src="js/wow.js?v=1513596924588"></script>
     <!-- Slick-Slider JavaScript-->
-    <script src="js/slick.js?v=1513549673041"></script>
+    <script src="js/slick.js?v=1513596924588"></script>
     <!-- FancyApps3 JavaScript-->
-    <script src="js/jquery.fancybox.js?v=1513549673041">   </script>
+    <script src="js/jquery.fancybox.js?v=1513596924588">   </script>
     <!-- Custom JavaScript-->
-    <script src="js/main.js?v=1513549673041"></script>
+    <script src="js/main.js?v=1513596924588"></script>
     <!-- endbuild-->
   </body>
 </html>

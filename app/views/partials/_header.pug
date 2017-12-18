@@ -1,16 +1,48 @@
 header.header
-  .container
-    .col
-      .nav
-  .header__content
+  - var navbar = page.header.navbar
+  section.nav.header__nav
+    .container.nav__container
+      .row.justify-content-between.align-items-center
+        .col-auto
+          a.nav__link.nv-map(href=navbar.navigation.href)
+            +svg(navbar.navigation.icon)(class="nv-map__icon")
+            span.nv-map__text!= navbar.navigation.text
+        .col-auto.order-md-1
+          .nv-nav-toggler.nav__toggler
+            button#nav-toggler.nv-toggler.nv-nav-toggler__btn(type="button", data-toggler=".js-navbar-1")
+              span.nv-toggler__line
+              span.nv-toggler__line
+              span.nv-toggler__line
+            label.nv-toggler-text.nv-nav-toggler__text(for="nav-toggler")!= navbar.nav.text
+        .col-24.col-md
+          .nv-descr.nav__descr
+            +svg(navbar.descr.icon)(class="nv-descr__icon nv-descr__icon--md-fixed")
+            p.nv-descr__text!= navbar.descr.text
+    
+    nav.navbar.navbar--ferdinand.nav__navbar.js-navbar-1
+      .navbar__bg
+      .navbar__box
+        ul.navbar__list
+          li.navbar__item
+            .navbar__link.navbar__link--between
+              h3.navbar__heading!= navbar.nav.text
+              button.nv-close.navbar__close
+                +svg(navbar.nav.close.icon)(class="nv-close__icon")
+          each item, i in navbar.nav.items
+            li.navbar__item
+              a.link.link.navbar__link.js-scroll-trigger(href=item.href, class={"navbar__link--active" : i == 0}) 
+                +svg(item.icon)(class="navbar__icon")
+                span.navbar__text!= item.text
+  - var intro = page.header.intro
+  section.intro.header__intro
     .container
       .row
         .col-24.col-md-14.col-lg-12
-          .header__box
-            .header__heading
-              h1.header__heading--text!=content.index.header.heading
+          .intro__box
+            .intro__heading
+              h2.intro__heading--text!=intro.heading
               i.ic.ic--venzel
-            .header__text!=content.index.header.text
-            a.btn.header__btn(href!=content.index.header.btn.href)!=content.index.header.btn.text
+            .intro__text!=intro.text
+            a.btn.intro__btn(href=intro.btn.href)!=intro.btn.text
               +svg('arrow-right-o')(class="btn__ic")
-        .col-24.col-md-10.col-lg-12      
+        .col-24.col-md-10.col-lg-12 
