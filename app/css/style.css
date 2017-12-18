@@ -6322,3 +6322,78 @@ a:focus {
     margin-bottom: 80px;
   }
 }
+
+/* ---------------------------------------- */
+/* B U I L D    S T Y L E                   */
+/* ---------------------------------------- */
+.build {
+  padding: 60px 0;
+  overflow: hidden;
+  background: url(../img/buildbg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.build__heading {
+  margin-bottom: 35px;
+}
+
+.build__text {
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+  color: #313431;
+  text-align: center;
+}
+
+.build__btn {
+  white-space: normal;
+  margin-top: 15px;
+}
+
+.build__img {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.build__img img {
+  display: inline-block;
+  max-width: none;
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+  margin-left: -120px;
+}
+
+@media only screen and (min-width: 400px) {
+  .build__img img {
+    margin-left: -60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .build {
+    padding: 70px 0 100px;
+  }
+  .build__heading {
+    text-align: left;
+  }
+  .build__text {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .build__img {
+    position: relative;
+    right: -30px;
+  }
+  .build__img img {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
+}

@@ -1084,3 +1084,51 @@ a
     padding-bottom: 70px
     &__heading
       margin-bottom: 80px          
++comment("build style")
+.build
+  padding: 60px 0
+  overflow: hidden
+  background: url(../img/buildbg.jpg) no-repeat
+  background-size: cover
+  background-position: center
+  &__heading
+    margin-bottom: 35px
+  &__text
+    font: 300 16px/21px $font-pf
+    color: #313431  
+    text-align: center
+  &__btn
+    white-space: normal
+    margin-top: 15px  
+  &__img
+    margin-top: 25px
+    text-align: center
+    img  
+      display: inline-block
+      max-width: none
+      transform: scale(0.8)
+      margin-left: -120px
++r(400)
+  .build
+    &__img
+      img
+        margin-left: -60px    
++r(768)
+  .build
+    padding: 70px 0 100px  
+    &__heading
+      text-align: left  
+    &__text
+      text-align: left    
++r(992)
+  .build
+    &__img
+      position: relative
+      right: -30px
+      img
+        margin: 0
+        position: absolute
+        top: 0
+        right: 0
+        margin-right: 10px  
+        transform: scale(1)
