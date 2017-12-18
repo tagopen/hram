@@ -1,0 +1,18 @@
+section.service
+  .container
+    .row
+      .col-24.text-center
+        .heading.heading--dark.service__heading!=content.index.service.heading
+    .row.justify-content-center
+      .col-24.col-md-20.col-lg-24
+        .row
+          each item, i in content.index.service.items
+            .col-24.col-md-12.col-lg-6.service__col
+              .service__item
+                .service__box
+                  .service__corner.service__corner--tl
+                  .service__corner.service__corner--tr
+                  .service__corner.service__corner--bl
+                  .service__corner.service__corner--br 
+                  i.ic.ic--t.service__icon
+                  .service__text!=item.text

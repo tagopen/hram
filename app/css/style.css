@@ -4382,12 +4382,18 @@ li.fancybox-thumbs-loading {
 .ic--quoteleft:before {
   width: 22px;
   height: 16px;
-  background: url(../img/sprite.png) -33px -24px no-repeat;
+  background: url(../img/sprite.png) -70px -24px no-repeat;
 }
 
 .ic--quoteright:before {
   width: 23px;
   height: 16px;
+  background: url(../img/sprite.png) -37px -24px no-repeat;
+}
+
+.ic--t:before {
+  width: 27px;
+  height: 25px;
   background: url(../img/sprite.png) 0px -24px no-repeat;
 }
 
@@ -4589,6 +4595,10 @@ li.fancybox-thumbs-loading {
 .heading {
   font: 700 italic 28px/36px "PlayfairDisplay", sans-serif;
   color: #4b8078;
+}
+
+.heading--dark {
+  color: #313431;
 }
 
 @media only screen and (min-width: 768px) {
@@ -5614,31 +5624,157 @@ a:focus {
 .gallery__link--1 {
   background: url(../img/gallery1.jpg) no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .gallery__link--2 {
   background: url(../img/gallery2.jpg) no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .gallery__link--3 {
   background: url(../img/gallery3.jpg) no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .gallery__link--4 {
   background: url(../img/gallery4.jpg) no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .gallery__link--5 {
   background: url(../img/gallery5.jpg) no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .gallery__link--6 {
   background: url(../img/gallery6.jpg) no-repeat;
   background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-1 {
+  background: url(../img/1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-2 {
+  background: url(../img/2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-3 {
+  background: url(../img/3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-4 {
+  background: url(../img/4.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-5 {
+  background: url(../img/5.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-6 {
+  background: url(../img/6.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-7 {
+  background: url(../img/7.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-8 {
+  background: url(../img/8.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-9 {
+  background: url(../img/9.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-10 {
+  background: url(../img/10.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-11 {
+  background: url(../img/11.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-12 {
+  background: url(../img/12.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-13 {
+  background: url(../img/13.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-14 {
+  background: url(../img/14.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-15 {
+  background: url(../img/15.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-16 {
+  background: url(../img/16.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-17 {
+  background: url(../img/17.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-18 {
+  background: url(../img/18.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-19 {
+  background: url(../img/19.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__link--hidden-20 {
+  background: url(../img/20.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .gallery__btn {
@@ -5647,8 +5783,19 @@ a:focus {
   text-align: center;
 }
 
+.gallery__col--hidden {
+  display: none;
+  opacity: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
 .gallery__video {
   position: relative;
+  height: 280px;
+  background: url(../img/video.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .gallery__play {
@@ -5792,6 +5939,18 @@ a:focus {
           animation: rotate-360 3s linear infinite;
 }
 
+@media only screen and (min-width: 768px) {
+  .gallery__video {
+    height: 420px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .gallery__video {
+    height: 590px;
+  }
+}
+
 /* ---------------------------------------- */
 /* H I S T O R Y    S T Y L E               */
 /* ---------------------------------------- */
@@ -5841,9 +6000,34 @@ a:focus {
   margin-bottom: 25px;
 }
 
-.accordion__img--1, .accordion__img--2, .accordion__img--3, .accordion__img--4, .accordion__img--5 {
+.accordion__img--1 {
   background: url(../img/accordion1.jpg) no-repeat;
   background-size: cover;
+  background-position: center;
+}
+
+.accordion__img--2 {
+  background: url(../img/accordion2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.accordion__img--3 {
+  background: url(../img/accordion3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.accordion__img--4 {
+  background: url(../img/accordion4.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.accordion__img--5 {
+  background: url(../img/accordion5.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -5920,13 +6104,13 @@ a:focus {
 
 @media only screen and (min-width: 992px) {
   .accordion__box {
-    width: 330px;
+    max-width: 330px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .accordion__box {
-    width: 360px;
+    max-width: 360px;
   }
 }
 
@@ -5992,5 +6176,119 @@ a:focus {
 @media only screen and (min-width: 1200px) {
   .donate {
     padding-bottom: 160px;
+  }
+}
+
+/* ---------------------------------------- */
+/* S E R V I C E    S T Y L E               */
+/* ---------------------------------------- */
+.service {
+  padding: 75px 0 40px;
+  background: url(../img/servicebg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.service__heading {
+  margin: 55px;
+}
+
+.service__item {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.service__box {
+  position: relative;
+  -webkit-box-shadow: inset 0 0 0 1px #e5e5e5;
+          box-shadow: inset 0 0 0 1px #e5e5e5;
+  text-align: center;
+  padding: 15px 10px 35px;
+  overflow: hidden;
+}
+
+.service__icon {
+  margin-bottom: 15px;
+}
+
+.service__text {
+  font: 700 italic 20px/22px "PlayfairDisplay", sans-serif;
+  color: #4b8078;
+}
+
+.service__corner {
+  position: absolute;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border-right: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.service__corner:before {
+  content: '';
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px solid #e5e5e5;
+}
+
+.service__corner--tl {
+  top: -10px;
+  left: -10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-left: 1px solid #e5e5e5;
+}
+
+.service__corner--tr {
+  top: -10px;
+  right: -10px;
+  border-left: 1px solid #e5e5e5;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.service__corner--bl {
+  bottom: -10px;
+  left: -10px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.service__corner--br {
+  bottom: -10px;
+  right: -10px;
+  -webkit-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+          transform: rotate(225deg);
+  border-right: 1px solid #e5e5e5;
+}
+
+@media only screen and (min-width: 768px) {
+  .service {
+    padding-bottom: 30px;
+  }
+  .service__heading {
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .service {
+    padding-bottom: 70px;
+  }
+  .service__heading {
+    margin-bottom: 80px;
   }
 }

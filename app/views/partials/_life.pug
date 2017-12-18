@@ -21,11 +21,14 @@ section.life
               a.gallery__link.gallery__link--6(data-fancybox="gallery" href="img/gallery6.jpg")
         .col-24.col-lg-18.gallery__col   
           .gallery__video
-            img.img-fluid(src="img/video.jpg") 
+            
             .gallery__play
               i.fa.fa-play.gallery__icon(aria-hidden="true")
               .gallery__border.gallery__border--1
               .gallery__border.gallery__border--2  
+        each item, i in content.index.life.slides
+          .col-24.col-md-12.col-lg-6.gallery__col.gallery__col--hidden
+            a.gallery__link(class="gallery__link--hidden-"+(i+1), data-fancybox="gallery", href!=item.href)      
       .row
         .col-24.text-center
           button.btn.gallery__btn(type="button", data-show-all=".gallery__col")!=content.index.life.btn.text
