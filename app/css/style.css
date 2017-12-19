@@ -4628,7 +4628,7 @@ a:focus {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   color: #313431;
   font: 700 italic 18px/20px "PlayfairDisplay", sans-serif;
-  padding: 25px 60px 25px 25px;
+  padding: 25px 30px 25px 20px;
   min-width: 270px;
   text-align: left;
   -webkit-transition: all .3s ease;
@@ -4644,10 +4644,19 @@ a:focus {
 
 .btn__ic {
   position: absolute;
-  right: 30px;
+  right: 10px;
   top: 50%;
-  margin-top: -8px;
+  margin-top: -6px;
   opacity: 0.3;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn {
+    padding: 25px 60px 25px 25px;
+  }
+  .btn__ic {
+    right: 30px;
+  }
 }
 
 /* ------------------------------------------ */
@@ -6320,6 +6329,228 @@ a:focus {
   }
   .service__heading {
     margin-bottom: 80px;
+  }
+}
+
+/* ---------------------------------------- */
+/* N O T E    S T Y L E                     */
+/* ---------------------------------------- */
+.note {
+  padding: 60px 0 0;
+  overflow: hidden;
+}
+
+.note__heading {
+  margin-bottom: 30px;
+}
+
+.note__text {
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+  color: #313431;
+  margin-bottom: 20px;
+}
+
+.note__link {
+  display: inline;
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+  color: #4b8078;
+  border-bottom: 1px dashed #313431;
+}
+
+.note__image {
+  position: relative;
+  text-align: center;
+  min-height: 470px;
+}
+
+.note__image img {
+  position: absolute;
+  top: 0;
+  right: -190px;
+  display: inline-block;
+  max-width: none;
+}
+
+.nt-form {
+  background-color: #f8f8f8;
+  padding: 50px 10px;
+  margin: 0 -15px;
+}
+
+.nt-form__group {
+  position: relative;
+}
+
+.nt-form__input {
+  position: relative;
+  color: #313431;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  padding: 22px 25px 25px 70px;
+  border: 0;
+}
+
+.nt-form__input::-webkit-input-placeholder {
+  color: #313431;
+}
+
+.nt-form__input::-moz-placeholder {
+  color: #313431;
+}
+
+.nt-form__input:-ms-input-placeholder {
+  color: #313431;
+}
+
+.nt-form__input::placeholder {
+  color: #313431;
+}
+
+.nt-form__btn {
+  white-space: normal;
+}
+
+.nt-form__icon {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  color: #4b8078;
+}
+
+.radio-btn {
+  margin-bottom: 14px;
+}
+
+.radio-btn__control {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.radio-btn__control:checked + .radio-btn__box .radio-btn__icon:before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  margin: -2px 0 0 -2px;
+  height: 4px;
+  width: 4px;
+  background-color: #4b8078;
+}
+
+.radio-btn__box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin: 0;
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+  color: #313431;
+  cursor: pointer;
+}
+
+.radio-btn__icon {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 15px;
+  border: 1px solid #4b8078;
+  background-color: #fff;
+}
+
+@media only screen and (min-width: 480px) {
+  .note__image img {
+    right: -210px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .note {
+    position: relative;
+    padding: 60px 0 70px;
+  }
+  .note__heading {
+    margin-bottom: 40px;
+  }
+  .note__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 25;
+    right: -200px;
+    top: 170px;
+  }
+  .note__image img {
+    position: static;
+  }
+  .nt-form {
+    position: relative;
+    padding-left: 50px;
+  }
+  .nt-form:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    top: 0;
+    left: 99%;
+    width: 1100vw;
+    background-color: #f8f8f8;
+  }
+  .nt-form__box {
+    max-width: 350px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .nt-form__box {
+    max-width: 682px;
+  }
+  .note {
+    padding-top: 140px;
+  }
+  .note__image {
+    top: 70px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .note {
+    padding-top: 160px;
+  }
+  .note__image {
+    top: 0;
+    right: auto;
+    left: 54%;
+  }
+  .nt-form__box {
+    max-width: 725px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .note__image {
+    top: -30px;
   }
 }
 

@@ -1,0 +1,37 @@
+section.note
+  .note__image.d-none.d-md-block
+    img.img-fluid(src!=content.index.note.img.src, alt!=content.index.note.img.alt) 
+  .container
+    .row
+      .col-24.col-lg-15.col-xl-14
+        .note__heading
+          .note__text!=content.index.note.text
+          .note__link!=content.index.note.link
+      .col-24
+        .note__form.nt-form
+          form.form.js-form.nt-form__box(method="post")
+            .row
+              .col-24.col-lg-10.col-xl-12
+                fieldset.form-group.nt-form__group
+                  input.form-control.nt-form__input(type="text", name="name", placeholder!=content.index.note.form.placeholder1, required)
+                  +svg('person')(class="nt-form__icon")
+                fieldset.form-group.nt-form__group
+                  input.form-control.nt-form__input(type="text", name="names", placeholder!=content.index.note.form.placeholder2, required)
+                  +svg('chat')(class="nt-form__icon")
+              .col-24.col-lg-14.col-xl-12   
+                fieldset.form-group
+                  .radio-btn
+                    input#rbtn1.radio-btn__control.js-note(type='radio', name='note', data-note='#health', value="1")
+                    label.radio-btn__box(for='rbtn1')
+                      i.radio-btn__icon
+                      | Треба о здравии
+                  .radio-btn
+                    input#rbtn2.radio-btn__control.js-note(type='radio', name='note', value="0", data-note='#repose')
+                    label.radio-btn__box(for='rbtn2')
+                      i.radio-btn__icon
+                      | Треба о упокоении
+                .btn-groups.form__btn-groups
+                  button.btn.nt-form__btn(name='form', value!=content.index.note.form.value, type='submit', data-loading-text!=content.index.note.form.loading)!=content.index.note.form.text
+                    +svg('arrow-right-o')(class="btn__ic")
+          .note__image.d-md-none
+            img.img-fluid(src!=content.index.note.img.src, alt!=content.index.note.img.alt) 
