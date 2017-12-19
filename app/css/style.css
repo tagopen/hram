@@ -6616,10 +6616,14 @@ a:focus {
 }
 
 @media only screen and (min-width: 992px) {
+  .footer {
+    padding: 80px 0 0;
+  }
   .footer__heading {
     margin: 0;
   }
   .footer__map {
+    margin-top: 80px;
     height: 740px;
   }
 }
