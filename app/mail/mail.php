@@ -85,6 +85,24 @@
     array_push($data, $stack);
   }
 
+  if ( (!empty($_POST["names"])) && (isset($_POST["names"])) ) {
+    $post["user_names"] = $_POST["names"];
+    $stack = array(
+      "key"   => "Имя: ",
+      "value" => $post["user_names"]
+    );
+    array_push($data, $stack);
+  }
+
+  if ( (!empty($_POST["names"])) && (isset($_POST["names"])) ) {
+    $post["user_names"] = $_POST["names"];
+    $stack = array(
+      "key"   => "Имена: ",
+      "value" => $post["user_names"]
+    );
+    array_push($data, $stack);
+  }
+
   if ( (!empty($_POST["message"])) && (isset($_POST["message"])) ) {
     $post["user_message"] = $_POST["message"];
     $stack = array(
@@ -125,15 +143,15 @@
     array_push($data, $stack);
   }
 
-  if ( !empty($_POST["material"])  && (isset($_POST["material"])) ) {
-    if (is_array($_POST['material'])) {
-      $post["material"] = implode(", ", $_POST["material"]);
+  if ( !empty($_POST["note"])  && (isset($_POST["note"])) ) {
+    if (is_array($_POST['note'])) {
+      $post["note"] = implode(", ", $_POST["note"]);
     } else {
-      $post["material"] = $_POST["material"];
+      $post["note"] = $_POST["note"];
     }
     $stack = array(
-      "key"   => "Чем зашивать: ",
-      "value" => $post["material"]
+      "key"   => "Треба: ",
+      "value" => $post["note"]
     );
     array_push($data, $stack);
   }

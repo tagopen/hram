@@ -11,29 +11,18 @@ $(function() {
       var url                = $form.attr('action'),
           form               = $form.find('[type=submit]').val(),
           name               = $form.find('[name=name]').val(),
+          names              = $form.find('[name=names]').val(),
           email              = $form.find('[name=email]').val(),
           phone              = $form.find('[name=phone]').val(),
           message            = $form.find('[name=message]').val(),
           time               = $form.find('[name=time]').val(),
-          method             = $form.find('[name=method]').val(),
-          range1             = $form.find('[name=range1]').val(),
-          range2             = $form.find('[name=range2]').val(),
-          period             = new Array(),
-          material           = new Array();
+          note               = new Array();
 
-      $form.find("[name^=\"period\"]:checked").each(function() {
+      $form.find("[name^=\"note\"]:checked").each(function() {
         if ($(this).prop("checked")) {
           var radioText = $(this).siblings().text();
 
-          period.push($.trim(radioText));
-        }
-      });
-
-      $form.find("[name^=\"material\"]:checked").each(function() {
-        if ($(this).prop("checked")) {
-          var radioText = $(this).siblings().text();
-
-          material.push($.trim(radioText));
+          note.push($.trim(radioText));
         }
       });
 
@@ -43,15 +32,12 @@ $(function() {
         data: {
           form: $.trim(form),
           name: $.trim(name),
+          names: $.trim(names),
           phone: $.trim(phone),
           email: $.trim(email),
-          method: $.trim(method),
           message: $.trim(message),
           time: $.trim(time),
-          period: period,
-          material: material,
-          range1: range1,
-          range2: range2,
+          note: note,
         },
         cache: false,
         success: function(response) {
