@@ -4359,438 +4359,6 @@ li.fancybox-thumbs-loading {
   }
 }
 
-.noselect {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-h4 {
-  width: 75%;
-  text-align: center;
-  font-family: 'Droid Sans Mono';
-  font-weight: normal;
-  color: white;
-  font-size: 14px;
-  margin: 0 auto 1em auto;
-  padding: 1em;
-  background: #b63642;
-}
-
-h5 {
-  font-size: 1em;
-  font-weight: bold;
-}
-
-p {
-  text-align: center;
-  font-family: 'Droid Sans Mono';
-  margin: 3em auto 1em auto;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  border-bottom: 2px solid #414141;
-  background: #f4f4f4;
-}
-
-.left-align {
-  text-align: left;
-}
-
-.right-align {
-  text-align: right;
-}
-
-.cal1 {
-  margin: 30px auto;
-  max-width: 600px;
-  font-family: 'Droid Sans Mono';
-  font-size: 14px;
-}
-
-.cal1 .clndr .clndr-controls {
-  display: inline-block;
-  width: 100%;
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.cal1 .clndr .clndr-controls .month {
-  float: left;
-  width: 33%;
-  text-align: center;
-}
-
-.cal1 .clndr .clndr-controls .clndr-control-button {
-  float: left;
-  width: 33%;
-}
-
-.cal1 .clndr .clndr-controls .clndr-control-button.rightalign {
-  text-align: right;
-  width: 34%;
-}
-
-.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button, .cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button {
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button:hover, .cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button:hover {
-  background: #ddd;
-}
-
-.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button.inactive, .cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button.inactive {
-  opacity: 0.5;
-}
-
-.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button.inactive:hover, .cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button.inactive:hover {
-  background: none;
-  cursor: default;
-}
-
-.cal1 .clndr .clndr-table {
-  table-layout: fixed;
-  width: 100%;
-}
-
-.cal1 .clndr .clndr-table .header-days {
-  height: 30px;
-  font-size: 10px;
-  background: #0D70A6;
-}
-
-.cal1 .clndr .clndr-table .header-days .header-day {
-  vertical-align: middle;
-  text-align: center;
-  border-left: 1px solid #000000;
-  border-top: 1px solid #000000;
-  color: #fff;
-}
-
-.cal1 .clndr .clndr-table .header-days .header-day:last-child {
-  border-right: 1px solid #000000;
-}
-
-.cal1 .clndr .clndr-table tr {
-  height: 85px;
-}
-
-.cal1 .clndr .clndr-table tr td {
-  vertical-align: top;
-}
-
-.cal1 .clndr .clndr-table tr .day {
-  border-left: 1px solid #000000;
-  border-top: 1px solid #000000;
-  width: 100%;
-  height: inherit;
-}
-
-.cal1 .clndr .clndr-table tr .day:hover {
-  background: #eee;
-}
-
-.cal1 .clndr .clndr-table tr .day.today, .cal1 .clndr .clndr-table tr .day.my-today {
-  background: #9AD6E3;
-}
-
-.cal1 .clndr .clndr-table tr .day.today:hover, .cal1 .clndr .clndr-table tr .day.my-today:hover {
-  background: #72c6d8;
-}
-
-.cal1 .clndr .clndr-table tr .day.today.event, .cal1 .clndr .clndr-table tr .day.my-today.event {
-  background: #a7dbc1;
-}
-
-.cal1 .clndr .clndr-table tr .day.event, .cal1 .clndr .clndr-table tr .day.my-event {
-  background: #B4E09F;
-}
-
-.cal1 .clndr .clndr-table tr .day.event:hover, .cal1 .clndr .clndr-table tr .day.my-event:hover {
-  background: #96d478;
-}
-
-.cal1 .clndr .clndr-table tr .day.inactive, .cal1 .clndr .clndr-table tr .day.my-inactive {
-  background: #ddd;
-}
-
-.cal1 .clndr .clndr-table tr .day:last-child {
-  border-right: 1px solid #000000;
-}
-
-.cal1 .clndr .clndr-table tr .day .day-contents {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 8px;
-  font-size: 12px;
-  text-align: right;
-}
-
-.cal1 .clndr .clndr-table tr .empty, .cal1 .clndr .clndr-table tr .adjacent-month, .cal1 .clndr .clndr-table tr .my-empty, .cal1 .clndr .clndr-table tr .my-adjacent-month {
-  border-left: 1px solid #000000;
-  border-top: 1px solid #000000;
-  width: 100%;
-  height: inherit;
-  background: #eee;
-}
-
-.cal1 .clndr .clndr-table tr .empty:hover, .cal1 .clndr .clndr-table tr .adjacent-month:hover, .cal1 .clndr .clndr-table tr .my-empty:hover, .cal1 .clndr .clndr-table tr .my-adjacent-month:hover {
-  background: #ddd;
-}
-
-.cal1 .clndr .clndr-table tr .empty:last-child, .cal1 .clndr .clndr-table tr .adjacent-month:last-child, .cal1 .clndr .clndr-table tr .my-empty:last-child, .cal1 .clndr .clndr-table tr .my-adjacent-month:last-child {
-  border-right: 1px solid #000000;
-}
-
-.cal1 .clndr .clndr-table tr:last-child .day, .cal1 .clndr .clndr-table tr:last-child .my-day, .cal1 .clndr .clndr-table tr:last-child .empty, .cal1 .clndr .clndr-table tr:last-child .my-empty {
-  border-bottom: 1px solid #000000;
-}
-
-.cal2 {
-  max-width: 177px;
-  margin: 30px auto;
-  font-family: 'Droid Sans Mono';
-}
-
-.cal2 .clndr .clndr-controls {
-  display: block;
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 3px;
-}
-
-.cal2 .clndr .clndr-controls .clndr-previous-button {
-  float: left;
-  width: 10%;
-  text-align: left;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.cal2 .clndr .clndr-controls .clndr-previous-button:hover {
-  background-color: #f4f4f4;
-}
-
-.cal2 .clndr .clndr-controls .month {
-  float: left;
-  width: 80%;
-  text-align: center;
-}
-
-.cal2 .clndr .clndr-controls .clndr-next-button {
-  float: left;
-  width: 10%;
-  text-align: right;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.cal2 .clndr .clndr-controls .clndr-next-button:hover {
-  background-color: #f4f4f4;
-}
-
-.cal2 .clndr .clndr-grid {
-  text-align: center;
-  border: 1px solid #FF4545;
-  display: inline-block;
-}
-
-.cal2 .clndr .clndr-grid .header-day {
-  float: left;
-  width: 25px;
-  height: 25px;
-  background: #FF4545;
-}
-
-.cal2 .clndr .clndr-grid .day {
-  float: left;
-  width: 25px;
-  height: 25px;
-}
-
-.cal2 .clndr .clndr-grid .day.event {
-  background-color: #B4E09F;
-}
-
-.cal2 .clndr .clndr-grid .day.today {
-  background-color: #E3C57F;
-}
-
-.cal2 .clndr .clndr-grid .day.selected {
-  background-color: #E37FD6;
-}
-
-.cal2 .clndr .clndr-grid .day.inactive {
-  color: gray;
-}
-
-.cal2 .clndr .clndr-grid .empty, .cal2 .clndr .clndr-grid .adjacent-month {
-  float: left;
-  width: 25px;
-  height: 25px;
-  background: #ddd;
-}
-
-.cal2 .clndr .clndr-today-button {
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-}
-
-.cal2 .clndr .clndr-today-button:hover {
-  background-color: #ddd;
-}
-
-.cal2 .multi-month-controls .quarter-button {
-  display: inline-block;
-  width: 25%;
-}
-
-.cal2 .multi-month-controls .quarter-button:hover {
-  cursor: pointer;
-  background-color: #f4f4f4;
-}
-
-.cal2 .day.inactive {
-  background-color: #aaa;
-}
-
-.cal3 {
-  max-width: 354px;
-  margin: 0 auto;
-  font-family: 'Droid Sans Mono';
-}
-
-.cal3 .cal {
-  float: left;
-  width: 177px;
-}
-
-.cal3 .clndr .clndr-controls {
-  display: block;
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 8px;
-}
-
-.cal3 .clndr .clndr-controls.top {
-  margin-bottom: -22px;
-  position: relative;
-  z-index: 1;
-}
-
-.cal3 .clndr .clndr-controls .clndr-previous-button {
-  float: left;
-  width: 10%;
-  text-align: left;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.cal3 .clndr .clndr-controls .clndr-previous-button:hover {
-  background-color: #f4f4f4;
-}
-
-.cal3 .clndr .clndr-controls .month {
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.cal3 .clndr .clndr-controls .clndr-next-button {
-  float: right;
-  width: 10%;
-  text-align: right;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.cal3 .clndr .clndr-controls .clndr-next-button:hover {
-  background-color: #f4f4f4;
-}
-
-.cal3 .clndr .clndr-grid {
-  text-align: center;
-  border: 1px solid #FF4545;
-  display: inline-block;
-}
-
-.cal3 .clndr .clndr-grid .header-day {
-  float: left;
-  width: 25px;
-  height: 25px;
-  background: #FF4545;
-}
-
-.cal3 .clndr .clndr-grid .day {
-  float: left;
-  width: 25px;
-  height: 25px;
-}
-
-.cal3 .clndr .clndr-grid .day.event {
-  background-color: #B4E09F;
-}
-
-.cal3 .clndr .clndr-grid .day.today {
-  background-color: #E3C57F;
-}
-
-.cal3 .clndr .clndr-grid .empty, .cal3 .clndr .clndr-grid .adjacent-month {
-  float: left;
-  width: 25px;
-  height: 25px;
-  background: #ddd;
-}
-
-.cal3 .clndr .clndr-today-button {
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-}
-
-.cal3 .clndr .clndr-today-button:hover {
-  background-color: #ddd;
-}
-
-.cal3 .multi-month-controls .quarter-button {
-  display: inline-block;
-  width: 25%;
-}
-
-.cal3 .multi-month-controls .quarter-button:hover {
-  cursor: pointer;
-  background-color: #f4f4f4;
-}
-
-.clndr-next-button, .clndr-previous-button, .clndr-next-year-button, .clndr-previous-year-button {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.clndr-next-button.inactive, .clndr-previous-button.inactive, .clndr-next-year-button.inactive, .clndr-previous-year-button.inactive {
-  opacity: 0.5;
-  cursor: default;
-}
-
 /* ---------------------------------------- */
 /* G E N E R A L    S T Y L E               */
 /* ---------------------------------------- */
@@ -6827,5 +6395,237 @@ a:focus {
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+/* ---------------------------------------- */
+/* P R A Y E R    S T Y L E                 */
+/* ---------------------------------------- */
+.prayer {
+  padding: 50px 0;
+  background: url(../img/prayerbg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.prayer__slider {
+  margin: 0 -15px;
+}
+
+.prayer__box {
+  padding: 45px 15px 30px;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.prayer__heading {
+  font: 700 italic 28px/36px "PlayfairDisplay", sans-serif;
+  color: #4b8078;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.prayer__text {
+  font: 300 14px/21px "PF Beau Sans Pro", sans-serif;
+  color: #313431;
+  text-align: center;
+}
+
+.prayer__img {
+  text-align: center;
+  position: relative;
+  top: 15px;
+  z-index: 20;
+}
+
+.prayer__img img {
+  display: inline-block;
+}
+
+.prayer-dots {
+  position: relative;
+  top: 8px;
+}
+
+.prayer-dots .slick-dots {
+  position: static;
+  bottom: 0;
+}
+
+.prayer-dots li {
+  height: 12px;
+  width: 12px;
+  padding: 0;
+  background-color: transparent;
+  -webkit-box-shadow: inset 0 0 0 2px #4b8078;
+          box-shadow: inset 0 0 0 2px #4b8078;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.prayer-dots li.slick-active button {
+  background-color: #4b8078;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.prayer-dots li button {
+  padding: 0;
+  height: 12px;
+  width: 12px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.prayer-dots li button:before {
+  content: none;
+}
+
+.prayer-arrows {
+  position: relative;
+  margin: 0 -15px;
+}
+
+.prayer-arrows .slick-arrow {
+  background-color: #4b8078;
+  height: 24px;
+  width: 24px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.prayer-arrows .slick-arrow__icon {
+  color: #d9dbd3;
+}
+
+.prayer-arrows .slick-prev {
+  left: 0;
+}
+
+.prayer-arrows .slick-next {
+  right: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .prayer {
+    padding: 90px 0;
+  }
+  .prayer__container {
+    position: relative;
+  }
+  .prayer__img {
+    position: absolute;
+    top: -15px;
+    right: -35px;
+    max-width: 300px;
+    z-index: 25;
+  }
+  .prayer__img img {
+    position: static;
+  }
+  .prayer__box {
+    padding: 50px 240px 35px 60px;
+  }
+  .prayer__heading {
+    font: 700 italic 42px/50px "PlayfairDisplay", sans-serif;
+    text-align: left;
+  }
+  .prayer__text {
+    font: 300 18px/21px "PF Beau Sans Pro", sans-serif;
+    text-align: left;
+  }
+  .prayer__tool {
+    font: 600 16px/20px "PF Beau Sans Pro", sans-serif;
+    color: #4b8078;
+  }
+  .prayer-arrows {
+    margin: 40px 0 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .prayer {
+    padding: 110px 0 130px;
+  }
+  .prayer__box {
+    padding: 60px 320px 35px 60px;
+  }
+  .prayer__img {
+    max-width: 400px;
+    top: -20px;
+    right: -50px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .prayer__box {
+    padding-right: 360px;
+  }
+  .prayer__img {
+    max-width: none;
+    top: -23px;
+    right: -60px;
+  }
+}
+
+/* ---------------------------------------- */
+/* F O O T E R    S T Y L E                 */
+/* ---------------------------------------- */
+.footer {
+  padding: 60px 0 0;
+}
+
+.footer__heading {
+  font: 700 italic 28px/36px "PlayfairDisplay", sans-serif;
+  color: #4b8078;
+  margin-bottom: 30px;
+}
+
+.footer__text {
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+  color: #313431;
+  margin-bottom: 5px;
+}
+
+.footer__icon {
+  color: #4b8078;
+}
+
+.footer__icon-map {
+  font-size: 30px;
+}
+
+.footer__map {
+  margin-top: 40px;
+  height: 340px;
+  background: url(../img/map.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer__heading {
+    font: 700 italic 32px/40px "PlayfairDisplay", sans-serif;
+  }
+  .footer__map {
+    height: 540px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer__heading {
+    margin: 0;
+  }
+  .footer__map {
+    height: 740px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .footer__map {
+    height: 900px;
   }
 }

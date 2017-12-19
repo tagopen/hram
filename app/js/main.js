@@ -147,6 +147,7 @@ var GRVE = GRVE || {};
     init: function(){
       this.quoteCarousel();
       this.aboutCarousel();
+      this.prayerCarousel();
     },
     quoteCarousel: function(){
       $('.js-quote-slider').slick({
@@ -163,7 +164,7 @@ var GRVE = GRVE || {};
         swipeToSlide: '15',
         responsive: [
         {
-          breakpoint: 1366,
+          breakpoint: 1365,
           settings: {
             adaptiveHeight: false
           }
@@ -188,9 +189,42 @@ var GRVE = GRVE || {};
         dots: false,
         responsive: [
         {
-          breakpoint: 1366,
+          breakpoint: 1365,
           settings: {
             adaptiveHeight: false
+          }
+        }
+        ]
+      });
+    },
+    prayerCarousel: function(){
+      $('.js-prayer-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: '<button type="button" data-role="none" aria-label="Prev" role="button" class="slick-prev slick-arrow">Previous<svg class="svg svg--arrow-left slick-arrow__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+        nextArrow: '<button type="button" data-role="none" aria-label="Next" role="button" class="slick-next slick-arrow">Next<svg class="svg svg--arrow-right slick-arrow__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+        infinite: true,
+        focusOnSelect: true,
+        adaptiveHeight: true,
+        mobileFirst: true,
+        accessibility: false,
+        swipeToSlide: '15',
+        dots: true,
+        appendDots: $('.js-prayer-dots'),
+        appendArrows: $('.js-prayer-arrows'),
+        responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            dots: false
+          }
+        },
+        {
+          breakpoint: 1366,
+          settings: {
+            adaptiveHeight: false,
+            dots: false
           }
         }
         ]

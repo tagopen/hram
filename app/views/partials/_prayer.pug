@@ -1,0 +1,19 @@
+section.prayer
+  .container.prayer__container
+    .prayer__img
+      img.img-fluid(src!=content.index.prayer.img.src, alt!=content.index.prayer.img.alt)
+  .container-fluid
+    .row
+      .col-24
+        .prayer__slider.js-prayer-slider
+          each item, i in content.index.prayer.slides
+            .prayer__item
+              .container
+                .row
+                  .col-24
+                    .prayer__box
+                      .prayer__heading!=item.heading
+                      .prayer__text!=item.text
+        .container                                  
+          .prayer-dots.js-prayer-dots
+          .prayer-arrows.js-prayer-arrows.d-flex.justify-content-between                 

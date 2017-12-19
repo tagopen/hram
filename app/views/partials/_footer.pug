@@ -1,1 +1,14 @@
-.footer
+footer.footer
+  .container
+    .row.justify-content-between
+      .col-24.col-lg-9
+        .footer__heading!=content.index.footer.heading
+      .col-24.col-lg-14  
+        .row
+          .col-4.col-md-auto.col-lg-3.col-xl-auto
+            .footer__icon
+              +svg('map-pin')(class="footer__icon-map")
+          .col-20.col-md-auto.col-lg-21.col-xl-auto
+            .footer__box
+              .footer__info!=content.index.footer.text
+  .footer__map           

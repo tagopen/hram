@@ -1132,3 +1132,152 @@ a
         right: 0
         margin-right: 10px  
         transform: scale(1)
++comment("prayer style")     
+.prayer
+  padding: 50px 0
+  background: url(../img/prayerbg.jpg) no-repeat
+  background-size: cover
+  background-position: center
+  overflow: hidden
+  &__slider
+    margin: 0 -15px
+  &__box
+    padding: 45px 15px 30px
+    background-color: #fff
+    border-radius: 10px   
+  &__heading
+    font: 700 italic 28px/36px $font-playfair
+    color: $green-color
+    text-align: center
+    margin-bottom: 25px
+  &__text
+    font: 300 14px/21px $font-pf
+    color: #313431    
+    text-align: center 
+  &__img
+    text-align: center
+    position: relative
+    top: 15px
+    z-index: 20 
+    img
+      display: inline-block      
+.prayer-dots    
+  position: relative
+  top: 8px
+  .slick-dots
+    position: static
+    bottom: 0
+  li
+    height: 12px
+    width: 12px
+    padding: 0
+    background-color: transparent
+    box-shadow: inset 0 0 0 2px #4b8078
+    border-radius: 50%
+    &.slick-active
+      button
+        background-color: #4b8078
+        box-shadow: none
+    button
+      padding: 0
+      height: 12px
+      width: 12px
+      border-radius: 50%
+      background: rgba(0, 0, 0, 0.1)
+      &:before
+        content: none  
+.prayer-arrows
+  position: relative
+  margin: 0 -15px
+  .slick
+    &-arrow
+      background-color: #4b8078
+      height: 24px
+      width: 24px     
+      border-radius: 50%  
+      &__icon
+        color: #d9dbd3
+    &-prev
+      left: 0
+    &-next
+      right: 0          
++r(768)
+  .prayer
+    padding: 90px 0
+    &__container
+      position: relative
+    &__img
+      position: absolute
+      top: -15px
+      right: -35px
+      max-width: 300px
+      z-index: 25
+      img
+        position: static
+    &__box
+      padding: 50px 240px 35px 60px
+    &__heading  
+      font: 700 italic 42px/50px $font-playfair 
+      text-align: left
+    &__text
+      font: 300 18px/21px $font-pf   
+      text-align: left
+    &__tool
+      font: 600 16px/20px $font-pf
+      color: $green-color  
+  .prayer-arrows
+    margin: 40px 0 0     
++r(992)
+  .prayer
+    padding: 110px 0 130px
+    &__box
+      padding: 60px 320px 35px 60px
+    &__img
+      max-width: 400px
+      top: -20px
+      right: -50px  
++r(1200)
+  .prayer
+    &__box
+      padding-right: 360px
+    &__img
+      max-width: none      
+      top: -23px
+      right: -60px
++comment("footer style")        
+.footer
+  padding: 60px 0 0
+  &__heading
+    font: 700 italic 28px/36px $font-playfair
+    color: $green-color
+    margin-bottom: 30px
+  &__text
+    font: 300 16px/21px $font-pf
+    color: #313431
+    margin-bottom: 5px
+  &__icon
+    color: #4b8078
+    &-map
+      font-size: 30px  
+  &__map
+    margin-top: 40px
+    height: 340px 
+    background: url(../img/map.jpg) no-repeat
+    background-size: cover
+    background-position: center   
++r(768)
+  .footer
+    &__heading
+      font: 700 italic 32px/40px $font-playfair
+    &__map
+      height: 540px  
++r(992)
+  .footer
+    &__heading
+      margin: 0
+    &__map
+      height: 740px  
++r(1600)
+  .footer
+    &__map
+      height: 900px      
