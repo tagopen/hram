@@ -55,6 +55,8 @@ var GRVE = GRVE || {};
       GRVE.showMore.init();
       GRVE.accordion.init();
       GRVE.navbar.init();
+      GRVE.video.init();
+      GRVE.videoModal.init();
     }
   };
 
@@ -62,7 +64,7 @@ var GRVE = GRVE || {};
   // ============================================================================= //
   GRVE.documentResize = {
     init: function() {
-
+      GRVE.video.init();
     }
   };
 
@@ -139,6 +141,20 @@ var GRVE = GRVE || {};
       }
     }
   };
+
+  GRVE.videoModal = {
+    init: function() {
+      $('#video__modal').on('shown.bs.modal', function() {
+        $(".modal__iframe").attr('src', 'https://www.youtube.com/embed/czvmUmHyMW0?ecver=1&autoplay=1&showinfo=0&mute=0&iv_load_policy=3&showsearch=0');
+      });
+      $('#video__modal').on('hidden.bs.modal', function() {
+        $(".modal__iframe").attr('src', 'https://www.youtube.com/embed/czvmUmHyMW0?ecver=1&autoplay=0&showinfo=0&mute=1&iv_load_policy=3&showsearch=0');
+      });
+    }
+  };
+
+
+  
 
   // # Initialize slick carousel
   // ============================================================================= //
@@ -228,6 +244,36 @@ var GRVE = GRVE || {};
         }
         ]
       });
+    }
+  };
+
+
+  GRVE.video = {
+    init: function() {
+
+      if( $( window ).width() >= 768 ) {
+        var windowWidth    = $( window).width() + 17,
+            windowHalf     = windowWidth/2,
+            windowWidth    = windowHalf - 23,
+            headerHeight   = $('.header__intro').height();
+        $('.js-video').css('min-width', windowWidth);
+        $('.js-video').css('min-height', headerHeight);
+        console.log(headerHeight);
+      };
+      if( $( window ).width() >= 1200 ) {
+        var windowWidthXl    = $( window).width() + 17,
+            windowHalfXl     = windowWidthXl/2,
+            containerWidthXl = $('.container').width(),
+            containerPartXl  = containerWidthXl/24*10,
+            headerHeightXl   = $('.header__intro').height(),
+            resultWithXl     = (windowWidthXl - containerWidthXl) / 2 + containerPartXl - 23;
+        $('.js-video').css('min-width', resultWithXl);
+        $('.js-video').css('max-height', headerHeightXl);
+      };
+
+
+
+
     }
   };
 

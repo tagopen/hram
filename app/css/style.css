@@ -4531,6 +4531,84 @@ li.fancybox-thumbs-loading {
           transform: translateZ(0);
 }
 
+.modal__size {
+  width: 100%;
+}
+
+.modal__body {
+  padding: 0;
+}
+
+.modal__content {
+  position: relative;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  padding: 30px 15px;
+  border: 0;
+}
+
+.modal__content-video {
+  padding: 0;
+  border: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
+
+.modal__close {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+}
+
+.modal__text {
+  font: 300 16px/21px;
+  color: #313431 "PF Beau Sans Pro", sans-serif;
+}
+
+.modal__video-box {
+  min-height: 180px;
+  position: relative;
+}
+
+.modal__video-box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal__content {
+    padding: 40px 25px;
+  }
+  .modal__size {
+    max-width: 700px;
+  }
+  .modal__close {
+    top: 0;
+    right: -50px;
+    opacity: 1;
+  }
+  .modal__close:hover .close__icon, .modal__close:focus .close__icon {
+    color: #ee8d3f;
+  }
+  .close__icon {
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .modal__content {
+    padding: 50px 35px;
+  }
+  .modal__size {
+    max-width: 900px;
+  }
+}
+
 .modal.show {
   display: -webkit-box !important;
   display: -webkit-flex !important;
@@ -4665,6 +4743,23 @@ a:focus {
 .header {
   position: relative;
   overflow: hidden;
+}
+
+.header__video {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__video {
+    position: relative;
+  }
+  .header__video source {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -6355,6 +6450,14 @@ a:focus {
   font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
   color: #4b8078;
   border-bottom: 1px dashed #313431;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.note__link:hover, .note__link:focus {
+  text-decoration: none;
+  color: #ffb24a;
+  border-bottom: 1px dashed #ffb24a;
 }
 
 .note__image {

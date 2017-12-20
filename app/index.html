@@ -108,7 +108,7 @@
       <section class="intro header__intro">
         <div class="container">
           <div class="row">
-            <div class="col-24 col-md-14 col-lg-12">
+            <div class="col-24 col-md-12 col-xl-14">
               <div class="intro__box">
                 <div class="intro__heading">
                   <h2 class="intro__heading--text">Храм преподобного Серафима Саровского и Умиления Пресвятой Богородицы</h2><i class="ic ic--venzel"></i>
@@ -119,7 +119,12 @@
                   </svg></a>
               </div>
             </div>
-            <div class="col-24 col-md-10 col-lg-12"> </div>
+            <div class="col-24 col-md-12 col-xl-10">
+              <video class="header__video js-video" autoplay loop muted>
+                <source src="video/video.webm" type="video/webm">
+                <source src="video/video.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
         </div>
       </section>
@@ -595,12 +600,9 @@
                 </div>
               </div>
               <div class="col-24 col-lg-18 gallery__col">  
-                <div class="gallery__video">
-                  <div class="gallery__play"><i class="fa fa-play gallery__icon" aria-hidden="true"></i>
+                <div class="gallery__video"><a class="gallery__play" href="#video__modal" data-toggle="modal"><i class="fa fa-play gallery__icon" aria-hidden="true"></i>
                     <div class="gallery__border gallery__border--1"></div>
-                    <div class="gallery__border gallery__border--2"> </div>
-                  </div>
-                </div>
+                    <div class="gallery__border gallery__border--2"> </div></a></div>
               </div>
               <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-1" data-fancybox="gallery" href="img/1.jpg">     </a></div>
               <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-2" data-fancybox="gallery" href="img/2.jpg">     </a></div>
@@ -846,8 +848,7 @@
           <div class="row">
             <div class="col-24 col-lg-15 col-xl-14">
               <div class="note__heading">
-                <div class="note__text">Вы можете подать записку в наш храм с помощью сайта и попросить молитв о ваших родных и близких. Мы распечатаем записку и помолимся о вас на ближайшем богослужении.</div>
-                <div class="note__link">Перед подачей записки обязательно ознакомьтесь с правилами написания записок</div>
+                <div class="note__text">Вы можете подать записку в наш храм с помощью сайта и попросить молитв о ваших родных и близких. Мы распечатаем записку и помолимся о вас на ближайшем богослужении.</div><a class="note__link" href="#note__modal" data-toggle="modal">Перед подачей записки обязательно ознакомьтесь с правилами написания записок</a>
               </div>
             </div>
             <div class="col-24">
@@ -1028,6 +1029,48 @@
       </div>
       <div class="footer__map">          </div>
     </footer>
+    <div class="modal fade" id="note__modal" tabindex="-1" role="dialog" aria-labelledby="callbackLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal__content">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-label="Close">
+            <svg class="svg svg--close close__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal-body modal__body">
+            <div class="modal__info">
+              <p class="modal__text">Заполнение записки (оформление требы на сайте) – духовная составляющая этого процесса: Вписывая имена живых и усопших, поминайте их в процессе писания с искренним желанием им блага, от чистого сердца, стараясь припомнить того человека, чье имя вы вписываете — это уже молитва за него.</p>
+              <p class="modal__text">- Если вы хотите помянуть многих своих родных и близких - подайте несколько записок (треб), в одной записке ограничьтесь 10 - 15 именами.</p>
+              <p class="modal__text">- При написании имен священников и архиереев указывается их сан - например, о здравии (или о упокоении) епископа Тихона, иерея (священника) Ярослава.</p>
+              <p class="modal__text">- Все имена должны быть даны в церковном написании (например, Георгия, а не Юрия, Иоанна, а не Ивана) и полностью (Александра, Николая, но не Саши, Коли).</p>
+              <p class="modal__text">- В записках (требах) не указывают фамилии, отчества, степени родства.</p>
+              <p class="modal__text">- Ребенок до семи лет в записке (требе) упоминается как младенец - "младенца Петра".</p>
+              <p class="modal__text">- В записках (требах) о упокоении усопший в течение сорока дней после кончины именуется "новопреставленный". Допускается в записках (требах) о упокоении написание перед именем слов "убиенный", "воин", "приснопамятный" (в день смерти или день именин усопшего).</p>
+              <p class="modal__text">- Не надо писать перед именем: "заблудшего", "страждущего", "озлобленного", "учащегося", "скорбящего", "девицы", "вдовицы", "нуждающегося".</p>
+              <p class="modal__text">- Допускается включение в записку слов: "воина", "монаха", "монахини", "болящего", "путешествующего", "заключенного".</p>
+              <p class="modal__text">- Имена (православные, данные при крещении) должны быть написаны в родительном падеже, каждое имя с новой строки (отвечать на вопрос "кого" - например - Алексея, Варвары).</p>
+              <p class="modal__text">- Не следует поминать в записках (требах) самоубийц; не крещенных в православной вере (атеистов, инославных, иноверцев); убежденных атеистов и богоборцев, даже если они были крещены в Православии. усопших, причисленных к лику святых. Например: блаженная Матрона, блаженная Ксения. Причина проста: находясь у Престола Божия именно они молятся за нас;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="video__modal" tabindex="-1" role="dialog" aria-labelledby="callbackLabel" aria-hidden="true">
+      <div class="modal-dialog modal__size" role="document">
+        <div class="modal-content modal__content-video">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-label="Close">
+            <svg class="svg svg--close close__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal-body modal__body">
+            <div class="modal__video-box embed-responsive embed-responsive-16by9">
+              <iframe class="modal__iframe" src="https://www.youtube.com/embed/czvmUmHyMW0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen> </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- build:js js/bundle.min.js-->
     <!-- Popper JavaScript-->
     <script src="js/popper.js"></script>

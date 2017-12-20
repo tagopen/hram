@@ -33,6 +33,59 @@
 .modal
   -webkit-overflow-scrolling: touch
   transform: translateZ(0)
+  &__size
+    width: 100%
+  &__body
+    padding: 0
+  &__content
+    position: relative
+    border-radius: 0
+    padding: 30px 15px
+    border: 0
+    &-video
+      padding: 0
+      border: 0
+      border-radius: 0
+  &__close
+    position: absolute
+    right: 25px
+    top: 25px
+    cursor: pointer  
+  &__text
+    font: 300 16px/21px
+    color: #313431 $font-pf
+  &__video-box
+    min-height: 180px
+    position: relative
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%  
++r(768)
+  .modal
+    &__content
+      padding: 40px 25px
+    &__size
+      max-width: 700px
+    &__close
+      top: 0
+      right: -50px  
+      opacity: 1
+      &:hover,
+      &:focus
+        .close__icon
+          color: #ee8d3f
+  .close__icon
+    color: #fff
+    opacity: 1    
++r(992)
+  .modal
+    &__content
+      padding: 50px 35px   
+    &__size
+      max-width: 900px         
 .modal.show 
   display: flex !important
   align-items: center
@@ -108,6 +161,18 @@ a
 .header
   position: relative
   overflow: hidden
+  &__video
+    max-width: 100%
++r(768)
+  .header
+    &__video
+      position: relative
+      source
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%   
 +r(992)
   .header
     display: flex
@@ -1103,6 +1168,12 @@ a
     font: 300 16px/21px $font-pf
     color: $green-color 
     border-bottom: 1px dashed #313431
+    transition: all .3s ease
+    &:hover,
+    &:focus
+      text-decoration: none
+      color: #ffb24a
+      border-bottom: 1px dashed #ffb24a
   &__image
     position: relative
     text-align: center
