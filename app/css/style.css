@@ -4561,6 +4561,11 @@ li.fancybox-thumbs-loading {
   cursor: pointer;
 }
 
+.modal__close--video {
+  top: -25px;
+  right: 0;
+}
+
 .modal__text {
   font: 300 16px/21px;
   color: #313431 "PF Beau Sans Pro", sans-serif;
