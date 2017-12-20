@@ -3,4 +3,5 @@
     .tooltip__item(id="tooltip"+(i+1))
       .tooltip__box.text-center
         +svg("info")(class="tooltip__icon")
-        .tooltip__price!=item.price
+        .tooltip__info!=content.index.service.tooltip
+          span.tooltip__price!=item.price

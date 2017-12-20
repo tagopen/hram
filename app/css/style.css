@@ -6318,7 +6318,7 @@ a:focus {
   display: none !important;
 }
 
-.tooltip__price {
+.tooltip__info {
   color: #313431;
   font: 300 14px/18px "PlayfairDisplay", sans-serif;
 }
@@ -6333,6 +6333,10 @@ a:focus {
   background: #fff;
   padding: 10px;
   margin: 30px 0;
+}
+
+.sv-card__zone {
+  width: 100%;
 }
 
 .sv-card__box {
