@@ -313,23 +313,26 @@ var GRVE = GRVE || {};
 
 
   GRVE.video = {
-    init: function() {
-      if( $( window ).width() >= 768 ) {
-        var windowWidth    = $( window).width() + 17,
-            windowHalf     = windowWidth/2,
-            headerHeight   = $('.header__intro').height(),
-            movieSize      = 0;    
-        if (windowHalf > headerHeight) {
-          movieSize = windowHalf;
-        } else {
-          movieSize = headerHeight;
-        }
-        movieSize += 6;
-        $('.movie__video').css({
-          'width': movieSize,
-          'height': movieSize 
-        });
-      };
+    init: function(breakpoint = 767) {
+      if (matchMedia('only screen and (max-width: ' + breakpoint + 'px)').matches) {
+        return;
+      }
+
+      var windowWidth    = $( window).width() + 17,
+          windowHalf     = windowWidth / 2,
+          headerHeight   = $('.header__intro').height(),
+          movieSize      = headerHeight;    
+
+      if (windowHalf > headerHeight) {
+        movieSize = windowHalf;
+      }
+
+      movieSize += 6;
+
+      $('.movie__video').css({
+        'width': movieSize,
+        'height': movieSize 
+      });
     }
   };
 

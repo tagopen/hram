@@ -5409,7 +5409,7 @@ a:focus {
 
 @media only screen and (min-width: 1200px) {
   .intro__box {
-    padding: 100px 0 60px;
+    padding: 45px 0 35px;
   }
   .intro__heading--text {
     font: 700 italic 44px/60px "PlayfairDisplay", sans-serif;
