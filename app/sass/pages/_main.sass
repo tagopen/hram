@@ -144,6 +144,7 @@ a
   min-width: 270px
   text-align: left  
   transition: all .3s ease
+  cursor: pointer
   &:hover,
   &:focus
     color: #313431
@@ -1089,6 +1090,16 @@ a
   &__item
     margin-bottom: 30px  
     height: 88%
+.tooltip
+  &__content
+    display: none !important
+  &__price
+    color: #313431
+    font: 300 14px/18px $font-playfair   
+  &__icon
+    margin-bottom: 15px
+    opacity: 0.4  
+    font-size: 20px
 .sv-card    
   background: #fff  
   padding: 10px 
@@ -1197,9 +1208,11 @@ a
     color: #313431
     border-radius: 0
     padding: 22px 25px 25px 70px
+    font: 300 16px/21px $font-pf
     border: 0
     +placeholder
       color: #313431  
+      font: 300 16px/21px $font-pf
   &__btn
     white-space: normal    
   &__icon

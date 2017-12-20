@@ -14,5 +14,6 @@ section.service
                   i.sv-card__corner.sv-card__corner--tr
                   i.sv-card__corner.sv-card__corner--bl
                   i.sv-card__corner.sv-card__corner--br 
-                  +svg("x")(class="sv-card__icon")
-                  .sv-card__text!=item.text
+                  .sv-card__zone.js-tooltipstered(data-tooltip-content="#tooltip"+(i+1))
+                    +svg("x")(class="sv-card__icon")
+                    .sv-card__text!=item.text

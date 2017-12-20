@@ -57,6 +57,7 @@ var GRVE = GRVE || {};
       GRVE.navbar.init();
       GRVE.video.init();
       GRVE.videoModal.init();
+      GRVE.tooltip.init();
     }
   };
 
@@ -175,6 +176,24 @@ var GRVE = GRVE || {};
       });
     }
   };
+
+
+  // # Service section tolltip init
+  // ============================================================================= //
+  GRVE.tooltip = {
+    init: function() {
+      $('.js-tooltipstered').tooltipster({
+        contentCloning: true,
+        theme: 'tooltipster-shadow',
+        animation: 'fade',
+        interactive: true,
+        delay: 25,
+        side: 'top',
+        maxWidth: 320
+      });
+    }
+  };
+
 
   // # Initialize slick carousel
   // ============================================================================= //

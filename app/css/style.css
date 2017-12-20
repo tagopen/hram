@@ -4721,6 +4721,7 @@ a:focus {
   text-align: left;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
+  cursor: pointer;
 }
 
 .btn:hover, .btn:focus {
@@ -6313,6 +6314,21 @@ a:focus {
   height: 88%;
 }
 
+.tooltip__content {
+  display: none !important;
+}
+
+.tooltip__price {
+  color: #313431;
+  font: 300 14px/18px "PlayfairDisplay", sans-serif;
+}
+
+.tooltip__icon {
+  margin-bottom: 15px;
+  opacity: 0.4;
+  font-size: 20px;
+}
+
 .sv-card {
   background: #fff;
   padding: 10px;
@@ -6494,23 +6510,28 @@ a:focus {
   -webkit-border-radius: 0;
           border-radius: 0;
   padding: 22px 25px 25px 70px;
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
   border: 0;
 }
 
 .nt-form__input::-webkit-input-placeholder {
   color: #313431;
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
 }
 
 .nt-form__input::-moz-placeholder {
   color: #313431;
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
 }
 
 .nt-form__input:-ms-input-placeholder {
   color: #313431;
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
 }
 
 .nt-form__input::placeholder {
   color: #313431;
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
 }
 
 .nt-form__btn {
