@@ -174,13 +174,17 @@ a
     height: 100%
     width: 50vw
     margin-left: 15px
+    overflow: hidden
     &__video
       position: absolute
       z-index: 15
-      top: -4px
-      left: 0
       height: 100%
       width: 100%   
+      top: 50%
+      left: 50%
+      margin-top: -1px
+      transform: translate(-50%, -50%)  
+
 +r(992)
   .header
     display: flex
@@ -189,6 +193,15 @@ a
     min-height: 700px
     &__intro
       flex-grow: 1
+  .movie  
+    overflow: visible
+    &__video  
+      left: 0
+      top: 0
+      margin-top: -4px
+      height: 100%
+      width: 100%
+      transform: translate(0)
 +comment("section nav style")
 .nav
   position: relative

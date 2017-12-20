@@ -4765,14 +4765,19 @@ a:focus {
     height: 100%;
     width: 50vw;
     margin-left: 15px;
+    overflow: hidden;
   }
   .movie__video {
     position: absolute;
     z-index: 15;
-    top: -4px;
-    left: 0;
     height: 100%;
     width: 100%;
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
@@ -4795,6 +4800,19 @@ a:focus {
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+  }
+  .movie {
+    overflow: visible;
+  }
+  .movie__video {
+    left: 0;
+    top: 0;
+    margin-top: -4px;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0);
   }
 }
 

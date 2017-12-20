@@ -168,7 +168,7 @@ var GRVE = GRVE || {};
           target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
           if (target.length) {
             $('html, body').animate({
-              scrollTop: (target.offset().top - 54)
+              scrollTop: (target.offset().top +3)
             }, 1000,);
             return false;
           }
@@ -324,7 +324,7 @@ var GRVE = GRVE || {};
         } else {
           movieSize = headerHeight;
         }
-        movieSize += 5;
+        movieSize += 6;
         $('.movie__video').css({
           'width': movieSize,
           'height': movieSize 
