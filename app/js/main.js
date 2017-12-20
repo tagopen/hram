@@ -311,10 +311,29 @@ var GRVE = GRVE || {};
     }
   };
 
+  GRVE.isWindowSize = {
+    init: function(min = undefined, max = undefined) {
+      var media;
+
+      if (min !== undefined && max !== undefined) {
+        media = matchMedia('only screen and (min-width: ' + min + 'px) and (max-width: ' + max + 'px)');
+      } else if (min !== undefined && max === undefined) {
+        media = matchMedia('only screen and (min-width: ' + min + 'px)');
+      } else if (min === undefined && max !== undefined) {
+        media = matchMedia('only screen and (max-width: ' + max + 'px)');
+      } else {
+        return true;
+      }
+
+      return media.matches;
+
+    }
+  };
+
 
   GRVE.video = {
     init: function(breakpoint = 767) {
-      if (matchMedia('only screen and (max-width: ' + breakpoint + 'px)').matches) {
+      if (GRVE.isWindowSize.init(0, breakpoint)) {
         return;
       }
 
