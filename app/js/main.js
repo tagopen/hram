@@ -265,8 +265,7 @@ var GRVE = GRVE || {};
         {
           breakpoint: 1366,
           settings: {
-            dots: false,
-            adaptiveHeight: false
+            dots: false
           }
         }
         ]
