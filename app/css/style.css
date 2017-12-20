@@ -4488,6 +4488,11 @@ li.fancybox-thumbs-loading {
   height: 1.375em;
 }
 
+.svg--x {
+  width: 1.8125em;
+  height: 1.75em;
+}
+
 /* form */
 .text-danger {
   color: #b94a48;
@@ -7011,7 +7016,7 @@ a:focus {
 .footer__map {
   margin-top: 40px;
   height: 340px;
-  background: url(../img/map.jpg) no-repeat;
+  background: url(../img/map.svg) no-repeat;
   background-size: cover;
   background-position: center;
 }

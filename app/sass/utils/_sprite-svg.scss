@@ -124,8 +124,17 @@ $svg-person-offset-y: px;
 $svg-person-image: "../img/sprite.svg";
 $svg-person: ( "person", em(19), em(22), px, px, "../img/sprite.svg" );
 
+// x
+$svg-x-name: "x";
+$svg-x-width: em(29);
+$svg-x-height: em(28);
+$svg-x-offset-x: px;
+$svg-x-offset-y: px;
+$svg-x-image: "../img/sprite.svg";
+$svg-x: ( "x", em(29), em(28), px, px, "../img/sprite.svg" );
+
 
 $svg-spritesheet-width: px;
 $svg-spritesheet-height: px;
 $svg-spritesheet-image: "../img/sprite.svg";
-$svg-spritesheet-sprites: ( $svg-arrow-left,  $svg-arrow-left-o,  $svg-arrow-right,  $svg-arrow-right-o,  $svg-calendar,  $svg-camera,  $svg-chat,  $svg-church,  $svg-close,  $svg-info,  $svg-list,  $svg-map,  $svg-map-pin,  $svg-person,  );
+$svg-spritesheet-sprites: ( $svg-arrow-left,  $svg-arrow-left-o,  $svg-arrow-right,  $svg-arrow-right-o,  $svg-calendar,  $svg-camera,  $svg-chat,  $svg-church,  $svg-close,  $svg-info,  $svg-list,  $svg-map,  $svg-map-pin,  $svg-person,  $svg-x,  );
