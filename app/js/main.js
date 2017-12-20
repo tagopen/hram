@@ -314,30 +314,22 @@ var GRVE = GRVE || {};
 
   GRVE.video = {
     init: function() {
-
       if( $( window ).width() >= 768 ) {
         var windowWidth    = $( window).width() + 17,
             windowHalf     = windowWidth/2,
-            windowWidth    = windowHalf - 23,
-            headerHeight   = $('.header__intro').height();
-        $('.js-video').css('min-width', windowWidth);
-        $('.js-video').css('min-height', headerHeight);
-        console.log(headerHeight);
+            headerHeight   = $('.header__intro').height(),
+            movieSize      = 0;    
+        if (windowHalf > headerHeight) {
+          movieSize = windowHalf;
+        } else {
+          movieSize = headerHeight;
+        }
+        movieSize += 5;
+        $('.movie__video').css({
+          'width': movieSize,
+          'height': movieSize 
+        });
       };
-      if( $( window ).width() >= 1200 ) {
-        var windowWidthXl    = $( window).width() + 17,
-            windowHalfXl     = windowWidthXl/2,
-            containerWidthXl = $('.container').width(),
-            containerPartXl  = containerWidthXl/24*10,
-            headerHeightXl   = $('.header__intro').height(),
-            resultWithXl     = (windowWidthXl - containerWidthXl) / 2 + containerPartXl - 23;
-        $('.js-video').css('min-width', resultWithXl);
-        $('.js-video').css('max-height', headerHeightXl);
-      };
-
-
-
-
     }
   };
 

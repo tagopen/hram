@@ -36,8 +36,8 @@ header.header
   - var intro = page.header.intro
   section.intro.header__intro
     .container
-      .row
-        .col-24.col-md-12.col-xl-14
+      .row.align-items-stretch
+        .col-24.col-md-12
           .intro__box
             .intro__heading
               h2.intro__heading--text!=intro.heading
@@ -45,7 +45,8 @@ header.header
             .intro__text!=intro.text
             a.btn.intro__btn(href=intro.btn.href)!=intro.btn.text
               +svg('arrow-right-o')(class="btn__ic")
-        .col-24.col-md-12.col-xl-10
-          video.header__video.js-video(autoplay loop muted)
-            source(src="video/video.webm" type="video/webm")
-            source(src="video/video.mp4" type="video/mp4")
+        .col-24.col-md-12
+          .movie
+            video.movie__video.js-video(autoplay loop muted)
+              source(src="video/video.webm" type="video/webm")
+              source(src="video/video.mp4" type="video/mp4")

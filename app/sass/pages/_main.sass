@@ -165,18 +165,22 @@ a
 .header
   position: relative
   overflow: hidden
-  &__video
-    max-width: 100%
 +r(768)
   .header
+    &__nav
+      z-index: 25
+  .movie
+    position: relative
+    height: 100%
+    width: 50vw
+    margin-left: 15px
     &__video
-      position: relative
-      source
-        position: absolute
-        top: 0
-        left: 0
-        height: 100%
-        width: 100%   
+      position: absolute
+      z-index: 15
+      top: -4px
+      left: 0
+      height: 100%
+      width: 100%   
 +r(992)
   .header
     display: flex
@@ -503,7 +507,7 @@ a
       font: 400 italic 22px/24px $font-playfair  
       text-align: left 
       margin-bottom: 50px   
-+r(992)
++r(1200)
   .intro
     &__box
       padding: 100px 0 60px
@@ -665,6 +669,7 @@ a
 .js-about-arrows
   padding-top: 56px
   margin: 0 -15px
+  height: 0
   .slick
     &-arrow
       display: inline-block
@@ -690,7 +695,7 @@ a
         box-shadow: 0 10px 15px rgba(238, 141, 63, 0.8)  
 +r(768)
   .about
-    padding-bottom: 50px      
+    padding-bottom: 20px      
     &__item
       padding-bottom: 225px
     &__box
@@ -716,7 +721,10 @@ a
       margin-bottom: 50px
     &__info
       left: 50px   
-      max-width: 580px     
+      max-width: 580px  
++r(1200)
+  .js-about-arrows  
+    padding-right: 48px      
 +comment("life style")
 .life
   padding: 65px 0
@@ -725,7 +733,7 @@ a
 .gallery
   &__link
     display: block
-    height: 280px
+    height: 262px
     margin-bottom: 30px
     &--1
       background: url(../img/gallery1.jpg) no-repeat
@@ -934,7 +942,7 @@ a
 +r(992)
   .gallery
     &__video
-      height: 590px        
+      height: 555px        
 +comment("history style") 
 .history 
   padding: 65px 0 30px
@@ -1081,12 +1089,12 @@ a
     padding-bottom: 160px            
 +comment("service style")
 .service
-  padding: 75px 0 40px
+  padding: 40px 0 40px
   background: url(../img/servicebg.jpg) no-repeat
   background-size: cover
   background-position: center
   &__heading
-    margin: 55px
+    margin-bottom: 30px 
   &__item
     margin-bottom: 30px  
     height: 88%
@@ -1161,13 +1169,9 @@ a
 +r(768)
   .service
     padding-bottom: 30px
-    &__heading
-      margin-bottom: 60px
 +r(992)
   .service
     padding-bottom: 70px
-    &__heading
-      margin-bottom: 80px
 +comment("note style")      
 .note
   padding: 60px 0 0

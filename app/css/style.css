@@ -4756,17 +4756,20 @@ a:focus {
   overflow: hidden;
 }
 
-.header__video {
-  max-width: 100%;
-}
-
 @media only screen and (min-width: 768px) {
-  .header__video {
-    position: relative;
+  .header__nav {
+    z-index: 25;
   }
-  .header__video source {
+  .movie {
+    position: relative;
+    height: 100%;
+    width: 50vw;
+    margin-left: 15px;
+  }
+  .movie__video {
     position: absolute;
-    top: 0;
+    z-index: 15;
+    top: -4px;
     left: 0;
     height: 100%;
     width: 100%;
@@ -5386,7 +5389,7 @@ a:focus {
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   .intro__box {
     padding: 100px 0 60px;
   }
@@ -5640,6 +5643,7 @@ a:focus {
 .js-about-arrows {
   padding-top: 56px;
   margin: 0 -15px;
+  height: 0;
 }
 
 .js-about-arrows .slick-arrow {
@@ -5681,7 +5685,7 @@ a:focus {
 
 @media only screen and (min-width: 768px) {
   .about {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
   .about__item {
     padding-bottom: 225px;
@@ -5719,6 +5723,12 @@ a:focus {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .js-about-arrows {
+    padding-right: 48px;
+  }
+}
+
 /* ---------------------------------------- */
 /* L I F E    S T Y L E                     */
 /* ---------------------------------------- */
@@ -5732,7 +5742,7 @@ a:focus {
 
 .gallery__link {
   display: block;
-  height: 280px;
+  height: 262px;
   margin-bottom: 30px;
 }
 
@@ -6063,7 +6073,7 @@ a:focus {
 
 @media only screen and (min-width: 992px) {
   .gallery__video {
-    height: 590px;
+    height: 555px;
   }
 }
 
@@ -6299,14 +6309,14 @@ a:focus {
 /* S E R V I C E    S T Y L E               */
 /* ---------------------------------------- */
 .service {
-  padding: 75px 0 40px;
+  padding: 40px 0 40px;
   background: url(../img/servicebg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .service__heading {
-  margin: 55px;
+  margin-bottom: 30px;
 }
 
 .service__item {
@@ -6437,17 +6447,11 @@ a:focus {
   .service {
     padding-bottom: 30px;
   }
-  .service__heading {
-    margin-bottom: 60px;
-  }
 }
 
 @media only screen and (min-width: 992px) {
   .service {
     padding-bottom: 70px;
-  }
-  .service__heading {
-    margin-bottom: 80px;
   }
 }
 

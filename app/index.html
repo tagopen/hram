@@ -104,14 +104,42 @@
                   <svg class="svg svg--camera navbar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
                     <use xlink:href="img/sprite.svg#camera"></use>
                   </svg><span class="navbar__text">Жизнь храма</span></a></li>
+              <li class="navbar__item"><a class="link link navbar__link js-scroll-trigger" href="#history"> 
+                  <svg class="svg svg--camera navbar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                    <use xlink:href="img/sprite.svg#camera"></use>
+                  </svg><span class="navbar__text">История храма</span></a></li>
+              <li class="navbar__item"><a class="link link navbar__link js-scroll-trigger" href="#donate"> 
+                  <svg class="svg svg--camera navbar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                    <use xlink:href="img/sprite.svg#camera"></use>
+                  </svg><span class="navbar__text">Помочь храму</span></a></li>
+              <li class="navbar__item"><a class="link link navbar__link js-scroll-trigger" href="#life"> 
+                  <svg class="svg svg--camera navbar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                    <use xlink:href="img/sprite.svg#camera"></use>
+                  </svg><span class="navbar__text">Требы</span></a></li>
+              <li class="navbar__item"><a class="link link navbar__link js-scroll-trigger" href="#note"> 
+                  <svg class="svg svg--camera navbar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                    <use xlink:href="img/sprite.svg#camera"></use>
+                  </svg><span class="navbar__text">Подать записку</span></a></li>
+              <li class="navbar__item"><a class="link link navbar__link js-scroll-trigger" href="#build"> 
+                  <svg class="svg svg--camera navbar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                    <use xlink:href="img/sprite.svg#camera"></use>
+                  </svg><span class="navbar__text">Именной кирпич</span></a></li>
+              <li class="navbar__item"><a class="link link navbar__link js-scroll-trigger" href="#prayer"> 
+                  <svg class="svg svg--camera navbar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                    <use xlink:href="img/sprite.svg#camera"></use>
+                  </svg><span class="navbar__text">Молитвы</span></a></li>
+              <li class="navbar__item"><a class="link link navbar__link js-scroll-trigger" href="#footer"> 
+                  <svg class="svg svg--camera navbar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                    <use xlink:href="img/sprite.svg#camera"></use>
+                  </svg><span class="navbar__text">Карта проезда</span></a></li>
             </ul>
           </div>
         </nav>
       </section>
       <section class="intro header__intro">
         <div class="container">
-          <div class="row">
-            <div class="col-24 col-md-12 col-xl-14">
+          <div class="row align-items-stretch">
+            <div class="col-24 col-md-12">
               <div class="intro__box">
                 <div class="intro__heading">
                   <h2 class="intro__heading--text">Храм преподобного Серафима Саровского и Умиления Пресвятой Богородицы</h2><i class="ic ic--venzel"></i>
@@ -122,11 +150,13 @@
                   </svg></a>
               </div>
             </div>
-            <div class="col-24 col-md-12 col-xl-10">
-              <video class="header__video js-video" autoplay loop muted>
-                <source src="video/video.webm" type="video/webm">
-                <source src="video/video.mp4" type="video/mp4">
-              </video>
+            <div class="col-24 col-md-12">
+              <div class="movie">
+                <video class="movie__video js-video" autoplay loop muted>
+                  <source src="video/video.webm" type="video/webm">
+                  <source src="video/video.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
         </div>
@@ -535,8 +565,8 @@
               <div class="about__slider js-about-slider">
                 <div class="about__item">
                   <div class="container">
-                    <div class="row">
-                      <div class="col-24">
+                    <div class="row justify-content-center">
+                      <div class="col-24 col-xl-22">
                         <div class="about__box">
                           <div class="about__img"><img class="img-fluid" src="img/about1.jpg" alt="Фото"></div>
                           <div class="about__info">
@@ -549,8 +579,8 @@
                 </div>
                 <div class="about__item">
                   <div class="container">
-                    <div class="row">
-                      <div class="col-24">
+                    <div class="row justify-content-center">
+                      <div class="col-24 col-xl-22">
                         <div class="about__box">
                           <div class="about__img"><img class="img-fluid" src="img/about2.jpg" alt="Фото"></div>
                           <div class="about__info">
@@ -563,8 +593,8 @@
                 </div>
                 <div class="about__item">
                   <div class="container">
-                    <div class="row">
-                      <div class="col-24">
+                    <div class="row justify-content-center">
+                      <div class="col-24 col-xl-22">
                         <div class="about__box">
                           <div class="about__img"><img class="img-fluid" src="img/about3.jpg" alt="Фото"></div>
                           <div class="about__info">
@@ -645,7 +675,7 @@
           </div>
         </div>
       </section>
-      <section class="history">
+      <section class="history" id="history">
         <div class="container">
           <div class="row">
             <div class="col-24 text-center">
@@ -697,7 +727,7 @@
           </div>
         </div>
       </section>
-      <section class="donate">
+      <section class="donate" id="donate">
         <div class="container">
           <div class="row">
             <div class="col-24 text-center">
@@ -925,7 +955,7 @@
           </div>
         </div>
       </section>
-      <section class="note">
+      <section class="note" id="note">
         <div class="note__image d-none d-md-block"><img class="img-fluid" src="img/box320.png" alt="Коробка"></div>
         <div class="container">
           <div class="row">
@@ -979,7 +1009,7 @@
           </div>
         </div>
       </section>
-      <section class="build">
+      <section class="build" id="build">
         <div class="container">
           <div class="row flex-lg-row-reverse">
             <div class="col-24 col-md-22 col-lg-14 text-center">
@@ -996,7 +1026,7 @@
           </div>
         </div>
       </section>
-      <section class="prayer">
+      <section class="prayer" id="prayer">
         <div class="container prayer__container">
           <div class="prayer__img"><img class="img-fluid" src="img/prayer.png" alt="Икона"></div>
         </div>
@@ -1086,7 +1116,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-24 col-lg-9">

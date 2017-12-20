@@ -10,8 +10,8 @@ section#about.about
           each item, i in content.index.about.slides  
             .about__item
               .container
-                .row
-                  .col-24
+                .row.justify-content-center
+                  .col-24.col-xl-22
                     .about__box
                       .about__img
                         img.img-fluid(src!=item.img.src, alt!=item.img.alt)
