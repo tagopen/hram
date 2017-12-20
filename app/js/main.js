@@ -213,12 +213,19 @@ var GRVE = GRVE || {};
       });
     },
     prayerCarousel: function(){
-      $('.js-prayer-slider').slick({
+      var $carousel      = $('.js-prayer-slider'),
+          self           = this; 
+
+
+      $carousel.on('init', function(event, slick, currentSlide = slick.currentSlide){
+        self.setArrowsText(slick, currentSlide);
+      });
+      $carousel.slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        prevArrow: '<button type="button" data-role="none" aria-label="Prev" role="button" class="slick-prev slick-arrow">Previous<svg class="svg svg--arrow-left slick-arrow__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
-        nextArrow: '<button type="button" data-role="none" aria-label="Next" role="button" class="slick-next slick-arrow">Next<svg class="svg svg--arrow-right slick-arrow__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+        prevArrow: '<button type="button" data-role="none" aria-label="Prev" role="button" class="slick-prev slick-arrow"><span class="slick-arrow__circle"><svg class="svg svg--arrow-left slick-arrow__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></span><span class="slick-arrow__text">Предыдущий слайд</span></button>',
+        nextArrow: '<button type="button" data-role="none" aria-label="Next" role="button" class="slick-next slick-arrow"><span class="slick-arrow__text">Следующий слайд</span><span class="slick-arrow__circle"><svg class="svg svg--arrow-right slick-arrow__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></span></button>',
         infinite: true,
         focusOnSelect: true,
         adaptiveHeight: true,
@@ -238,12 +245,31 @@ var GRVE = GRVE || {};
         {
           breakpoint: 1366,
           settings: {
-            adaptiveHeight: false,
-            dots: false
+            dots: false,
+            adaptiveHeight: false
           }
         }
         ]
       });
+
+      $carousel.on('afterChange', function(event, slick, currentSlide) {
+        self.setArrowsText(slick, currentSlide);
+      });    
+
+    },
+    setArrowsText: function(slick, currentSlide) {
+        var nextSlide             = (currentSlide === slick.slideCount - 1) ? 0 : currentSlide + 1,
+            prevSlide             = (currentSlide === 0) ? slick.slideCount - 1 : currentSlide - 1,
+            $prev                 = $(slick.$slides[prevSlide]),
+            $next                 = $(slick.$slides[nextSlide]),
+            prevArticleHeading    = $prev.find('[data-article]').data('article'),
+            nextArticleHeading    = $next.find('[data-article]').data('article'),
+            $arrows               = slick.$slider.next().find('.js-prayer-arrows'),
+            $arrowPrevText        = $arrows.find('.slick-prev .slick-arrow__text'),
+            $arrowNextText        = $arrows.find('.slick-next .slick-arrow__text');
+            
+        $arrowPrevText.html(prevArticleHeading);
+        $arrowNextText.html(nextArticleHeading);
     }
   };
 

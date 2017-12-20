@@ -1409,10 +1409,23 @@ a
   margin: 0 -15px
   .slick
     &-arrow
-      background-color: #4b8078
-      height: 24px
-      width: 24px     
-      border-radius: 50%  
+      display: flex
+      flex-wrap: wrap
+      flex-direction: row
+      align-items: center
+      width: auto
+      height: auto
+      &__text
+        margin: 0 10px
+        font: 500 16px/18px $font-pf
+        color: #4b8078
+      &__circle
+        display: inline-block
+        padding: 3px
+        height: 24px
+        width: 24px
+        border-radius: 50%
+        background-color: #4b8078
       &__icon
         color: #d9dbd3
     &-prev

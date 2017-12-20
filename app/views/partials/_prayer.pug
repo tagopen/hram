@@ -6,8 +6,8 @@ section.prayer
     .row
       .col-24
         .prayer__slider.js-prayer-slider
-          each item, i in content.index.prayer.slides
-            .prayer__item
+          each item, i in content.index.prayer.slides 
+            .prayer__item(data-article=item.heading)
               .container
                 .row
                   .col-24
