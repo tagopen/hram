@@ -156,6 +156,26 @@ var GRVE = GRVE || {};
 
   
 
+  // # Anchor scrolling effect
+  // ============================================================================= //
+  GRVE.anchorScroll = {
+    init: function($selector) {
+      // Smooth scrolling using jQuery easing
+      $selector.on('click', function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: (target.offset().top - 54)
+            }, 1000,);
+            return false;
+          }
+        }
+      });
+    }
+  };
+
   // # Initialize slick carousel
   // ============================================================================= //
   GRVE.slickInit = {
@@ -267,7 +287,7 @@ var GRVE = GRVE || {};
             $arrows               = slick.$slider.next().find('.js-prayer-arrows'),
             $arrowPrevText        = $arrows.find('.slick-prev .slick-arrow__text'),
             $arrowNextText        = $arrows.find('.slick-next .slick-arrow__text');
-            
+
         $arrowPrevText.html(prevArticleHeading);
         $arrowNextText.html(nextArticleHeading);
     }
@@ -317,6 +337,14 @@ var GRVE = GRVE || {};
       this.navbarOpen =           "navbar--open";
       self =                      this;
 
+      GRVE.anchorScroll.init(this.$navbarLink);
+      this.togglerClick();
+      this.backdropClick();
+      this.navbarLinkClick();
+      this.navbarCloseClick();
+
+    },
+    togglerClick: function() {
       this.$toggler.on('click', function() {
         $(this).toggleClass(self.navbarTogglerOpen);
         if (self.$navbar.hasClass(self.navbarTogglerOpen)) {
@@ -325,18 +353,21 @@ var GRVE = GRVE || {};
           self.showNavbar('show');
         }
       });
-
+    },
+    backdropClick: function() {
       this.$backdrop.on('click', function() {
         self.showNavbar('hide');
       });
-
+    },
+    navbarLinkClick: function() {
       this.$navbarLink.on('click', function() {
         self.$navbarLink.removeClass(self.navbarLinkActive)
         $(this).addClass(self.navbarLinkActive);
 
         self.showNavbar('hide');
       });
-
+    },
+    navbarCloseClick: function() {
       this.$close.on('click', function() {
         self.showNavbar('hide');
       });
