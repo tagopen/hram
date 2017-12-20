@@ -6908,6 +6908,9 @@ a:focus {
   .prayer__container {
     position: relative;
   }
+  .prayer__item {
+    min-height: 320px;
+  }
   .prayer__img {
     position: absolute;
     top: -15px;
@@ -6945,6 +6948,9 @@ a:focus {
   .prayer {
     padding: 110px 0 130px;
   }
+  .prayer__item {
+    min-height: 410px;
+  }
   .prayer__box {
     padding: 60px 320px 35px 60px;
   }
@@ -6962,6 +6968,9 @@ a:focus {
 }
 
 @media only screen and (min-width: 1200px) {
+  .prayer__item {
+    min-height: 480px;
+  }
   .prayer__box {
     padding-right: 360px;
   }
