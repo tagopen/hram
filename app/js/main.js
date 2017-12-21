@@ -58,7 +58,6 @@ var GRVE = GRVE || {};
       GRVE.video.init();
       GRVE.videoModal.init();
       GRVE.tooltip.init();
-      GRVE.calendar.init();
     }
   };
 
@@ -125,11 +124,6 @@ var GRVE = GRVE || {};
 
   // # Calendar json source
   // ============================================================================= //
-  GRVE.calendar = {
-    init: function() {
-      
-    }
-  };
 
   GRVE.accordion = {
     init: function() {
