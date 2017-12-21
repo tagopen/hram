@@ -79,6 +79,15 @@ $svg-close-offset-y: px;
 $svg-close-image: "../img/sprite.svg";
 $svg-close: ( "close", em(24), em(24), px, px, "../img/sprite.svg" );
 
+// email
+$svg-email-name: "email";
+$svg-email-width: em(19);
+$svg-email-height: em(19);
+$svg-email-offset-x: px;
+$svg-email-offset-y: px;
+$svg-email-image: "../img/sprite.svg";
+$svg-email: ( "email", em(19), em(19), px, px, "../img/sprite.svg" );
+
 // info
 $svg-info-name: "info";
 $svg-info-width: em(18);
@@ -124,6 +133,15 @@ $svg-person-offset-y: px;
 $svg-person-image: "../img/sprite.svg";
 $svg-person: ( "person", em(19), em(22), px, px, "../img/sprite.svg" );
 
+// phone
+$svg-phone-name: "phone";
+$svg-phone-width: em(19);
+$svg-phone-height: em(18);
+$svg-phone-offset-x: px;
+$svg-phone-offset-y: px;
+$svg-phone-image: "../img/sprite.svg";
+$svg-phone: ( "phone", em(19), em(18), px, px, "../img/sprite.svg" );
+
 // x
 $svg-x-name: "x";
 $svg-x-width: em(29);
@@ -137,4 +155,4 @@ $svg-x: ( "x", em(29), em(28), px, px, "../img/sprite.svg" );
 $svg-spritesheet-width: px;
 $svg-spritesheet-height: px;
 $svg-spritesheet-image: "../img/sprite.svg";
-$svg-spritesheet-sprites: ( $svg-arrow-left,  $svg-arrow-left-o,  $svg-arrow-right,  $svg-arrow-right-o,  $svg-calendar,  $svg-camera,  $svg-chat,  $svg-church,  $svg-close,  $svg-info,  $svg-list,  $svg-map,  $svg-map-pin,  $svg-person,  $svg-x,  );
+$svg-spritesheet-sprites: ( $svg-arrow-left,  $svg-arrow-left-o,  $svg-arrow-right,  $svg-arrow-right-o,  $svg-calendar,  $svg-camera,  $svg-chat,  $svg-church,  $svg-close,  $svg-email,  $svg-info,  $svg-list,  $svg-map,  $svg-map-pin,  $svg-person,  $svg-phone,  $svg-x,  );

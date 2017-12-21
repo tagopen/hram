@@ -7,7 +7,7 @@ section.donate#donate
             .heading.donate__heading!=content.index.donate.heading
             .donate__text!=content.index.donate.text
             .text-center.text-md-left
-              a.btn.donate__btn(href!=content.index.donate.btn.href)!=content.index.donate.btn.text
+              a.btn.donate__btn(href!=content.index.donate.btn.href, data-toggle="modal")!=content.index.donate.btn.text
                 +svg('arrow-right-o')(class="btn__ic")
           .col-24.col-md-6.col-lg-8.col-xl-10
             .donate__img

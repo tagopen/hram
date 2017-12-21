@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="css/tooltipster.bundle.css">
     <link rel="stylesheet" href="css/tooltipster-sideTip-shadow.min.css">
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
@@ -735,7 +736,7 @@
                 <div class="col-24 col-md-18 col-lg-16 col-xl-14">
                   <div class="heading donate__heading">Мы строим наш Храм для всех желающих спасения</div>
                   <div class="donate__text"><p>Храм прп. Серафима Саровского строится исключительно за счет добровольных пожертвований многих людей. Принимать участие в таком богоугодном деле всегда считалось высокой честью, это вызывало в народе особую любовь и уважение.</p><p>Примите и вы участие в строительстве храма, своим добровольным пожертвованием!</p></div>
-                  <div class="text-center text-md-left"><a class="btn donate__btn" href="">Помочь храму
+                  <div class="text-center text-md-left"><a class="btn donate__btn" href="#donate__modal" data-toggle="modal">Помочь храму
                       <svg class="svg svg--arrow-right-o btn__ic" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
                         <use xlink:href="img/sprite.svg#arrow-right-o"></use>
                       </svg></a></div>
@@ -1015,13 +1016,19 @@
             <div class="col-24 col-md-22 col-lg-14 text-center">
               <div class="heading build__heading">Ваш именной кирпичик в стенах храма</div>
               <div class="build__text"><p>Заложите именной кирпич в стены храма! Вы можете приобрести один или более именной кирпич стоимостью 15 грн, и получите свидетельство подтверждающее ваше участие в строительстве храма.</p><p>На каждой литургии возносятся молитвы “о создателях святого храма сего”, “о плодоносящих и добродеющих”, что равнозначно вечному поминовению в святом храме.</p></div>
-              <div class="text-center text-md-left"><a class="btn build__btn" href="">Заложить именной кирпич
+              <div class="text-center text-md-left"><a class="btn build__btn" href="#build__modal" data-toggle="modal">Заложить именной кирпич
                   <svg class="svg svg--arrow-right-o btn__ic" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
                     <use xlink:href="img/sprite.svg#arrow-right-o"></use>
                   </svg></a></div>
             </div>
             <div class="col-24 d-md-none d-lg-block col-lg-10">
               <div class="build__img"><img class="img-fluid" src="img/build.png" alt="Свидетельство"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-24">
+              <script>window.jsonurl = 'js/Events.json';</script>
+              <div id="app"></div>
             </div>
           </div>
         </div>
@@ -1140,7 +1147,7 @@
           </div>
         </div>
       </div>
-      <div class="footer__map">          </div>
+      <div class="footer__map">   <img class="img-fluid" src="img/map.svg"></div>
     </footer>
     <div class="modal fade" id="note__modal" tabindex="-1" role="dialog" aria-labelledby="callbackLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
@@ -1180,6 +1187,121 @@
             <div class="modal__video-box embed-responsive embed-responsive-16by9">
               <iframe class="modal__iframe" src="https://www.youtube.com/embed/czvmUmHyMW0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen> </iframe>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="build__modal" tabindex="-1" role="dialog" aria-labelledby="callbackLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal__content">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-label="Close">
+            <svg class="svg svg--close close__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal-body modal__body">
+            <div class="modal__heading">Заложить именной кирпич</div>
+            <div class="modal__subheading">Введите ваши контакты и количество именных кирпечей, которые вы хотите заложить в храм. Затем нажмите на кнопку, чтобы перейти к оплате.</div>
+            <form class="m-form js-form" action="mail/mail.php" method="post">
+              <div class="row">
+                <div class="col-24">   
+                  <fieldset class="form-group m-form__group">
+                    <input class="form-control m-form__input" type="tel" name="phone" placeholder="Введите ваш телефон" required>
+                    <svg class="svg svg--phone m-form__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                      <use xlink:href="img/sprite.svg#phone"></use>
+                    </svg>
+                  </fieldset>
+                </div>
+                <div class="col-24">   
+                  <fieldset class="form-group m-form__group">
+                    <input class="form-control m-form__input" type="email" name="email" placeholder="Введите ваш e-mail" required>
+                    <svg class="svg svg--email m-form__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                      <use xlink:href="img/sprite.svg#email"></use>
+                    </svg>
+                  </fieldset>
+                </div>
+                <div class="col-24">   
+                  <label class="m-form__label">Стоимость 1-го кирпича — 15 грн</label>
+                  <fieldset class="form-group m-form__group">
+                    <input class="form-control m-form__input" type="text" name="count" placeholder="Введите количество кирпичей" required>
+                    <svg class="svg svg--chat m-form__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                      <use xlink:href="img/sprite.svg#chat"></use>
+                    </svg>
+                  </fieldset>
+                </div>
+                <div class="col-24">
+                  <fieldset class="form-group m-form__group">
+                    <input class="form-control m-form__input" type="text" name="name" placeholder="Введите ваше имя" required>
+                    <svg class="svg svg--person nt-form__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                      <use xlink:href="img/sprite.svg#person"></use>
+                    </svg>
+                  </fieldset>
+                </div>
+                <div class="col-24">       
+                  <div class="btn-groups form__btn-groups">
+                    <button class="btn btn--size" name="form" value="Модалка именной кирпич" type="submit" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Перейти к оплате
+                      <svg class="svg svg--arrow-right-o btn__ic" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                        <use xlink:href="img/sprite.svg#arrow-right-o"></use>
+                      </svg>
+                    </button>
+                    <div class="m-form__confident confident">Гарантируем конфиденциальность ваших данных </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="donate__modal" tabindex="-1" role="dialog" aria-labelledby="callbackLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal__content">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-label="Close">
+            <svg class="svg svg--close close__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal-body modal__body">
+            <div class="modal__heading">Помочь храму</div>
+            <div class="modal__subheading">Введите ваши контакты и добровольную сумму пожертвования. Затем нажмите на кнопку, чтобы перейти к оплате.</div>
+            <form class="m-form js-form" action="mail/mail.php" method="post">
+              <div class="row">
+                <div class="col-24">   
+                  <fieldset class="form-group m-form__group">
+                    <input class="form-control m-form__input" type="tel" name="phone" placeholder="Введите ваш телефон" required>
+                    <svg class="svg svg--phone m-form__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                      <use xlink:href="img/sprite.svg#phone"></use>
+                    </svg>
+                  </fieldset>
+                </div>
+                <div class="col-24">   
+                  <fieldset class="form-group m-form__group">
+                    <input class="form-control m-form__input" type="email" name="email" placeholder="Введите ваш e-mail" required>
+                    <svg class="svg svg--email m-form__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                      <use xlink:href="img/sprite.svg#email"></use>
+                    </svg>
+                  </fieldset>
+                </div>
+                <div class="col-24">   
+                  <fieldset class="form-group m-form__group">
+                    <input class="form-control m-form__input" type="text" name="sum" placeholder="Введите сумму пожертвования" required>
+                    <svg class="svg svg--chat m-form__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                      <use xlink:href="img/sprite.svg#chat"></use>
+                    </svg>
+                  </fieldset>
+                </div>
+                <div class="col-24">       
+                  <div class="btn-groups form__btn-groups">
+                    <button class="btn btn--size" name="form" value="Модалка именной кирпич" type="submit" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">Перейти к оплате
+                      <svg class="svg svg--arrow-right-o btn__ic" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                        <use xlink:href="img/sprite.svg#arrow-right-o"></use>
+                      </svg>
+                    </button>
+                    <div class="m-form__confident confident">Гарантируем конфиденциальность ваших данных                 </div>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -1332,6 +1454,7 @@
     <!-- FancyApps3 JavaScript-->
     <script src="js/jquery.fancybox.js">   </script>
     <!-- Custom JavaScript-->
+    <script src="js/index.js"></script>
     <script src="js/main.js"></script>
     <!-- endbuild-->
   </body>

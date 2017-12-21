@@ -5,8 +5,13 @@ section.build#build
         .heading.build__heading!=content.index.build.heading
         .build__text!=content.index.build.text
         .text-center.text-md-left
-          a.btn.build__btn(href!=content.index.build.btn.href)!=content.index.build.btn.text
+          a.btn.build__btn(href!=content.index.build.btn.href, data-toggle="modal")!=content.index.build.btn.text
             +svg('arrow-right-o')(class="btn__ic")
       .col-24.d-md-none.d-lg-block.col-lg-10
         .build__img
           img.img-fluid(src!=content.index.build.img.src, alt!=content.index.build.img.alt)      
+    .row
+      .col-24
+        script.
+          window.jsonurl = 'js/Events.json';
+        #app

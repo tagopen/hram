@@ -4463,6 +4463,11 @@ li.fancybox-thumbs-loading {
   height: 1.5em;
 }
 
+.svg--email {
+  width: 1.1875em;
+  height: 1.1875em;
+}
+
 .svg--info {
   width: 1.125em;
   height: 1.1875em;
@@ -4486,6 +4491,11 @@ li.fancybox-thumbs-loading {
 .svg--person {
   width: 1.1875em;
   height: 1.375em;
+}
+
+.svg--phone {
+  width: 1.1875em;
+  height: 1.125em;
 }
 
 .svg--x {
@@ -4548,7 +4558,7 @@ li.fancybox-thumbs-loading {
   position: relative;
   -webkit-border-radius: 0;
           border-radius: 0;
-  padding: 30px 15px;
+  padding: 35px 15px;
   border: 0;
 }
 
@@ -4562,13 +4572,28 @@ li.fancybox-thumbs-loading {
 .modal__close {
   position: absolute;
   right: 25px;
-  top: 25px;
+  top: 12px;
   cursor: pointer;
+  z-index: 25;
 }
 
 .modal__close--video {
   top: -25px;
   right: 0;
+}
+
+.modal__heading {
+  font: 700 italic 28px/36px "PlayfairDisplay", sans-serif;
+  color: #4b8078;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.modal__subheading {
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+  color: #313431;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .modal__text {
@@ -4589,6 +4614,70 @@ li.fancybox-thumbs-loading {
   width: 100%;
 }
 
+.m-form {
+  padding-top: 15px;
+}
+
+.m-form__group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.m-form__input {
+  position: relative;
+  color: #313431;
+  background-color: #f8f8f8;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  padding: 22px 25px 25px 70px;
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+  border: 0;
+}
+
+.m-form__input::-webkit-input-placeholder {
+  color: #313431;
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+}
+
+.m-form__input::-moz-placeholder {
+  color: #313431;
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+}
+
+.m-form__input:-ms-input-placeholder {
+  color: #313431;
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+}
+
+.m-form__input::placeholder {
+  color: #313431;
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+}
+
+.m-form__btn {
+  white-space: normal;
+}
+
+.m-form__icon {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  color: #4b8078;
+}
+
+.m-form__label {
+  color: #313431;
+  font: 300 14px/21px "PF Beau Sans Pro", sans-serif;
+  margin-bottom: 10px;
+}
+
+.confident {
+  font: 300 14px/21px "PF Beau Sans Pro", sans-serif;
+  padding-top: 25px;
+  text-align: center;
+  color: #313431;
+}
+
 @media only screen and (min-width: 768px) {
   .modal__content {
     padding: 40px 25px;
@@ -4604,6 +4693,9 @@ li.fancybox-thumbs-loading {
   .modal__close:hover .close__icon, .modal__close:focus .close__icon {
     color: #ee8d3f;
   }
+  .modal__heading {
+    font: 700 italic 42px/50px "PlayfairDisplay", sans-serif;
+  }
   .close__icon {
     color: #fff;
     opacity: 1;
@@ -4612,7 +4704,7 @@ li.fancybox-thumbs-loading {
 
 @media only screen and (min-width: 992px) {
   .modal__content {
-    padding: 50px 35px;
+    padding: 50px 50px;
   }
   .modal__size {
     max-width: 900px;
@@ -4722,6 +4814,10 @@ a:focus {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   cursor: pointer;
+}
+
+.btn--size {
+  width: 100%;
 }
 
 .btn:hover, .btn:focus {
@@ -7062,18 +7158,11 @@ a:focus {
 
 .footer__map {
   margin-top: 40px;
-  height: 340px;
-  background: url(../img/map.svg) no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 @media only screen and (min-width: 768px) {
   .footer__heading {
     font: 700 italic 32px/40px "PlayfairDisplay", sans-serif;
-  }
-  .footer__map {
-    height: 540px;
   }
 }
 
@@ -7086,12 +7175,5 @@ a:focus {
   }
   .footer__map {
     margin-top: 80px;
-    height: 740px;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  .footer__map {
-    height: 900px;
   }
 }
