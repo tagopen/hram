@@ -58,6 +58,7 @@ var GRVE = GRVE || {};
       GRVE.video.init();
       GRVE.videoModal.init();
       GRVE.tooltip.init();
+      GRVE.calendar.init();
     }
   };
 
@@ -119,6 +120,14 @@ var GRVE = GRVE || {};
         $(this).stop().fadeOut(300);
         e.preventDefault();
       }); 
+    }
+  };
+
+  // # Calendar json source
+  // ============================================================================= //
+  GRVE.calendar = {
+    init: function() {
+      
     }
   };
 

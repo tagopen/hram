@@ -1,0 +1,268 @@
+#app
+  font-weight: 700
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: #2c3e50
+  margin-top: 30px
+  font-family: $font-pf
+
+.ra-block
+  font-family: $font-pf
+  color: #000
+  width: 100%
+  height: 520px
+  margin: 0 auto
+  text-align: center
+  padding-top: 20%
+  background-repeat: no-repeat
+
+.ra-block2
+  display: none
+  &:first-child
+    display: block
+a
+  color: #42b983
+
+.t-center
+  text-align: center
+  margin: 20px
+  font-size: 42px
+  margin-bottom: 30px
+  font-family: $font-playfair
+  font-style: italic
+  font-weight: 600
+  color: #4b8078
+
+.t-center2
+  font-family: $font-playfair
+  font-style: italic
+  font-weight: 600
+  color: #4b8078
+  font-size: 22px
+
++r(895)
+  .__vev_calendar-wrapper
+    max-width: 1200px
+    margin: 0 auto
+    .cal-wrapper
+      width: 50%
+      margin-top: 50px
+      margin-bottom: 50px
+      padding: 30px 50px
+      background-color: #f8f8f8
+      .date-num
+        line-height: 50px
+    .events-wrapper
+      width: 47%
+      background-color: #ffb24a
+      color: #fff
+      padding: 40px 45px
+      position: absolute
+      left: 50%
+      top: 0
+      bottom: 0
+
++rx(894)
+  .__vev_calendar-wrapper
+    .cal-wrapper
+      width: 100%
+      padding: 10px 5px
+      .date-num
+        line-height: 42px
+    .events-wrapper
+      width: 100%
+      margin-top: 10px
+      padding: 10px
+
+.__vev_calendar-wrapper
+  font-family: $font-playfair
+  position: relative
+  overflow: hidden
+  width: 100%
+  &::-webkit-scrollbar
+    width: 8px
+    height: 8px
+  &::-webkit-scrollbar-track
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2)
+    border-radius: 5px
+  &::-webkit-scrollbar-thumb
+    border-radius: 5px
+    background: rgba(0, 0, 0, 0.2)
+  .cal-wrapper
+    .cal-header
+      position: relative
+      width: 100%
+      background-color: #f8f8f8
+      font-weight: 500
+      overflow: hidden
+      padding-bottom: 10px
+      > .t-center2
+        line-height: 20px
+        padding: 30px
+        text-align: center
+      .title
+        width: 60%
+        text-align: center
+    .cal-body
+      width: 100%
+      .weeks
+        width: 100%
+        overflow: hidden
+        text-align: center
+        font-size: 1.2rem
+        color: #4b8078
+        .item
+          line-height: 50px
+          float: left
+          width: 14.285%
+      .dates
+        width: 100%
+        overflow: hidden
+        text-align: center
+        font-size: 1rem
+        color: #4b8078
+        .item
+          position: relative
+          float: left
+          display: block
+          width: 14.285%
+          cursor: default
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+          .date-num
+            font-size: 1.2rem
+            position: relative
+            z-index: 3
+          &.event
+            color: #fff
+            cursor: pointer
+          &.selected-day .is-event
+            background-color: #ffb24a
+          &.today
+            color: #fff
+          .is-event
+            content: ""
+            background-color: #ffb24a
+            color: #fff
+            border-radius: 50%
+            width: 36px
+            height: 36px
+            position: absolute
+            left: 50%
+            top: 50%
+            z-index: 1
+            margin-left: -18px
+            margin-top: -16px
+          .is-today
+            content: ""
+            background-color: #4b8078
+            color: #fff !important
+            border-radius: 50%
+            width: 36px
+            height: 36px
+            position: absolute
+            left: 50%
+            top: 50%
+            z-index: 1
+            margin-left: -18px
+            margin-top: -16px
+  .events-wrapper
+    border-radius: 10px
+    .cal-events
+      height: 100%
+      overflow-y: auto
+      padding: 0 5px
+      margin: 15px 0
+    .date
+      max-width: 60%
+      min-width: 200px
+      text-align: center
+      color: #fff
+      background-color: #4b8078
+      border-radius: 20px
+      margin: 0 auto
+      font-size: 22px
+    .event-item
+      padding: 5px 20px
+      margin-top: 15px
+      box-shadow: 0 3px 11px 2px rgba(0, 0, 0, 0.1)
+      background-color: #fff
+      border-radius: 5px
+      color: #323232
+      position: relative
+      &:first-child
+        margin-top: 0
+      .title
+        height: 40px
+        line-height: 40px
+        color: #323232
+        font-size: 16px
+        border-bottom: 1px solid #f2f2f2
+      .time
+        position: absolute
+        right: 30px
+        top: 17px
+        color: #9b9b9b
+        font-size: 14px
+      .desc
+        color: #9b9b9b
+        font-size: 14px
+        padding: 7px 0
+  .arrow-left.icon
+    color: #000
+    position: absolute
+    left: 6%
+    margin-top: 10px
+    &:before
+      content: ""
+      position: absolute
+      left: 1px
+      top: -5px
+      width: 10px
+      height: 10px
+      border-top: 1px solid currentColor
+      border-right: 1px solid currentColor
+      transform: rotate(-135deg)
+  .arrow-right.icon
+    color: #000
+    position: absolute
+    right: 6%
+    margin-top: 10px
+    &:before
+      content: ""
+      position: absolute
+      right: 1px
+      top: -5px
+      width: 10px
+      height: 10px
+      border-top: 1px solid currentColor
+      border-right: 1px solid currentColor
+      transform: rotate(45deg)
+  h3, p
+    margin: 0
+    padding: 0
+
+.ra-img-left
+  left: -80px
+  position: absolute
+  top: 200px
+  z-index: 200
+
+.ra-img-right
+  position: absolute
+  top: 200px
+  z-index: 200
+  right: -80px
+
++rx(900)
+  .ra-img-left
+    left: 10px
+    position: absolute
+    top: 200px
+    z-index: 200
+  .ra-img-right
+    position: absolute
+    top: 200px
+    z-index: 200
+    right: 10px
+
+/*# sourceMappingURL=style.css.map
