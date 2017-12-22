@@ -190,6 +190,7 @@ a
   text-align: left  
   transition: all .3s ease
   cursor: pointer
+  white-space: normal
   &--size
     width: 100%
   &:hover,
@@ -661,7 +662,7 @@ a
   .quote
     &__content
       padding: 75px 90px 35px 
-+comment("schedule style")      
++comment("schedule style")   
 .schedule
   padding: 45px 0 60px
   background: #f8f8f8
@@ -670,9 +671,10 @@ a
     margin-bottom: 25px
   &__element
     position: relative
-    padding: 30px 25px 50px  
+    height: 100%
+    padding: 30px 50px 50px 15px
     background: url(../img/venzelvertical.png) no-repeat
-    background-position: right top
+    background-position: right 50%
   &__day
     font: 700 italic 24px/26px $font-playfair 
     color: $green-color  
@@ -686,8 +688,9 @@ a
   &__text  
     font: 600 16px/18px $font-pf
     color: $green-color    
-    margin-bottom: 20px
+    margin-bottom: 10px
   &__event
+    margin-bottom: 20px
     font: 300 16px/18px $font-pf
     color: #313431
   &__container
@@ -696,6 +699,8 @@ a
     overflow: hidden  
   &__col
     box-shadow: 0 0 0 2px #f8f8f8
+    &--hidden
+      display: none
 +r(768)
   .schedule
     padding: 80px 0 75px

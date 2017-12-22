@@ -114,8 +114,14 @@ var GRVE = GRVE || {};
     init: function() {
       $('[data-show-all]').on('click', function (e) {
         var target = $(this).data('show-all'), 
-            $items = $(target); 
-        $items.removeClass('gallery__col--hidden');
+            $items = $(target),
+            delayStep = 100;
+
+        $items.has(':hidden').each(function() {
+          $(this).delay(delayStep).stop().fadeIn();
+          delayStep += delayStep;
+        }); 
+        
         $(this).stop().fadeOut(300);
         e.preventDefault();
       }); 

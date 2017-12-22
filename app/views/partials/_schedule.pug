@@ -1,3 +1,10 @@
+mixin cols(i, days)
+  if ((i === days - 1) && days % 2 !== 0)
+    .col-24.schedule__col(class={"schedule__col--hidden" : i >= 6})
+      block
+  else
+    .col-24.col-md-12.schedule__col(class={"schedule__col--hidden" : i >= 6})
+      block
 section.schedule
   .container
     .row
@@ -5,14 +12,19 @@ section.schedule
         .heading.schedule__heading!=content.index.schedule.heading
   .container.schedule__container      
     .row.schedule__row
-      each item, i in content.index.schedule.days
-        .col-24.schedule__col(class=(i == 6) ? 'col-md-24': 'col-md-12')
+      - var days = content.index.schedule.days
+      each item, i in days
+        +cols(i, days.length)
           .schedule__element
             .schedule__day
                +svg('calendar')(class="schedule__ic")
                !=item.day
             .schedule__date!=item.date
-            .schedule__text!=item.text
-            .schedule__event!=item.event 
-        
+            each event in item.events
+              .schedule__text!=event.text
+              .schedule__event!=event.event  
+    .row
+      .col-24.text-center
+        button.btn.gallery__btn(type="button", data-show-all=".schedule__col")!=content.index.schedule.btn.text
+          
         

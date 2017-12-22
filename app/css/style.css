@@ -4814,6 +4814,7 @@ a:focus {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   cursor: pointer;
+  white-space: normal;
 }
 
 .btn--size {
@@ -5659,9 +5660,10 @@ a:focus {
 
 .schedule__element {
   position: relative;
-  padding: 30px 25px 50px;
+  height: 100%;
+  padding: 30px 50px 50px 15px;
   background: url(../img/venzelvertical.png) no-repeat;
-  background-position: right top;
+  background-position: right 50%;
 }
 
 .schedule__day {
@@ -5683,10 +5685,11 @@ a:focus {
 .schedule__text {
   font: 600 16px/18px "PF Beau Sans Pro", sans-serif;
   color: #4b8078;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .schedule__event {
+  margin-bottom: 20px;
   font: 300 16px/18px "PF Beau Sans Pro", sans-serif;
   color: #313431;
 }
@@ -5702,6 +5705,10 @@ a:focus {
 .schedule__col {
   -webkit-box-shadow: 0 0 0 2px #f8f8f8;
           box-shadow: 0 0 0 2px #f8f8f8;
+}
+
+.schedule__col--hidden {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
