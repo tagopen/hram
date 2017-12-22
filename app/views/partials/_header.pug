@@ -4,7 +4,7 @@ header.header
     .container.nav__container
       .row.justify-content-between.align-items-center
         .col-auto
-          a.nav__link.nv-map(href=navbar.navigation.href)
+          a.nav__link.nv-map.js-scroll-trigger(href=navbar.navigation.href)
             +svg(navbar.navigation.icon)(class="nv-map__icon")
             span.nv-map__text!= navbar.navigation.text
         .col-auto.order-md-1
