@@ -342,7 +342,10 @@ var GRVE = GRVE || {};
 
   GRVE.video = {
     init: function(breakpoint = 767) {
+      this.$video = $('.movie__video');
+
       if (GRVE.isWindowSize.init(0, breakpoint)) {
+        this.clearVideoSize();
         return;
       }
 
@@ -357,9 +360,15 @@ var GRVE = GRVE || {};
 
       movieSize += 6;
 
-      $('.movie__video').css({
+      this.$video.css({
         'width': movieSize,
         'height': movieSize 
+      });
+    },
+    clearVideoSize: function() {
+      this.$video.css({
+        'width': '',
+        'height': '' 
       });
     }
   };

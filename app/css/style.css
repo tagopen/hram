@@ -5214,6 +5214,11 @@ a:focus {
   overflow: hidden;
 }
 
+.movie__video {
+  width: 100%;
+  height: auto;
+}
+
 @media only screen and (min-width: 768px) {
   .header__nav {
     z-index: 25;
