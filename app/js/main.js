@@ -148,9 +148,19 @@ var GRVE = GRVE || {};
   GRVE.showMore = {
     init: function() {
       $('[data-show-all]').on('click', function (e) {
-        var target = $(this).data('show-all'), 
-            $items = $(target),
-            delayStep = 100;
+        var $this =         $(this),
+            target =        $this.data('show-all'), 
+            $items =        $(target),
+            delayStep =     100,
+            sliced =         [];
+
+        sliced['xs'] =       $this.data('slice')    && $this.data('slice')     !== '' ? +$this.data('slice')    : undefined;
+        sliced['sm'] =       $this.data('slice-sm') && $this.data('slice-sm')  !== '' ? +$this.data('slice-sm') : undefined;
+        sliced['md'] =       $this.data('slice-md') && $this.data('slice-md')  !== '' ? +$this.data('slice-md') : undefined;
+        sliced['lg'] =       $this.data('slice-lg') && $this.data('slice-lg')  !== '' ? +$this.data('slice-lg') : undefined;
+        sliced['xl'] =       $this.data('slice-xl') &&  $this.data('slice-xl') !== '' ? +$this.data('slice-xl') : undefined;
+
+        this.sliceItems(sliced, $items);
 
         $items.has(':hidden').each(function() {
           $(this).delay(delayStep).stop().fadeIn();
@@ -160,6 +170,20 @@ var GRVE = GRVE || {};
         $(this).stop().fadeOut(300);
         e.preventDefault();
       }); 
+    },
+    sliceItems: function(slice, $items) {
+      var itemsLength = $items.length;
+
+      for (item in slice) {
+        if (!item) {
+          return false;
+        }
+
+        if (GRVE.isWindowSize.init(0, 767)) {
+          $items.slice(itemsLength - item).hide();
+        }
+
+      }
     }
   };
 
