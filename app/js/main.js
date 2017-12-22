@@ -196,7 +196,10 @@ var GRVE = GRVE || {};
         animation: 'fade',
         delay: 25,
         side: 'top',
-        maxWidth: 320
+        maxWidth: 290,
+        contentCloning: true,
+        interactive: true,
+        trigger: 'click'
       });
     }
   };

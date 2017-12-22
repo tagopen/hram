@@ -6836,6 +6836,7 @@ a:focus {
   background: #fff;
   padding: 10px;
   margin: 30px 0;
+  cursor: pointer;
 }
 
 .sv-card__zone {
@@ -6945,6 +6946,16 @@ a:focus {
 @media only screen and (min-width: 992px) {
   .service {
     padding-bottom: 70px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .service__col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    max-width: 20%;
   }
 }
 
