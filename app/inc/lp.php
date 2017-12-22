@@ -24,7 +24,7 @@ if ($v == '1') {
         'currency' => 'UAH',
         'description' => 'Пожертвование на храм', //заменить
         'order_id' => $order_id,
-        'sandbox' => '1',
+        'sandbox' => '1', // заменить на 0, после тестов
         'version' => '3'
     ));
     print $html;
@@ -55,7 +55,7 @@ if ($v == '1') {
         'currency' => 'UAH',
         'description' => 'Покупка ' . $w . ' с именем ' . $name, //заменить $w генерирует фразы  2 кирпичей,  3 кирпичей, $name имя введенное в форме
         'order_id' => $order_id,
-        'sandbox' => '1',
+        'sandbox' => '1', // заменить на 0, после тестов
         'version' => '3'
     ));
     print $html;
