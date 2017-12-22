@@ -576,10 +576,10 @@
         margin-bottom: 40px
 +comment("quote style")
 .quote 
-  padding: 50px 0
+  padding: 30px 0 25px
   overflow: hidden
   &__item
-    margin-bottom: 30px
+    margin-bottom: 10px
   &__box
     position: relative  
     &:before
@@ -623,6 +623,8 @@
     text-align: right
     font: 400 italic 18px/20px $font-playfair  
     color: $green-color
+  &__slider
+    margin: 0 !important  
 .ic
   &--quoteleft    
     left: 40px
@@ -639,6 +641,7 @@
     height: 12px
     width: 12px
     padding: 0
+    margin: 0 1px
     &.slick-active
       button
         background-color: #ffb24a
@@ -656,6 +659,9 @@
       padding: 55px 90px 35px  
     &__text
       margin-bottom: 25px  
+    &-dots
+      li
+        margin: 0 2px  
 +r(992)
   .quote
     &__content
@@ -708,9 +714,8 @@
   .schedule
     padding: 35px 0 50px 
     background: url(../img/schedulebg.png) no-repeat
-    &__heading
-      text-align: left     
-      margin-bottom: 65px
+    &__heading   
+      margin-bottom: 45px
 +comment("about style")
 .about
   padding: 45px 0 55px

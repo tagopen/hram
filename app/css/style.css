@@ -5512,12 +5512,12 @@ li.fancybox-thumbs-loading {
 /* Q U O T E    S T Y L E                   */
 /* ---------------------------------------- */
 .quote {
-  padding: 50px 0;
+  padding: 30px 0 25px;
   overflow: hidden;
 }
 
 .quote__item {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .quote__box {
@@ -5582,6 +5582,10 @@ li.fancybox-thumbs-loading {
   color: #4b8078;
 }
 
+.quote__slider {
+  margin: 0 !important;
+}
+
 .ic--quoteleft {
   left: 40px;
   top: 30px;
@@ -5605,6 +5609,7 @@ li.fancybox-thumbs-loading {
   height: 12px;
   width: 12px;
   padding: 0;
+  margin: 0 1px;
 }
 
 .quote-dots li.slick-active button {
@@ -5630,6 +5635,9 @@ li.fancybox-thumbs-loading {
   }
   .quote__text {
     margin-bottom: 25px;
+  }
+  .quote-dots li {
+    margin: 0 2px;
   }
 }
 
@@ -5720,8 +5728,7 @@ li.fancybox-thumbs-loading {
     background: url(../img/schedulebg.png) no-repeat;
   }
   .schedule__heading {
-    text-align: left;
-    margin-bottom: 65px;
+    margin-bottom: 45px;
   }
 }
 
