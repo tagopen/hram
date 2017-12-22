@@ -128,6 +128,9 @@ var GRVE = GRVE || {};
     }
   };
 
+  // # Calendar json source
+  // ============================================================================= //
+
   GRVE.accordion = {
     init: function() {
       if( $( window ).width() >= 768 ) {

@@ -45,7 +45,6 @@
     <link rel="stylesheet" href="css/tooltipster.bundle.css">
     <link rel="stylesheet" href="css/tooltipster-sideTip-shadow.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
@@ -792,15 +791,6 @@
           </div>
         </div>
       </section>
-      <section class="calendar">
-        <div class="container">
-          <div class="row">
-            <div class="col-24">
-              <div id="calendar"></div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="history" id="history">
         <div class="container">
           <div class="row">
@@ -870,6 +860,16 @@
                   <div class="donate__img"><img class="img-fluid" src="img/mockup.png" alt="Планшет"></div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="calendar">
+        <div class="container">
+          <div class="row">
+            <div class="col-24">
+              <script>window.jsonurl = 'Events.json';</script>
+              <div id="app"></div>
             </div>
           </div>
         </div>
@@ -1092,7 +1092,7 @@
             </div>
             <div class="col-24">
               <div class="note__form nt-form">
-                <form class="form js-form nt-form__box" action="mail/mail.php" method="post">
+                <form class="form js-form nt-form__box" action="/inc/lp.php?v=1" method="post">
                   <div class="row">
                     <div class="col-24 col-lg-10 col-xl-12">
                       <fieldset class="form-group nt-form__group">
@@ -1139,7 +1139,7 @@
         <div class="container">
           <div class="row flex-lg-row-reverse">
             <div class="col-24 col-md-22 col-lg-14 text-center">
-              <div class="heading build__heading">Ваш именной кирпичик в стенах храма</div>
+              <h2 class="heading build__heading">Ваш именной кирпичик в стенах храма</h2>
               <div class="build__text"><p>Заложите именной кирпич в стены храма! Вы можете приобрести один или более именной кирпич стоимостью 15 грн, и получите свидетельство подтверждающее ваше участие в строительстве храма.</p><p>На каждой литургии возносятся молитвы “о создателях святого храма сего”, “о плодоносящих и добродеющих”, что равнозначно вечному поминовению в святом храме.</p></div>
               <div class="text-center text-md-left"><a class="btn build__btn" href="#build__modal" data-toggle="modal">Заложить именной кирпич
                   <svg class="svg svg--arrow-right-o btn__ic" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
@@ -1148,12 +1148,6 @@
             </div>
             <div class="col-24 d-md-none d-lg-block col-lg-10">
               <div class="build__img"><img class="img-fluid" src="img/build.png" alt="Свидетельство"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-24">
-              <script>window.jsonurl = 'js/Events.json';</script>
-              <div id="app"></div>
             </div>
           </div>
         </div>
@@ -1327,7 +1321,7 @@
           <div class="modal-body modal__body">
             <div class="modal__heading">Заложить именной кирпич</div>
             <div class="modal__subheading">Введите ваши контакты и количество именных кирпечей, которые вы хотите заложить в храм. Затем нажмите на кнопку, чтобы перейти к оплате.</div>
-            <form class="m-form js-form" action="mail/mail.php" method="post">
+            <form class="m-form js-form" action="inc/lp.php?v=2" method="post">
               <div class="row">
                 <div class="col-24">   
                   <fieldset class="form-group m-form__group">
@@ -1577,10 +1571,11 @@
     <!-- Tooltip JavaScript-->
     <script src="js/tooltipster.bundle.js">   </script>
     <!-- FancyApps3 JavaScript-->
-    <script src="js/jquery.fancybox.js">   </script>
-    <!-- Custom JavaScript-->
-    <script src="js/index.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/jquery.fancybox.js"> </script>
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"> </script>
+    <!-- Calendar Vue JavaScript-->
+    <script src="js/calendar-vue-events.js"></script>
     <!-- endbuild-->
   </body>
 </html>

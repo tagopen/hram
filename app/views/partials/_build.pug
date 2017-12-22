@@ -2,7 +2,7 @@ section.build#build
   .container
     .row.flex-lg-row-reverse
       .col-24.col-md-22.col-lg-14.text-center
-        .heading.build__heading!=content.index.build.heading
+        h2.heading.build__heading!=content.index.build.heading
         .build__text!=content.index.build.text
         .text-center.text-md-left
           a.btn.build__btn(href!=content.index.build.btn.href, data-toggle="modal")!=content.index.build.btn.text
@@ -10,8 +10,3 @@ section.build#build
       .col-24.d-md-none.d-lg-block.col-lg-10
         .build__img
           img.img-fluid(src!=content.index.build.img.src, alt!=content.index.build.img.alt)      
-    .row
-      .col-24
-        script.
-          window.jsonurl = 'js/Events.json';
-        #app
