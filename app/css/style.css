@@ -5148,17 +5148,6 @@ a {
   }
 }
 
-button,
-a {
-  outline: none !important;
-}
-
-button:hover, button:focus,
-a:hover,
-a:focus {
-  outline: none !important;
-}
-
 .btn {
   position: relative;
   background-color: #ffb24a;
