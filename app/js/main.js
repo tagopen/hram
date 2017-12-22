@@ -192,10 +192,8 @@ var GRVE = GRVE || {};
   GRVE.tooltip = {
     init: function() {
       $('.js-tooltipstered').tooltipster({
-        contentCloning: true,
         theme: 'tooltipster-shadow',
         animation: 'fade',
-        interactive: true,
         delay: 25,
         side: 'top',
         maxWidth: 320
