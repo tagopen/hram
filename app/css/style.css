@@ -5643,7 +5643,7 @@ li.fancybox-thumbs-loading {
 /* S C H E D U L E    S T Y L E             */
 /* ---------------------------------------- */
 .schedule {
-  padding: 45px 0 60px;
+  padding: 35px 0 40px;
   background: #f8f8f8;
 }
 
@@ -5707,7 +5707,7 @@ li.fancybox-thumbs-loading {
 
 @media only screen and (min-width: 768px) {
   .schedule {
-    padding: 80px 0 75px;
+    padding: 40px 0 45px;
   }
   .schedule__heading {
     margin-bottom: 60px;
@@ -5716,7 +5716,7 @@ li.fancybox-thumbs-loading {
 
 @media only screen and (min-width: 992px) {
   .schedule {
-    padding: 75px 0 100px;
+    padding: 35px 0 50px;
     background: url(../img/schedulebg.png) no-repeat;
   }
   .schedule__heading {
@@ -5729,7 +5729,7 @@ li.fancybox-thumbs-loading {
 /* A B O U T    S T Y L E                   */
 /* ---------------------------------------- */
 .about {
-  padding: 65px 0 75px;
+  padding: 45px 0 55px;
   background: #e5e7df url(../img/aboutbg.png) no-repeat;
   background-size: cover;
   background-position: center;
@@ -5848,7 +5848,7 @@ li.fancybox-thumbs-loading {
 /* L I F E    S T Y L E                     */
 /* ---------------------------------------- */
 .life {
-  padding: 65px 0;
+  padding: 55px 0;
 }
 
 .life__heading {
@@ -6195,13 +6195,13 @@ li.fancybox-thumbs-loading {
 /* H I S T O R Y    S T Y L E               */
 /* ---------------------------------------- */
 .history {
-  padding: 65px 0 30px;
+  padding: 50px 0 25px;
   background-color: #e5e6de;
   overflow: hidden;
 }
 
 .history__heading {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .accordion {
@@ -6437,7 +6437,7 @@ li.fancybox-thumbs-loading {
 }
 
 .service__heading {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .service__item {
@@ -6591,7 +6591,7 @@ li.fancybox-thumbs-loading {
 /* N O T E    S T Y L E                     */
 /* ---------------------------------------- */
 .note {
-  padding: 60px 0 0;
+  padding: 40px 0 0;
   overflow: hidden;
 }
 
@@ -6755,7 +6755,7 @@ li.fancybox-thumbs-loading {
 @media only screen and (min-width: 768px) {
   .note {
     position: relative;
-    padding: 60px 0 70px;
+    padding: 45px 0 50px;
   }
   .note__heading {
     margin-bottom: 40px;
@@ -6804,7 +6804,7 @@ li.fancybox-thumbs-loading {
 
 @media only screen and (min-width: 1200px) {
   .note {
-    padding-top: 160px;
+    padding-top: 120px;
   }
   .note__image {
     top: 0;
@@ -6826,7 +6826,7 @@ li.fancybox-thumbs-loading {
 /* B U I L D    S T Y L E                   */
 /* ---------------------------------------- */
 .build {
-  padding: 60px 0;
+  padding: 40px 0;
   overflow: hidden;
   background: url(../img/buildbg.jpg) no-repeat;
   background-size: cover;
@@ -6870,7 +6870,7 @@ li.fancybox-thumbs-loading {
 
 @media only screen and (min-width: 768px) {
   .build {
-    padding: 70px 0 100px;
+    padding: 50px 0 60px;
   }
   .build__heading {
     text-align: left;
@@ -7069,7 +7069,7 @@ li.fancybox-thumbs-loading {
 
 @media only screen and (min-width: 768px) {
   .prayer {
-    padding: 90px 0;
+    padding: 50px 0;
   }
   .prayer__container {
     position: relative;
@@ -7112,7 +7112,7 @@ li.fancybox-thumbs-loading {
 
 @media only screen and (min-width: 992px) {
   .prayer {
-    padding: 110px 0 130px;
+    padding: 60px 0 80px;
   }
   .prayer__item {
     min-height: 410px;
