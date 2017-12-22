@@ -1,7 +1,7 @@
 <?php
 require_once "LiqPay.php";
-$public_key = "i66314607113"; //заменить
-$private_key = "WOwqQ6DZfZ5WFjHy65cVT6XIDHYGtZZmxniyA2ue"; //заменить
+$public_key = "i35172522940"; 
+$private_key = "pNKMam46mnwXKBeeV4TXhOHaGSsCMbtZFMkx1T9A"; 
 $v = $_GET['v'];
 function plural_form($number, $after)
 {
@@ -22,7 +22,7 @@ if ($v == '1') {
         'email' => $email,
         'phone' => $phone,
         'currency' => 'UAH',
-        'description' => 'Пожертвование на храм', //заменить
+        'description' => 'Пожертвование на храм', //заменить, если надо
         'order_id' => $order_id,
         'sandbox' => '1', // заменить на 0, после тестов
         'version' => '3'
@@ -53,7 +53,7 @@ if ($v == '1') {
         'email' => $email,
         'phone' => $phone,
         'currency' => 'UAH',
-        'description' => 'Покупка ' . $w . ' с именем ' . $name, //заменить $w генерирует фразы  2 кирпичей,  3 кирпичей, $name имя введенное в форме
+        'description' => 'Покупка ' . $w . ' с именем ' . $name, //заменить ксли надо ($w генерирует фразы  2 кирпичей,  3 кирпичей, $name имя введенное в форме)
         'order_id' => $order_id,
         'sandbox' => '1', // заменить на 0, после тестов
         'version' => '3'
