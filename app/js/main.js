@@ -148,16 +148,36 @@ var GRVE = GRVE || {};
   GRVE.showMore = {
     init: function() {
       $('[data-show-all]').on('click', function (e) {
-        var target = $(this).data('show-all'), 
-            $items = $(target),
-            delayStep = 100;
+        var $this =              $(this),
+            target =             $this.data('show-all'),
+            $items =             $(target),
+            toggle =             $this.has('[show-toggle]'),
+            ariaControl =        $this.attr('aria-control') || undefined,
+            itemsVisibleLength = $items.has(":visible").length,
+            delayStep =          100;
 
-        $items.has(':hidden').each(function() {
-          $(this).delay(delayStep).stop().fadeIn();
-          delayStep += delayStep;
-        }); 
-        
-        $(this).stop().fadeOut(300);
+        if (!ariaControl && toggle) {
+          $this.attr("aria-control", itemsVisibleLength);
+          ariaControl = itemsVisibleLength;
+        }
+
+
+        if ($items.length === itemsVisibleLength) {
+          $items.slice(ariaControl, $items.length).each(function() {
+            $(this).delay(delayStep).stop().fadeOut();
+            delayStep += delayStep;
+          });
+        } else {
+          $items.has(':hidden').each(function() {
+            $(this).delay(delayStep).stop().fadeIn();
+            delayStep += delayStep;
+          });
+        }
+
+        if (!toggle) {
+          $(this).stop().fadeOut(300);
+        }
+
         e.preventDefault();
       }); 
     }
