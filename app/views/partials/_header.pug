@@ -45,6 +45,7 @@ header.header
             .intro__text!=intro.text
             a.btn.intro__btn(href=intro.btn.href)!=intro.btn.text
               +svg('arrow-right-o')(class="btn__ic")
+            a.btn.js-gallery__btn(data-fancybox="gallery", href="img/gallery1.jpg") Галерея
         .col-24.col-md-12
           .movie
             video.movie__video.js-video(autoplay loop muted)
