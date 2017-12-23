@@ -148,16 +148,36 @@ var GRVE = GRVE || {};
   GRVE.showMore = {
     init: function() {
       $('[data-show-all]').on('click', function (e) {
-        var target = $(this).data('show-all'), 
-            $items = $(target),
-            delayStep = 100;
+        var $this =              $(this),
+            target =             $this.data('show-all'),
+            $items =             $(target),
+            toggle =             $this.data('show-toggle'),
+            toggleNum =          parseInt(toggle),
+            itemsVisibleLength = $items.has(":visible").length,
+            delayStep =          100;
 
-        $items.has(':hidden').each(function() {
-          $(this).delay(delayStep).stop().fadeIn();
-          delayStep += delayStep;
-        }); 
-        
-        $(this).stop().fadeOut(300);
+
+        if (toggleNum === NaN) {
+          $this.attr("data-show-toggle", itemsVisibleLength);
+          toggleNum = itemsVisibleLength;
+        }
+
+        if ($items.has(':visible').length > parseInt(toggleNum)) {
+          $items.slice(toggleNum, $items.length).each(function() {
+            $(this).delay(delayStep).stop().fadeOut();
+            delayStep += delayStep;
+          });
+        } else {
+          $items.has(':hidden').each(function() {
+            $(this).delay(delayStep).stop().fadeIn();
+            delayStep += delayStep;
+          });
+        }
+
+        if (toggleNum === NaN) {
+          $(this).stop().fadeOut(300);
+        }
+
         e.preventDefault();
       }); 
     }
