@@ -66,6 +66,7 @@
     "@fancyapps/fancybox": "^3.2.5",
     "bootstrap": "4.0.0-beta.2",
     "bootstrap-validator": "^0.11.9",
+    "cleave.js": "^1.0.9",
     "clndr": "^1.4.7",
     "fancybox": "^3.0.0",
     "font-awesome": "^4.7.0",

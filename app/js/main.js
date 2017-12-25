@@ -59,6 +59,7 @@ var GRVE = GRVE || {};
       GRVE.video.init();
       GRVE.videoModal.init();
       GRVE.tooltip.init();
+      GRVE.numberMask.init();
     }
   };
 
@@ -105,6 +106,18 @@ var GRVE = GRVE || {};
         paragraph2: 'Пожалуйста, установите современный браузер:',
         closeMessage: 'Закрывая это уведомление вы соглашаетесь с тем, что сайт в вашем браузере может отображаться некорректно.',
         closeLink: 'Закрыть это уведомление',
+      });
+    }
+  };
+
+
+  // # Number mask for input
+  // ============================================================================= //
+  GRVE.numberMask = {
+    init: function() {
+      var cleave = new Cleave('.js-input-number', {
+        numeral: true,
+        numeralThousandsGroupStyle: 'thousand'
       });
     }
   };
