@@ -1350,7 +1350,7 @@
           <div class="modal-body modal__body">
             <div class="modal__heading">Помочь храму</div>
             <div class="modal__subheading">Введите ваши контакты и добровольную сумму пожертвования. Затем нажмите на кнопку, чтобы перейти к оплате.</div>
-            <form class="m-form js-form" action="mail/mail.php" method="post">
+            <form class="m-form js-form" аction="inc/lp.php?v=1" method="post">
               <div class="row">
                 <div class="col-24">   
                   <fieldset class="form-group m-form__group">
@@ -1370,7 +1370,7 @@
                 </div>
                 <div class="col-24">   
                   <fieldset class="form-group m-form__group">
-                    <input class="form-control m-form__input" type="text" name="amount" placeholder="Введите сумму пожертвования" required>
+                    <input class="form-control m-form__input" type="number" name="amount" placeholder="Введите сумму пожертвования" required>
                     <svg class="svg svg--chat m-form__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
                       <use xlink:href="img/sprite.svg#chat"></use>
                     </svg>
