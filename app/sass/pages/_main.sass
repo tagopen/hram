@@ -499,12 +499,10 @@
     transition: all .1s ease-out
     &--between
       justify-content: space-between
-    &--active
+    &:hover,
+    &:focus
       background-color: #fff
       color: #4b8078
-      &:hover,
-      &:focus
-        color: #4b8078
   &__close
     transition: all .3s ease-out
     &:hover,
@@ -1609,6 +1607,13 @@
     font: 300 16px/21px $font-pf
     color: #313431
     margin-bottom: 5px
+  &__link  
+    font: 300 16px/21px $font-pf
+    color: #313431
+    margin-bottom: 5px
+    &:hover,
+    &:focus
+      text-decoration: none
   &__icon
     color: #4b8078
     &-map

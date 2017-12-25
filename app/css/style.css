@@ -5380,12 +5380,8 @@ li.fancybox-thumbs-loading {
           justify-content: space-between;
 }
 
-.navbar__link--active {
+.navbar__link:hover, .navbar__link:focus {
   background-color: #fff;
-  color: #4b8078;
-}
-
-.navbar__link--active:hover, .navbar__link--active:focus {
   color: #4b8078;
 }
 
@@ -7182,6 +7178,16 @@ li.fancybox-thumbs-loading {
   font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
   color: #313431;
   margin-bottom: 5px;
+}
+
+.footer__link {
+  font: 300 16px/21px "PF Beau Sans Pro", sans-serif;
+  color: #313431;
+  margin-bottom: 5px;
+}
+
+.footer__link:hover, .footer__link:focus {
+  text-decoration: none;
 }
 
 .footer__icon {

@@ -30,7 +30,7 @@ header.header
                 +svg(navbar.nav.close.icon)(class="nv-close__icon")
           each item, i in navbar.nav.items
             li.navbar__item
-              a.link.link.navbar__link.js-scroll-trigger(href=item.href, class={"navbar__link--active" : i == 0}) 
+              a.link.link.navbar__link.js-scroll-trigger(href=item.href) 
                 +svg(item.icon)(class="navbar__icon")
                 span.navbar__text!= item.text
   - var intro = page.header.intro
