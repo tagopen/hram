@@ -151,10 +151,12 @@ var GRVE = GRVE || {};
         var $this =              $(this),
             target =             $this.data('show-all'),
             $items =             $(target),
-            toggle =             $this.has('[show-toggle]'),
+            toggle =             $this.is('[data-show-toggle]') || undefined,
             ariaControl =        $this.attr('aria-control') || undefined,
             itemsVisibleLength = $items.has(":visible").length,
             delayStep =          100;
+
+        console.log("toggle", toggle);
 
         if (!ariaControl && toggle) {
           $this.attr("aria-control", itemsVisibleLength);

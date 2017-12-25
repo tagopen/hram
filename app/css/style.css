@@ -6456,6 +6456,10 @@ li.fancybox-thumbs-loading {
   height: 88%;
 }
 
+.service__col--hidden {
+  display: none;
+}
+
 .tooltip__content {
   display: none !important;
 }

@@ -7,7 +7,7 @@ section.service#service
       .col-24.col-md-20.col-lg-24
         .row.align-items-stretch
           each item, i in content.index.service.items
-            .col-24.col-md-12.col-xl-auto.service__col
+            .col-24.col-md-12.col-xl-auto.service__col(class={"service__col--hidden" : i >= 10 })
               .service__item.sv-card.js-tooltipstered(data-tooltip-content="#tooltip"+(i+1))
                 .sv-card__box
                   i.sv-card__corner.sv-card__corner--tl
@@ -17,3 +17,6 @@ section.service#service
                   .sv-card__zone
                     +svg("x")(class="sv-card__icon")
                     .sv-card__text!=item.text
+          .col-24.text-center
+            button.btn.btn--default(type="button", data-show-all=".service__col", data-show-toggle)!=content.index.schedule.btn.text
+          
