@@ -133,8 +133,7 @@
 
   $from = "no-repeat@" . HOST_NAME;
   $mail->SetFrom($from, HOST_NAME);
-  $mail->AddAddress("Artem2431@gmail.com");
-  $mail->AddAddress("Marchik88@rambler.ru");
+  $mail->AddAddress("hram.serafim.dp@gmail.com");
   $mail->isHTML(true);
   $mail->Subject      = HOST_NAME;
   $NewsLetterClass    = new NewsLetterClass();
