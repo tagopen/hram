@@ -60,6 +60,7 @@ var GRVE = GRVE || {};
       GRVE.videoModal.init();
       GRVE.tooltip.init();
       GRVE.numberMask.init();
+      GRVE.AjaxSend.init();
     }
   };
 
@@ -504,6 +505,114 @@ var GRVE = GRVE || {};
     }
   };
 
+  // # AjaxSend
+  // ============================================================================= //
+  GRVE.ajaxSend = {
+    init: function() {
+      this.send($('.js-form'), )
+    },
+    send: function($form, formName=undefined) {
+      this.$result =         $form.find('.result');
+      this.$submit =         $form.find("[type=submit]");
+
+      var url =         $form.attr('action');
+      var data =        new FormData($form[0]);
+      var formVal =     this.$submit.val();
+      var self =        this;
+
+      data.append("form", formVal);
+
+      switch (formName) {
+        case 'promo':
+          data = data.get["promocode"];
+          break;
+      }
+
+      $.ajax(url, {
+        type: 'post',
+        data: data,
+        dataType: 'json',
+        processData: false,
+        contentType: false,
+        cache: false,
+        beforeSend: function() {
+          if (!formName) {
+            self.progress('hide');
+          }
+        },
+        afterSend: function() {
+          if (!formName) {
+            self.progress('show');
+          }
+        },
+
+        success: function(data) {
+
+          if ($.isPlainObject(data) && data.state === 200) {
+            if (data.error) {
+              self.submitFail(data.error);
+            } else if (data.message) {
+              self.submitDone(data.message);
+              if (!formName && data.redirect) {
+                document.location.href = data.redirect;
+              }
+              if (!formName) {
+                $form.trigger("reset");
+              }
+            }
+          } else {
+            self.submitFail("Возникли проблемы с сервером. Сообщите нам о ошибке, мы постараемся устранить её в ближайшее время.");
+          }
+        },
+
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+          self.submitFail(textStatus || errorThrown);
+        },
+      });
+    },
+    submitFail: function(msg) {
+      this.alert(msg, "success")
+      return false;
+    },
+    submitDone: function(msg) {
+      this.alert(msg, "danger")
+      return true;
+    },
+    alert: function(msg, status) {
+      var self =   this;
+      var $alert = [
+
+        '<div class="alert alert-' + status + ' avatar-alert alert-dismissable fade show" role="alert">',
+        '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>',
+        msg,
+        '</div>'
+      ].join('');
+
+      this.$result.html($alert);
+      if (status === "success") {
+        setTimeout(function() {
+          self.$result.slideUp(function() {
+            self.$result.html('');
+          });
+        }, 3000);
+      }
+    },
+    submit: function() {
+      var self = this;
+      this.$submit.on('click', function() {
+        var $form = $(this).closest('.js-form');
+        self.init($form);
+      });
+    },
+    progress: function(status) {
+      if (status === 'hide') {
+        this.$submit.prop("disabled", true).button('loading');
+      } else if (status === 'show') {
+        this.$submit.prop("disabled", false).button('reset'); 
+      }
+    }
+  };
+
   // # Basic Elements
   // ============================================================================= //
   GRVE.basicElements = {
@@ -570,6 +679,9 @@ var GRVE = GRVE || {};
       });
     },
   };
+
+
+
 
   $(document).ready(function(){ GRVE.documentReady.init(); });
   $(window).smartresize(function(){ GRVE.documentResize.init(); });

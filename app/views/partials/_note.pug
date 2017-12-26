@@ -33,5 +33,6 @@ section.note#note
                 .btn-groups.form__btn-groups
                   button.btn.nt-form__btn(name='form', value!=content.index.note.form.value, type='submit', data-loading-text!=content.index.note.form.loading)!=content.index.note.form.text
                     +svg('arrow-right-o')(class="btn__ic")
+                  .result   
           .note__image.d-md-none
             img.img-fluid(src!=content.index.note.img.src, alt!=content.index.note.img.alt) 

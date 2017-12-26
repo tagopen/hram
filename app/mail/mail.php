@@ -200,10 +200,18 @@
   $mail->AltBody      = $body;
 
   if(!$mail->send()) {
-    echo "Что-то пошло не так. " . $mail->ErrorInfo;
-    return false;
+    $response = array(
+      'state'  => 200,
+      'error' => "Что-то пошло не так. " . $mail->ErrorInfo,
+    );
   } else {
-    header("Location: ../success.html");
-    return true;
+    $response = array(
+      'state'  => 200,
+      'message' => "Cообщение успешно отправлено.",
+    );
   }
+  echo json_encode($response);
 ?>
+
+
+  
