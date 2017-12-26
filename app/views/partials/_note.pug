@@ -9,7 +9,7 @@ section.note#note
           a.note__link(href!=content.index.note.link.href, data-toggle="modal")!=content.index.note.link.info
       .col-24
         .note__form.nt-form
-          form.form.js-form.nt-form__box(action="/mail/mail.php", method="post")
+          form.form.js-form.nt-form__box(action="mail/mail.php", method="post")
             .row
               .col-24.col-lg-10.col-xl-12
                 fieldset.form-group.nt-form__group
@@ -21,12 +21,12 @@ section.note#note
               .col-24.col-lg-14.col-xl-12   
                 fieldset.form-group
                   .radio-btn
-                    input#rbtn1.radio-btn__control.js-note(type='radio', name='note', data-note='#health', value="Треба о здравии")
+                    input#rbtn1.radio-btn__control.js-note(type='radio', name='note[]', data-note='#health', value="Треба о здравии")
                     label.radio-btn__box(for='rbtn1')
                       i.radio-btn__icon
                       | Треба о здравии
                   .radio-btn
-                    input#rbtn2.radio-btn__control.js-note(type='radio', name='note', value="Треба о упокоении", data-note='#repose')
+                    input#rbtn2.radio-btn__control.js-note(type='radio', name='note[]', value="Треба о упокоении", data-note='#repose')
                     label.radio-btn__box(for='rbtn2')
                       i.radio-btn__icon
                       | Треба о упокоении

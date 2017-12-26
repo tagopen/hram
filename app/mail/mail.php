@@ -88,15 +88,6 @@
   if ( (!empty($_POST["names"])) && (isset($_POST["names"])) ) {
     $post["user_names"] = $_POST["names"];
     $stack = array(
-      "key"   => "Имя: ",
-      "value" => $post["user_names"]
-    );
-    array_push($data, $stack);
-  }
-
-  if ( (!empty($_POST["names"])) && (isset($_POST["names"])) ) {
-    $post["user_names"] = $_POST["names"];
-    $stack = array(
       "key"   => "Имена: ",
       "value" => $post["user_names"]
     );
@@ -112,64 +103,15 @@
     array_push($data, $stack);
   }
 
-  if ( (!empty($_POST["method"])) && (isset($_POST["method"])) ) {
-    $post["user_method"] = $_POST["method"];
-    $stack = array(
-      "key"   => "Как связаться: ",
-      "value" => $post["user_method"]
-    );
-    array_push($data, $stack);
-  }
-
-  if ( (!empty($_POST["time"])) && (isset($_POST["time"])) ) {
-    $post["user_time"] = $_POST["time"];
-    $stack = array(
-      "key"   => "Удобное время: ",
-      "value" => $post["user_time"]
-    );
-    array_push($data, $stack);
-  }
-
-  if ( !empty($_POST["period"])  && (isset($_POST["period"])) ) {
-    if (is_array($_POST['period'])) {
-      $post["period"] = implode(", ", $_POST["period"]);
-    } else {
-      $post["period"] = $_POST["period"];
-    }
-    $stack = array(
-      "key"   => "Когда позвонить: ",
-      "value" => $post["period"]
-    );
-    array_push($data, $stack);
-  }
-
   if ( !empty($_POST["note"])  && (isset($_POST["note"])) ) {
     if (is_array($_POST['note'])) {
-      $post["note"] = implode(", ", $_POST["note"]);
+      $post["user_note"] = implode(", ", $_POST["note"]);
     } else {
-      $post["note"] = $_POST["note"];
+      $post["user_note"] = $_POST["note"];
     }
     $stack = array(
       "key"   => "Треба: ",
-      "value" => $post["note"]
-    );
-    array_push($data, $stack);
-  }
-
-  if ( (!empty($_POST["range1"])) && (isset($_POST["range1"])) ) {
-    $post["user_range1"] = $_POST["range1"];
-    $stack = array(
-      "key"   => "Длина ворот: ",
-      "value" => $post["user_range1"]
-    );
-    array_push($data, $stack);
-  }
-
-  if ( (!empty($_POST["range2"])) && (isset($_POST["range2"])) ) {
-    $post["user_range2"] = $_POST["range2"];
-    $stack = array(
-      "key"   => "Высота ворот: ",
-      "value" => $post["user_range2"]
+      "value" => $post["user_note"]
     );
     array_push($data, $stack);
   }

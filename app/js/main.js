@@ -60,7 +60,7 @@ var GRVE = GRVE || {};
       GRVE.videoModal.init();
       GRVE.tooltip.init();
       GRVE.numberMask.init();
-      GRVE.AjaxSend.init();
+      GRVE.ajax.init();
     }
   };
 
@@ -505,11 +505,17 @@ var GRVE = GRVE || {};
     }
   };
 
-  // # AjaxSend
+  // # Form ajax send
   // ============================================================================= //
-  GRVE.ajaxSend = {
+  GRVE.ajax = {
     init: function() {
-      this.send($('.js-form'), )
+      var self = this;
+
+      $('.js-form').on('submit', function (e) {
+        var $form = $(this);
+        e.preventDefault();
+        self.send( $form)
+      });
     },
     send: function($form, formName=undefined) {
       this.$result =         $form.find('.result');
@@ -540,7 +546,7 @@ var GRVE = GRVE || {};
             self.progress('hide');
           }
         },
-        afterSend: function() {
+        complete: function() {
           if (!formName) {
             self.progress('show');
           }
@@ -571,11 +577,11 @@ var GRVE = GRVE || {};
       });
     },
     submitFail: function(msg) {
-      this.alert(msg, "success")
+      this.alert(msg, "danger")
       return false;
     },
     submitDone: function(msg) {
-      this.alert(msg, "danger")
+      this.alert(msg, "success")
       return true;
     },
     alert: function(msg, status) {
