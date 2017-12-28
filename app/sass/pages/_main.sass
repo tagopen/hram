@@ -375,6 +375,11 @@
     font: 400 16px/20px $font-pf
     color: #fff
     text-decoration: none
+    &--main
+      &:hover,
+      &:focus
+        color: #fff !important
+        background-color: #4b8078 !important
     &:hover,
     &:focus
       text-decoration: none
@@ -537,7 +542,7 @@
   &__heading
     text-align: center
     &--text
-      font: 700 italic 24px/40px $font-playfair
+      font: 700 italic 22px/36px $font-playfair
       color: $green-color
       margin-bottom: 20px
     .ic
@@ -556,7 +561,7 @@
     &__heading 
       text-align: left
       &--text   
-        font: 700 italic 34px/44px $font-playfair
+        font: 700 italic 30px/40px $font-playfair
         margin-bottom: 45px
       .ic
         margin-bottom: 50px  
@@ -570,7 +575,7 @@
       padding: 45px 0 35px
     &__heading    
       &--text
-        font: 700 italic 44px/60px $font-playfair
+        font: 700 italic 38px/60px $font-playfair
         margin-bottom: 40px
 +comment("quote style")
 .quote 
@@ -1242,7 +1247,7 @@
   .service
     padding-bottom: 30px
   .sv-card
-    margin: 0 0 30px  
+    margin: 0 0 20px  
 +r(992)
   .service
     padding-bottom: 70px

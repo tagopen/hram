@@ -5121,6 +5121,11 @@ li.fancybox-thumbs-loading {
   text-decoration: none;
 }
 
+.navbar__link--main:hover, .navbar__link--main:focus {
+  color: #fff !important;
+  background-color: #4b8078 !important;
+}
+
 .navbar__link:hover, .navbar__link:focus {
   text-decoration: none;
   color: #fff;
@@ -5453,7 +5458,7 @@ li.fancybox-thumbs-loading {
 }
 
 .intro__heading--text {
-  font: 700 italic 24px/40px "PlayfairDisplay", sans-serif;
+  font: 700 italic 22px/36px "PlayfairDisplay", sans-serif;
   color: #4b8078;
   margin-bottom: 20px;
 }
@@ -5481,7 +5486,7 @@ li.fancybox-thumbs-loading {
     text-align: left;
   }
   .intro__heading--text {
-    font: 700 italic 34px/44px "PlayfairDisplay", sans-serif;
+    font: 700 italic 30px/40px "PlayfairDisplay", sans-serif;
     margin-bottom: 45px;
   }
   .intro__heading .ic {
@@ -5499,7 +5504,7 @@ li.fancybox-thumbs-loading {
     padding: 45px 0 35px;
   }
   .intro__heading--text {
-    font: 700 italic 44px/60px "PlayfairDisplay", sans-serif;
+    font: 700 italic 38px/60px "PlayfairDisplay", sans-serif;
     margin-bottom: 40px;
   }
 }
@@ -6581,7 +6586,7 @@ li.fancybox-thumbs-loading {
     padding-bottom: 30px;
   }
   .sv-card {
-    margin: 0 0 30px;
+    margin: 0 0 20px;
   }
 }
 
