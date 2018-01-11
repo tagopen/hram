@@ -1,7 +1,9 @@
 mixin cols(i, days)
   if ((i === days - 1) && days % 2 !== 0)
-    .col-24.schedule__col(class={"schedule__col--hidden" : i >= 4})
-      block
+    //- .col-24.schedule__col(class={"schedule__col--hidden" : i >= 6})
+    //-   block
+    .col-24.col-md-12.col-lg-8.schedule__col(class={"schedule__col--hidden" : i >= 6})
+      block    
   else
     .col-24.col-md-12.col-lg-8.schedule__col(class={"schedule__col--hidden" : i >= 6})
       block
@@ -9,7 +11,7 @@ section.schedule#schedule
   .container
     .row
       .col-24
-        .heading.schedule__heading!=content.index.schedule.heading
+        h2.heading.schedule__heading!=content.index.schedule.heading
   .container.schedule__container      
     .row.schedule__row
       - var days = content.index.schedule.days

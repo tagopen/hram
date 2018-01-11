@@ -5753,7 +5753,7 @@ li.fancybox-thumbs-loading {
 }
 
 .about__info {
-  padding: 30px 20px;
+  padding: 20px;
   background: #fff;
   border-left: 5px solid #ffb24a;
 }
@@ -5811,7 +5811,7 @@ li.fancybox-thumbs-loading {
     padding-bottom: 20px;
   }
   .about__item {
-    padding-bottom: 225px;
+    padding-bottom: 210px;
   }
   .about__box {
     position: relative;
@@ -5822,7 +5822,7 @@ li.fancybox-thumbs-loading {
     left: 0;
     top: 100%;
     margin-top: -140px;
-    padding: 35px 30px;
+    padding: 20px 30px 10px;
     max-width: 540px;
   }
   .js-about-arrows {
@@ -5842,7 +5842,6 @@ li.fancybox-thumbs-loading {
   }
   .about__info {
     left: 50px;
-    max-width: 580px;
   }
   .js-about-arrows {
     padding-right: 78px;
@@ -5852,6 +5851,13 @@ li.fancybox-thumbs-loading {
 @media only screen and (min-width: 1200px) {
   .js-about-arrows {
     padding-right: 95px;
+    top: -65px;
+  }
+  .about__item {
+    padding-bottom: 130px;
+  }
+  .about__info {
+    max-width: 720px;
   }
 }
 
@@ -6333,7 +6339,7 @@ li.fancybox-thumbs-loading {
     position: absolute;
     top: 220px;
     left: 0;
-    padding: 35px;
+    padding: 20px 20px 15px;
   }
   .accordion__date {
     position: static;
