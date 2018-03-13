@@ -68,7 +68,7 @@ html.html(lang='ru' prefix='og: http://ogp.me/ns#')
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <![endif]-->    
 
   body.body
     block header
@@ -104,3 +104,11 @@ html.html(lang='ru' prefix='og: http://ogp.me/ns#')
     //-script(src='js/calendar-vue-events.js')
 
     // endbuild
+    
+    // Global site tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-115520269-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-115520269-1');
