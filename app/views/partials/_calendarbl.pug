@@ -1,0 +1,22 @@
+section.calendarbl
+  .container
+    .row
+      .col-24
+        h2.heading.calendarbl__heading Православный календарь
+  .container.calendarbl__container
+    .row
+      .col-24.col-lg-8
+        .card.card-calendar
+          .card-body
+            #calendar-container
+              input#T2(type='hidden', value='<?php echo date("md")?>')
+              #datepicker
+          #trapeza.card-footer
+            .row
+              .col-xs-5.col-sm-5.my-auto
+                img(src='img/trapeza-img.png', alt='trapeza-img')
+              .col-xs-19.col-sm-19.my-auto
+                p.text-trapeza
+      .col-24.col-lg-16
+        .card.results
+        .test
