@@ -57,6 +57,10 @@ html.html(lang='ru' prefix='og: http://ogp.me/ns#')
     // Tooltip CSS
     link(rel='stylesheet' href='css/tooltipster.bundle.css')
     link(rel='stylesheet' href='css/tooltipster-sideTip-shadow.min.css') 
+    // Calendar CSS
+    link(rel='stylesheet' href='css/calendar.css')
+    link(rel='stylesheet' href='calendar/css/bootstrap-datepicker.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=cyrillic')   
     block styles
     // Custom CSS 
     link(rel='stylesheet' href='css/style.min.css')
@@ -68,7 +72,7 @@ html.html(lang='ru' prefix='og: http://ogp.me/ns#')
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->    
+    <![endif]--> 
 
   body.body
     block header
@@ -98,6 +102,10 @@ html.html(lang='ru' prefix='og: http://ogp.me/ns#')
     script(src='js/tooltipster.bundle.js')    
     // FancyApps3 JavaScript
     script(src='js/jquery.fancybox.js')  
+    // Calendar JavaScript
+    script(data-require='MomentJS@2.10.0', data-semver='2.10.0', src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js')
+    script(src='calendar/js/bootstrap-datepicker.js')
+    script(src='calendar/locales/bootstrap-datepicker.ru.min.js')
     // Custom JavaScript 
     script(src='js/main.min.js') 
 
@@ -110,3 +118,83 @@ html.html(lang='ru' prefix='og: http://ogp.me/ns#')
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-115520269-1');
+    // Calendar  
+    script.
+      $(document).ready(function() {
+        var d = new Date();
+        var currDate = d.getDate();
+        var currMonth = d.getMonth() + 1;
+        var currYear = d.getFullYear();
+        var dateStr = currMonth + "" + currDate;
+        $('#T2').val(dateStr);
+
+        $('#datepicker').datepicker({
+          format: "mmdd",
+          language: "ru",
+          immediateUpdates: true,
+          defaultDate: 'now',
+          templates: {
+            leftArrow: '<button class="calendar-link prev-day"><i class="fas fa-chevron-left"></i></button>',
+            rightArrow: '<button class="calendar-link next-day"><i class="fas fa-chevron-right"></i></button>'
+          }
+        }).datepicker("setDate", new Date());
+
+        function print_r(arr, level) {
+          var print_red_text = "";
+          if (!level) level = 0;
+          var level_padding = "";
+          for (var j = 0; j < level + 1; j++) level_padding += "    ";
+          if (typeof(arr) == 'object') {
+            for (var item in arr) {
+              var value = arr[item];
+              if (typeof(value) == 'object') {
+                print_red_text += level_padding + "'" + item + "' :\n";
+                print_red_text += print_r(value, level + 1);
+              } else
+                print_red_text += level_padding + "'" + item + "' => \"" + value + "\"\n";
+            }
+          } else print_red_text = "===>" + arr + "<===(" + typeof(arr) + ")";
+          return print_red_text;
+        }
+
+        function CalendarContent() {
+          var data1 = $('#T2').val();
+          return $.ajax({
+            type: "POST",
+            url: "calendar-hram-serafim.php",
+            data: "data=" + data1,
+            success: function(data) {
+              $('.results').html(data[0]);
+              $('.text-trapeza').html(data[1]);
+              //$('.test').html(print_r(data[2]));
+            },
+            dataType: "json"
+          });
+        };
+
+        $('#datepicker').on('changeDate', function() {
+          $('#T2').val(
+            $('#datepicker').datepicker('getFormattedDate')
+          );
+          CalendarContent();
+        });
+        // Navigate to next date
+        $('.body').on("click", '#next-day', function() {
+          var day = $("#datepicker").datepicker("getDate");
+          if (day == null) {
+            var day = new Date();
+          }
+          day.setTime(day.getTime() + (1000 * 60 * 60 * 24));
+          $("#datepicker").datepicker("setDate", day);
+        });
+
+        $('.body').on("click", '#prev-day', function() {
+          var day = $("#datepicker").datepicker("getDate");
+          if (day == null) {
+            var day = new Date();
+          }
+          day.setTime(day.getTime() - (1000 * 60 * 60 * 24))
+          $("#datepicker").datepicker("setDate", day);
+        });
+        CalendarContent();
+      });    

@@ -44,6 +44,10 @@
     <!-- Tooltip CSS-->
     <link rel="stylesheet" href="css/tooltipster.bundle.css">
     <link rel="stylesheet" href="css/tooltipster-sideTip-shadow.min.css">
+    <!-- Calendar CSS-->
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="calendar/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;amp;subset=cyrillic">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.min.css">
     <!-- endbuild-->
@@ -51,7 +55,7 @@
     <!-- WARNING: Respond.js doesn't work if you view the page via file://--><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->    
+<![endif]--> 
   </head>
   <body class="body">
     <header class="header">
@@ -136,7 +140,7 @@
                 <div class="intro__heading">
                   <h2 class="intro__heading--text">Храмовый комплекс в честь иконы Божьей матери «Умиление» и преподобного Серафима Саровского</h2><i class="ic ic--venzel"></i>
                 </div>
-                <div class="intro__text">Храм открыт</div><a class="btn js-gallery__btn" data-fancybox="gallery" href="img/gallery1.jpg">Жизнь храма</a>
+                <div class="intro__text">Храм открыт</div><a class="btn js-gallery__btn" data-fancybox="gallery" href="https://youtu.be/d9WwPxnQrnw">Жизнь храма</a>
               </div>
             </div>
             <div class="col-24 col-md-12">
@@ -443,6 +447,41 @@
           </div>
         </div>
       </div>
+      <section class="calendarbl">
+        <div class="container">
+          <div class="row">
+            <div class="col-24">
+              <h2 class="heading calendarbl__heading">Православный календарь</h2>
+            </div>
+          </div>
+        </div>
+        <div class="container calendarbl__container">
+          <div class="row">
+            <div class="col-24 col-lg-8">
+              <div class="card card-calendar">
+                <div class="card-body">
+                  <div id="calendar-container">
+                    <input id="T2" type="hidden">
+                    <div id="datepicker"></div>
+                  </div>
+                </div>
+                <div class="card-footer" id="trapeza">
+                  <div class="row">
+                    <div class="col-xs-5 col-sm-5 my-auto"><img src="img/trapeza-img.png" alt="trapeza-img"></div>
+                    <div class="col-xs-19 col-sm-19 my-auto">
+                      <p class="text-trapeza"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-24 col-lg-16">
+              <div class="card results"></div>
+              <div class="test"></div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="schedule" id="schedule">
         <div class="container">
           <div class="row">
@@ -643,13 +682,13 @@
           <div class="gallery life__gallery">
             <div class="row">
               <div class="col-24 col-md-12 col-lg-6 gallery__col"></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col"><a class="gallery__link gallery__link--2" data-fancybox="gallery" href="img/gallery2.jpg"></a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col"><a class="gallery__link gallery__link--3" data-fancybox="gallery" href="img/gallery3.jpg"></a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col"><a class="gallery__link gallery__link--4" data-fancybox="gallery" href="img/gallery4.jpg"></a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col"><a class="gallery__link gallery__link--2" data-fancybox="gallery" href="img/gallery1.jpg"></a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col"><a class="gallery__link gallery__link--3" data-fancybox="gallery" href="img/gallery2.jpg"></a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col"><a class="gallery__link gallery__link--4" data-fancybox="gallery" href="img/gallery3.jpg"></a></div>
               <div class="col-24 col-lg-6 gallery__col">
                 <div class="row">
-                  <div class="col-24 col-md-12 col-lg-24"><a class="gallery__link gallery__link--5" data-fancybox="gallery" href="img/gallery5.jpg"></a></div>
-                  <div class="col-24 col-md-12 col-lg-24"><a class="gallery__link gallery__link--6" data-fancybox="gallery" href="img/gallery6.jpg"></a></div>
+                  <div class="col-24 col-md-12 col-lg-24"><a class="gallery__link gallery__link--5" data-fancybox="gallery" href="img/gallery4.jpg"></a></div>
+                  <div class="col-24 col-md-12 col-lg-24"><a class="gallery__link gallery__link--6" data-fancybox="gallery" href="img/gallery5.jpg"></a></div>
                 </div>
               </div>
               <div class="col-24 col-lg-18 gallery__col">  
@@ -657,26 +696,27 @@
                     <div class="gallery__border gallery__border--1"></div>
                     <div class="gallery__border gallery__border--2"> </div></a></div>
               </div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-1" data-fancybox="gallery" href="img/gallery7.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-2" data-fancybox="gallery" href="img/gallery8.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-3" data-fancybox="gallery" href="img/gallery9.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-4" data-fancybox="gallery" href="img/gallery10.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-5" data-fancybox="gallery" href="img/gallery11.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-6" data-fancybox="gallery" href="img/gallery12.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-7" data-fancybox="gallery" href="img/gallery13.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-8" data-fancybox="gallery" href="img/gallery14.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-9" data-fancybox="gallery" href="img/gallery15.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-10" data-fancybox="gallery" href="img/gallery16.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-11" data-fancybox="gallery" href="img/gallery17.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-12" data-fancybox="gallery" href="img/gallery18.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-13" data-fancybox="gallery" href="img/gallery19.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-14" data-fancybox="gallery" href="img/gallery20.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-15" data-fancybox="gallery" href="img/gallery21.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-16" data-fancybox="gallery" href="img/gallery22.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-17" data-fancybox="gallery" href="img/gallery23.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-18" data-fancybox="gallery" href="img/gallery24.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-19" data-fancybox="gallery" href="img/gallery25.jpg">     </a></div>
-              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-20" data-fancybox="gallery" href="img/gallery26.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-1" data-fancybox="gallery" href="img/gallery6.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-2" data-fancybox="gallery" href="img/gallery7.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-3" data-fancybox="gallery" href="img/gallery8.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-4" data-fancybox="gallery" href="img/gallery9.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-5" data-fancybox="gallery" href="img/gallery10.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-6" data-fancybox="gallery" href="img/gallery11.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-7" data-fancybox="gallery" href="img/gallery12.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-8" data-fancybox="gallery" href="img/gallery13.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-9" data-fancybox="gallery" href="img/gallery14.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-10" data-fancybox="gallery" href="img/gallery15.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-11" data-fancybox="gallery" href="img/gallery16.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-12" data-fancybox="gallery" href="img/gallery17.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-13" data-fancybox="gallery" href="img/gallery18.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-14" data-fancybox="gallery" href="img/gallery19.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-15" data-fancybox="gallery" href="img/gallery20.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-16" data-fancybox="gallery" href="img/gallery21.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-17" data-fancybox="gallery" href="img/gallery22.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-18" data-fancybox="gallery" href="img/gallery23.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-19" data-fancybox="gallery" href="img/gallery24.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-20" data-fancybox="gallery" href="img/gallery25.jpg">     </a></div>
+              <div class="col-24 col-md-12 col-lg-6 gallery__col gallery__col--hidden"><a class="gallery__link gallery__link--hidden-21" data-fancybox="gallery" href="img/gallery26.jpg">     </a></div>
             </div>
             <div class="row">
               <div class="col-24 text-center">
@@ -1424,6 +1464,10 @@
     <script src="js/tooltipster.bundle.js">   </script>
     <!-- FancyApps3 JavaScript-->
     <script src="js/jquery.fancybox.js"> </script>
+    <!-- Calendar JavaScript-->
+    <script data-require="MomentJS@2.10.0" data-semver="2.10.0" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="calendar/js/bootstrap-datepicker.js"></script>
+    <script src="calendar/locales/bootstrap-datepicker.ru.min.js"></script>
     <!-- Custom JavaScript -->
     <script src="js/main.min.js"> </script>
     <!-- endbuild-->
@@ -1434,6 +1478,87 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-115520269-1');
+    </script>
+    <!-- Calendar  -->
+    <script>
+      $(document).ready(function() {
+        var d = new Date();
+        var currDate = d.getDate();
+        var currMonth = d.getMonth() + 1;
+        var currYear = d.getFullYear();
+        var dateStr = currMonth + "" + currDate;
+        $('#T2').val(dateStr);
+      
+        $('#datepicker').datepicker({
+          format: "mmdd",
+          language: "ru",
+          immediateUpdates: true,
+          defaultDate: 'now',
+          templates: {
+            leftArrow: '<button class="calendar-link prev-day"><i class="fas fa-chevron-left"></i></button>',
+            rightArrow: '<button class="calendar-link next-day"><i class="fas fa-chevron-right"></i></button>'
+          }
+        }).datepicker("setDate", new Date());
+      
+        function print_r(arr, level) {
+          var print_red_text = "";
+          if (!level) level = 0;
+          var level_padding = "";
+          for (var j = 0; j < level + 1; j++) level_padding += "    ";
+          if (typeof(arr) == 'object') {
+            for (var item in arr) {
+              var value = arr[item];
+              if (typeof(value) == 'object') {
+                print_red_text += level_padding + "'" + item + "' :\n";
+                print_red_text += print_r(value, level + 1);
+              } else
+                print_red_text += level_padding + "'" + item + "' => \"" + value + "\"\n";
+            }
+          } else print_red_text = "===>" + arr + "<===(" + typeof(arr) + ")";
+          return print_red_text;
+        }
+      
+        function CalendarContent() {
+          var data1 = $('#T2').val();
+          return $.ajax({
+            type: "POST",
+            url: "calendar-hram-serafim.php",
+            data: "data=" + data1,
+            success: function(data) {
+              $('.results').html(data[0]);
+              $('.text-trapeza').html(data[1]);
+              //$('.test').html(print_r(data[2]));
+            },
+            dataType: "json"
+          });
+        };
+      
+        $('#datepicker').on('changeDate', function() {
+          $('#T2').val(
+            $('#datepicker').datepicker('getFormattedDate')
+          );
+          CalendarContent();
+        });
+        // Navigate to next date
+        $('.body').on("click", '#next-day', function() {
+          var day = $("#datepicker").datepicker("getDate");
+          if (day == null) {
+            var day = new Date();
+          }
+          day.setTime(day.getTime() + (1000 * 60 * 60 * 24));
+          $("#datepicker").datepicker("setDate", day);
+        });
+      
+        $('.body').on("click", '#prev-day', function() {
+          var day = $("#datepicker").datepicker("getDate");
+          if (day == null) {
+            var day = new Date();
+          }
+          day.setTime(day.getTime() - (1000 * 60 * 60 * 24))
+          $("#datepicker").datepicker("setDate", day);
+        });
+        CalendarContent();
+      });    
     </script>
   </body>
 </html>

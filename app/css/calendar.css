@@ -1,0 +1,192 @@
+@font-face{
+
+font-family: 'PF Beau Sans Pro Light';
+
+src: url('../fonts/PF Beau Sans Pro/PF Beau Sans Pro-Light.ttf');
+
+src: url('../fonts/PF Beau Sans Pro/PF Beau Sans Pro-Light.woff') format('woff')
+
+font-weight: normal;
+
+font-style: normal;
+
+}
+.crop{
+    overflow: hidden;
+    position: relative;
+    top: 21px;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    }
+.crop img{
+	position: absolute;
+    top: -20%;
+    left: -10%;
+	}
+
+.calendarbl {
+    padding: 35px 0 50px;
+    background: #d9dbce url(../img/calendar-bg.jpg);
+	background-position: left top;
+}
+.calendarbl__heading {
+    margin-bottom: 45px;
+    text-align: center;
+}
+.card-calendar{
+	background: url(../img/date-piker-bkg.png);
+	background-color:#fff;
+	background-position: center top;
+	border-radius: 0.5rem;
+}
+.card-calendar .card-body{
+	padding-top:0px;
+}
+.card-calendar .card-footer{
+	background:#ffffff;
+	height:110px;
+	padding-left: 40px;
+	padding-right: 40px;
+	font: 300 16px/18px "PF Beau Sans Pro";
+}
+.card-calendar .card-footer .row{
+	height:100%;
+}
+.card-calendar .datepicker{
+	font-family: "Playfair Display";
+    color: rgb(75, 128, 120);
+    line-height: 1.2;
+}
+.card-calendar .datepicker .datepicker-switch {
+    width: 145px;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    height:80px;
+}
+.card-calendar .dow{
+    font-size: 1.1rem;
+	padding-bottom: 35px;
+    padding-top: 25px;
+}
+.card-calendar .datepicker td, .datepicker th {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.1rem;
+}
+.card-calendar .datepicker table {
+    margin: 0 auto;
+}
+.card-calendar .datepicker .prev:hover, .card-calendar .datepicker .next:hover{
+    background: #fff;
+}
+.card-calendar td.active.active{
+	background-image: none;
+	background-color: rgb(75, 128, 120)!important;
+	border-radius:40px;
+}
+.card-calendar .datepicker-inline {
+    width: 100%;
+}
+.calendarbl__heading{
+	font-family:'Playfair Display', bold;
+}
+.calendarbl .day-of-week{
+  font-size: 24px;
+  font-family: "Playfair Display";
+  color: rgb(75, 128, 120);
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: capitalize
+}
+.text-trapeza{
+  padding-left: 10px;
+  font: 200 18px/20px "PF Beau Sans Pro Light";
+  color: #313431;
+  line-height: 1.2;
+}
+.calendarbl .results{
+   border-radius: 0.5rem;
+   color: #313431;
+}
+.calendarbl .card-header {
+    background-color: #ffffff; 
+    height:86px;
+}
+.calendarbl .card-header .row {
+    height:100%;
+}
+.calendarbl .date-style{
+  font-size: 1.1rem;
+  font-family: "Playfair Display";
+  color: rgb(75, 128, 120);
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.2;
+}
+.calendarbl .block-icons{
+	background: url(../img/block-icons.png) no-repeat;
+	background-position: center center;
+	text-align: center;
+	height:150px;
+}
+/* .calendarbl .block-icons img {
+    border-radius: 50%; Радиус скругления
+    height:100px;
+    width:100px;
+    position:relative;
+    top:20px;
+   }  */
+.datepicker .datepicker-switch:hover, .datepicker .prev:hover, .datepicker .next:hover, .datepicker tfoot tr th:hover {
+    background: #fff;
+}
+.calendarbl i {
+	font-family: fontawesome !important;
+	font-style: normal;
+	background:#f8f8f8;
+	color: #9d9d9d;
+}
+button.calendar-link{
+    background: #f8f8f8;
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    border:none;
+}
+
+button.calendar-link:focus{
+    outline-style: none;
+    outline-width: 0px !important;
+    outline-color: none !important;
+
+}
+
+button.prev-day{
+	padding-left: 8px;
+}
+button.next-day{
+	padding-right: 8px;
+}
+
+@media (max-width: 992px) { 
+	.card-header-prev-day, .card-header-next-day{
+		width:15%;
+	}
+	.day-of-week{
+		width:69%;
+	}
+	.card-calendar {
+	   margin-bottom: 20px;
+	}
+	.date-style{
+		text-align: center !important;
+	}
+}
+
