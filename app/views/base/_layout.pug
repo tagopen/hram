@@ -121,80 +121,86 @@ html.html(lang='ru' prefix='og: http://ogp.me/ns#')
     // Calendar  
     script.
       $(document).ready(function() {
-        var d = new Date();
-        var currDate = d.getDate();
-        var currMonth = d.getMonth() + 1;
-        var currYear = d.getFullYear();
-        var dateStr = currMonth + "" + currDate;
-        $('#T2').val(dateStr);
-
-        $('#datepicker').datepicker({
-          format: "mmdd",
-          language: "ru",
-          immediateUpdates: true,
-          defaultDate: 'now',
-          templates: {
-            leftArrow: '<button class="calendar-link prev-day"><i class="fas fa-chevron-left"></i></button>',
-            rightArrow: '<button class="calendar-link next-day"><i class="fas fa-chevron-right"></i></button>'
+          var d = new Date();
+          var currDate = d.getDate();
+          var currMonth = d.getMonth() + 1;
+          var currYear = d.getFullYear();
+          if (currDate < 10) {
+              currDate = '0' + currDate;
           }
-        }).datepicker("setDate", new Date());
+          if (currMonth < 10) {
+              currMonth = '0' + currMonth;
+          }
+          var dateStr = currMonth + "" + currDate;
+          $('#T2').val(dateStr);
 
-        function print_r(arr, level) {
-          var print_red_text = "";
-          if (!level) level = 0;
-          var level_padding = "";
-          for (var j = 0; j < level + 1; j++) level_padding += "    ";
-          if (typeof(arr) == 'object') {
-            for (var item in arr) {
-              var value = arr[item];
-              if (typeof(value) == 'object') {
-                print_red_text += level_padding + "'" + item + "' :\n";
-                print_red_text += print_r(value, level + 1);
-              } else
-                print_red_text += level_padding + "'" + item + "' => \"" + value + "\"\n";
-            }
-          } else print_red_text = "===>" + arr + "<===(" + typeof(arr) + ")";
-          return print_red_text;
-        }
+          $('#datepicker').datepicker({
+              format: "mmdd",
+              language: "ru",
+              immediateUpdates: true,
+              defaultDate: 'now',
+              templates: {
+                  leftArrow: '<button class="calendar-link prev-day"><i class="fas fa-chevron-left"></i></button>',
+                  rightArrow: '<button class="calendar-link next-day"><i class="fas fa-chevron-right"></i></button>'
+              }
+          }).datepicker("setDate", new Date());
 
-        function CalendarContent() {
-          var data1 = $('#T2').val();
-          return $.ajax({
-            type: "POST",
-            url: "calendar-hram-serafim.php",
-            data: "data=" + data1,
-            success: function(data) {
-              $('.results').html(data[0]);
-              $('.text-trapeza').html(data[1]);
-              //$('.test').html(print_r(data[2]));
-            },
-            dataType: "json"
+          function print_r(arr, level) {
+              var print_red_text = "";
+              if (!level) level = 0;
+              var level_padding = "";
+              for (var j = 0; j < level + 1; j++) level_padding += "    ";
+              if (typeof(arr) == 'object') {
+                  for (var item in arr) {
+                      var value = arr[item];
+                      if (typeof(value) == 'object') {
+                          print_red_text += level_padding + "'" + item + "' :\n";
+                          print_red_text += print_r(value, level + 1);
+                      } else
+                          print_red_text += level_padding + "'" + item + "' => \"" + value + "\"\n";
+                  }
+              } else print_red_text = "===>" + arr + "<===(" + typeof(arr) + ")";
+              return print_red_text;
+          }
+
+          function CalendarContent() {
+              var data1 = $('#T2').val();
+              return $.ajax({
+                  type: "POST",
+                  url: "calendar-hram-serafim.php",
+                  data: "data=" + data1,
+                  success: function(data) {
+                      $('.results').html(data[0]);
+                      $('.text-trapeza').html(data[1]);
+                      //$('.test').html(print_r(data[2]));
+                  },
+                  dataType: "json"
+              });
+          };
+
+          $('#datepicker').on('changeDate', function() {
+              $('#T2').val(
+                  $('#datepicker').datepicker('getFormattedDate')
+              );
+              CalendarContent();
           });
-        };
+          // Navigate to next date
+          $('.body').on("click", '#next-day', function() {
+              var day = $("#datepicker").datepicker("getDate");
+              if (day == null) {
+                  var day = new Date();
+              }
+              day.setTime(day.getTime() + (1000 * 60 * 60 * 24));
+              $("#datepicker").datepicker("setDate", day);
+          });
 
-        $('#datepicker').on('changeDate', function() {
-          $('#T2').val(
-            $('#datepicker').datepicker('getFormattedDate')
-          );
+          $('.body').on("click", '#prev-day', function() {
+              var day = $("#datepicker").datepicker("getDate");
+              if (day == null) {
+                  var day = new Date();
+              }
+              day.setTime(day.getTime() - (1000 * 60 * 60 * 24));
+              $("#datepicker").datepicker("setDate", day);
+          });
           CalendarContent();
-        });
-        // Navigate to next date
-        $('.body').on("click", '#next-day', function() {
-          var day = $("#datepicker").datepicker("getDate");
-          if (day == null) {
-            var day = new Date();
-          }
-          day.setTime(day.getTime() + (1000 * 60 * 60 * 24));
-          $("#datepicker").datepicker("setDate", day);
-        });
-
-        $('.body').on("click", '#prev-day', function() {
-          var day = $("#datepicker").datepicker("getDate");
-          if (day == null) {
-            var day = new Date();
-          }
-          day.setTime(day.getTime() - (1000 * 60 * 60 * 24))
-          $("#datepicker").datepicker("setDate", day);
-        });
-        CalendarContent();
-      });    
+      });
